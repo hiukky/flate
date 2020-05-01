@@ -3,8 +3,13 @@
   "displayName": "orbit",
   "description": "",
   "version": "0.0.1",
+  "publisher": "hiukky",
   "engines": {
     "vscode": "^1.44.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hiukky/orbit.git"
   },
   "categories": [
     "Themes"
