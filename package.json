@@ -2,7 +2,7 @@
   "name": "orbit",
   "displayName": "Orbit",
   "description": "Dark Neutral Theme for VS Code.",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "publisher": "hiukky",
   "icon": "assets/logo.png",
   "engines": {
