@@ -14,6 +14,8 @@
     "editorOverviewRuler.border": "#1C1D27",
     "editorLineNumber.foreground": "#444446",
     "editor.selectionBackground": "#DADBDB15",
+    "editorSuggestWidget.background": "#1C1D27",
+    "editorSuggestWidget.selectedBackground": "#DADBDB15",
 
     "sideBar.background": "#1C1D27",
     "sideBarSectionHeader.background": "#1C1D27",
@@ -54,12 +56,16 @@
     "peekViewTitle.background": "#1C1D27",
     "peekViewResult.selectionBackground": "#1C1D27",
 
+    "input.background": "#1C1D27",
+
+    "widget.shadow": "#00000000",
+
+    "button.background": "#1C1D27",
     "badge.background": "#1C1D27",
     "walkThrough.embeddedEditorBackground": "#1C1D27",
     "breadcrumbPicker.background": "#1C1D27",
-    "button.background": "#1C1D27",
-    "input.background": "#1C1D27",
-    "scrollbar.shadow": "#1C1D27"
+    "scrollbar.shadow": "#00000000",
+    "debugToolBar.background": "#1C1D27"
   },
   "tokenColors": [
     {
