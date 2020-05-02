@@ -1,7 +1,7 @@
 <div align="center">
     <img src="https://github.com/hiukky/orbit/blob/develop/assets/logo.png" width="300x300" height="300" />
     <h1> Orbit </h1>
-    <h3 align="center">Neutral Dark Theme for VS Code.</h3>
+    <h3 align="center">Dark Neutral Theme for VS Code.</h3>
 </div>
 
 <div align="center">

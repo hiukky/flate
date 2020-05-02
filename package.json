@@ -1,10 +1,10 @@
 {
   "name": "orbit",
-  "displayName": "orbit",
-  "description": "",
+  "displayName": "Orbit",
+  "description": "Dark Neutral Theme for VS Code.",
   "version": "0.0.1",
   "publisher": "hiukky",
-  "icon": "assets/orbit.png",
+  "icon": "assets/logo.png",
   "engines": {
     "vscode": "^1.44.0"
   },
