@@ -66,10 +66,24 @@
       }
     },
     {
+      "name": "storage.type.class.jsdoc",
+      "scope": "storage.type.class.jsdoc,entity.name.type.instance.jsdoc",
+      "settings": {
+        "foreground": "#3772FF"
+      }
+    },
+    {
+      "name": "storage.type.class.jsdoc",
+      "scope": "variable.other.jsdoc",
+      "settings": {
+        "foreground": "#DAB785"
+      }
+    },
+    {
       "name": "Variables",
       "scope": ["variable", "string constant.other.placeholder"],
       "settings": {
-        "foreground": "#6BF178"
+        "foreground": "#FF6B6B"
       }
     },
     {
@@ -134,14 +148,14 @@
         "keyword.other.special-method"
       ],
       "settings": {
-        "foreground": "#FF6B6B"
+        "foreground": "#6BF178"
       }
     },
     {
       "name": "Block Level Variables",
       "scope": ["meta.block variable.other"],
       "settings": {
-        "foreground": "#4ECDC4"
+        "foreground": "#FF6B6B"
       }
     },
     {
@@ -353,9 +367,7 @@
     },
     {
       "name": "JSON Key - Level 0",
-      "scope": [
-        "source.json meta.structure.dictionary.json support.type.property-name.json"
-      ],
+      "scope": ["source.json  support.type.property-name.json"],
       "settings": {
         "foreground": "#424B54"
       }
@@ -363,7 +375,7 @@
     {
       "name": "JSON Key - Level 1",
       "scope": [
-        "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+        "source.json  meta.structure.dictionary.value.json  support.type.property-name.json"
       ],
       "settings": {
         "foreground": "#FFCB6B"
