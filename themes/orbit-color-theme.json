@@ -30,6 +30,9 @@
     "tab.inactiveBackground": "#1C1D27",
     "tab.activeBackground": "#DADBDB09",
 
+    "statusBar.debuggingBackground": "#6BF178",
+    "statusBar.foreground": "#1C1D27",
+
     "titleBar.activeBackground": "#1C1D27",
     "titleBar.inactiveBackground": "#1C1D27",
 
