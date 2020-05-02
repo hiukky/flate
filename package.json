@@ -18,7 +18,7 @@
   "contributes": {
     "themes": [
       {
-        "label": "Orbit",
+        "label": "Orbit (Bold)",
         "uiTheme": "vs-dark",
         "path": "./themes/orbit-color-theme.json"
       }
