@@ -34,7 +34,8 @@
     "tab.activeBackground": "#DADBDB09",
 
     "statusBar.debuggingBackground": "#6BF178",
-    "statusBar.foreground": "#1C1D27",
+    "statusBar.debuggingForeground": "#1C1D27",
+    "statusBar.foreground": "#DADBDB",
 
     "titleBar.activeBackground": "#1C1D27",
     "titleBar.inactiveBackground": "#1C1D27",
@@ -103,7 +104,8 @@
         "entity.name.function.tsx",
         "storage.type.function.arrow",
         "support.function.misc.scss",
-        "punctuation.separator.key-value.html"
+        "punctuation.separator.key-value.html",
+        "entity.other.attribute-name.placeholder.css"
       ],
       "settings": {
         "foreground": "#4ab2fc",
@@ -163,7 +165,8 @@
         "storage.type.interface.ts",
         "invalid.deprecated.entity.other.attribute-name.html",
         "keyword.control.as",
-        "storage.modifier.js"
+        "storage.modifier.js",
+        "punctuation.definition"
       ],
       "settings": {
         "foreground": "#8F8D88",
