@@ -19,10 +19,11 @@
     "editorSuggestWidget.selectedBackground": "#444446",
 
     "sideBar.background": "#1C1D27",
-    "sideBarSectionHeader.background": "#DADBDB09",
+    "sideBarSectionHeader.background": "#DADBDB00",
+    "sideBarSectionHeader.border": "#DADBDB00",
     "sideBar.foreground": "#969b9b",
 
-    "list.activeSelectionBackground": "#DADBDB09",
+    "list.activeSelectionBackground": "#DADBDB05",
     "list.focusBackground": "#DADBDB15",
     "list.hoverBackground": "#1C1D27",
     "list.inactiveSelectionBackground": "#1C1D27",
@@ -31,7 +32,7 @@
 
     "tab.border": "#1C1D27",
     "tab.inactiveBackground": "#1C1D27",
-    "tab.activeBackground": "#DADBDB09",
+    "tab.activeBackground": "#DADBDB05",
 
     "statusBar.debuggingBackground": "#6BF178",
     "statusBar.debuggingForeground": "#1C1D27",
@@ -74,7 +75,7 @@
     "breadcrumbPicker.background": "#1C1D27",
     "scrollbar.shadow": "#00000000",
     "debugToolBar.background": "#1C1D27",
-    "focusBorder": "#DADBDB09"
+    "focusBorder": "#DADBDB05"
   },
   "tokenColors": [
     {
@@ -128,8 +129,7 @@
         "variable.scss",
         "support.type.property-name.json",
         "variable.other.readwrite",
-        "variable.other.constant",
-        "variable.parameter"
+        "variable.other.constant"
       ],
       "settings": {
         "foreground": "#6BF178",
@@ -141,7 +141,6 @@
       "scope": [
         "storage.type.class.js",
         "storage.type.class.jsdoc",
-        "entity.name.type.instance.jsdoc",
         "storage.modifier.async",
         "keyword.control.trycatch.js",
         "keyword.control.trycatch.ts",
@@ -214,7 +213,8 @@
         "variable.other.jsdoc",
         "variable.other.constant.js",
         "entity.other.attribute-name.tsx",
-        "entity.other.attribute-name.html"
+        "entity.other.attribute-name.html",
+        "variable.parameter"
       ],
       "settings": {
         "foreground": "#ffc482",
@@ -372,7 +372,8 @@
         "text.html.markdown",
         "markup.inline.raw.markdown",
         "punctuation.definition.raw.markdown",
-        "entity.name.type"
+        "entity.name.type",
+        "entity.name.type.instance.jsdoc"
       ],
       "settings": {
         "foreground": "#e9dbdb",
