@@ -43,9 +43,13 @@ const arrow = () => {
   return
 }
 
+arrow()
+
 function func() {
   return
 }
+
+func()
 
 try {
 } catch (error) {}
@@ -62,8 +66,11 @@ if (age <= 23) {
 } else {
 }
 
-while (age < 23) {}
+while (age < 23) {
+  break
+}
 
 for (let i = 0; i < dirs.length; i++) {
   var element = dirs[i]
+  break
 }
