@@ -1,4 +1,9 @@
+node_modules/
+examples/
 .vscode/**
 .vscode-test/**
 .gitignore
-vsc-extension-quickstart.md
+.huskyrc
+.prettierrc
+commitlint.config.js
+yarn.lock

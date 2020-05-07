@@ -1,0 +1,17 @@
+@import "https://fonts.googleapis.com/css?family=Inter:400,500,700|Lato:400,700|Nunito:400,600,700&display=swap";
+
+html,
+body {
+  font-family: "Nunito", sans-serif;
+  background: #2d3436;
+}
+
+.class {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#id {
+  position: absolute;
+  display: flex;
+}

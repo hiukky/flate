@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  main:
+    container_name: main
+    build:
+      context: .
+      target: development
+    volumes:
+      - .:/nest
+      - /nest/node_modules
+    ports:
+      - ${PORT}:${PORT}
+    command: yarn start:dev
+    env_file:
+      - .env
