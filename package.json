@@ -1,8 +1,8 @@
 {
   "name": "orbit",
   "displayName": "Orbit",
-  "description": "Dark Neutral Theme for VS Code.",
-  "version": "0.2.0",
+  "description": "Dark Colored Theme for VS Code.",
+  "version": "0.2.3",
   "publisher": "hiukky",
   "icon": "assets/logo.png",
   "engines": {
@@ -27,7 +27,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "@types/node": "^13.13.5",
+    "@types/node": "^14.0.5",
     "husky": "^4.2.5",
     "prettier": "^2.0.5",
     "react": "^16.13.1"
