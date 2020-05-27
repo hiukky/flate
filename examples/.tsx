@@ -18,7 +18,7 @@ const App = ({ loading = true, background = '#55efc4' }: IAppProps) => {
     }
   }, [])
 
-  return <h1>Dark Neutral Theme for VS Code</h1>
+  return <h1 color={'dark'}>Dark Neutral Theme for VS Code</h1>
 }
 
 export default App

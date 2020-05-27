@@ -6,12 +6,14 @@ const App = () => {
   useEffect(() => {
     document.title = title
 
+    console.log({ title })
+
     return () => {
       setTitle('')
     }
   }, [])
 
-  return <h1>Dark Neutral Theme for VS Code</h1>
+  return <h1 color={'blue'}>Dark Neutral Theme for VS Code {title}</h1>
 }
 
 export default App

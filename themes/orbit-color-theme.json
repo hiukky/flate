@@ -93,7 +93,6 @@
         "keyword.operator.type.annotation",
         "keyword.package.go",
         "keyword.import.go",
-        "keyword.function.go",
         "meta.brace.square",
         "meta.brace.round",
         "punctuation.definition.binding-pattern.object",
@@ -104,15 +103,7 @@
         "punctuation.definition.block.tag.jsdoc",
         "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.var.expr.js meta.objectliteral.js punctuation.definition.block.js",
         "source.js meta.objectliteral.js punctuation.definition.block.js",
-        "storage.modifier.js",
-        "storage.modifier.ts",
         "storage.type.class.jsdoc",
-        "storage.type.interface.ts",
-        "storage.type.type",
-        "storage.type.class",
-        "storage.type.property",
-        "storage.type.function",
-        "support.function",
         "support.type.object.module.js"
       ],
       "settings": {
@@ -127,7 +118,6 @@
         "constant.numeric",
         "constant.other.caps.python",
         "constant.other.placeholder",
-        "entity.name.function.sql.sqlite",
         "entity.other.attribute-name",
         "entity.other.attribute-name.id",
         "entity.other.attribute-name.placeholder.css",
@@ -135,6 +125,8 @@
         "keyword.operator",
         "keyword.other.unit",
         "keyword.operator.new",
+        "keyword.operator.assignment",
+        "keyword.operator.assignment.compound",
         "markup.bold",
         "markup.deleted",
         "meta.group.regexp",
@@ -142,7 +134,6 @@
         "source.css",
         "source.php",
         "storage.type.function.arrow",
-        "storage.modifier.async",
         "support.class",
         "support.constant",
         "support.function",
@@ -161,12 +152,14 @@
     {
       "name": "Green",
       "scope": [
-        "entity.name.function",
         "entity.name.tag.yaml",
+        "entity.name.function",
+        "entity.name.function.sql.sqlite",
         "keyword.other.special-method",
         "markup.raw.block.fenced.markdown",
         "markup.table",
         "meta.function-call",
+        "meta.object-literal.key",
         "punctuation.definition.list_item.markdown",
         "punctuation.section.class.end",
         "support.type.property-name.json",
@@ -196,7 +189,6 @@
         "keyword.operator.type.annotation.tsx",
         "keyword.other.substitution",
         "keyword.other.template",
-        "keyword.operator.assignment",
         "markup.changed",
         "markup.quote punctuation.definition.blockquote.markdown",
         "markup.raw.block",
@@ -212,7 +204,6 @@
         "punctuation.definition.tag.html",
         "punctuation.section.embedded",
         "punctuation.separator.inheritance.php",
-        "storage.modifier",
         "string.other.link.description.title.markdown",
         "string.regexp",
         "variable.language.fenced.markdown"
@@ -253,6 +244,8 @@
         "entity.name.tag",
         "entity.name.tag.css",
         "entity.name.tag.js",
+        "entity.name.type.class",
+        "entity.name.type",
         "invalid",
         "invalid.illegal",
         "keyword.control",
@@ -282,6 +275,7 @@
         "support.class.component",
         "support.other.variable",
         "support.variable.object.node",
+        "support.type",
         "tag.decorator.js punctuation.definition.tag.js",
         "tag.decorator.js",
         "variable.function.constructor",
@@ -305,12 +299,10 @@
         "source meta.block keyword.control.loop",
         "storage.type",
         "keyword.control.as",
-        "keyword.control.loop",
-        "keyword.control.trycatch",
-        "keyword.control.flow"
+        "keyword.control.trycatch"
       ],
       "settings": {
-        "foreground": "#b388eb",
+        "foreground": "#e0aaff",
         "fontStyle": "bold"
       }
     },
@@ -334,12 +326,11 @@
       "name": "Quince",
       "scope": [
         "constant.character.escape.backslash.regexp",
-        "entity.name.type.class",
-        "entity.name.type",
         "entity.other.attribute-name.html",
-        "entity.other.attribute-name.tsx",
         "entity.name.type.instance.jsdoc",
         "entity.other.inherited-class",
+        "entity.other.attribute-name.js.jsx",
+        "entity.other.attribute-name.tsx",
         "meta.structure.dictionary.value.json",
         "source.json",
         "source.js meta.class.js meta.method.declaration.js meta.block.js meta.var.expr.js meta.function-call.js variable.other.object.js",
@@ -365,8 +356,9 @@
         "support.constant.property-value.css",
         "support.orther.namespace.use.php",
         "support.other.namespace.php",
-        "support.type",
-        "support.type.sys-types"
+        "support.type.sys-types",
+        "support.type.builtin.graphql",
+        "support.type.primitive"
       ],
       "settings": {
         "fontStyle": "bold",
@@ -387,7 +379,6 @@
         "constant.other.color",
         "markup.inline.raw.markdown",
         "meta.definition.property.tsx",
-        "meta.object-literal.key",
         "punctuation.definition.raw.markdown",
         "source.css",
         "source.less",
@@ -399,8 +390,10 @@
         "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.var.expr.js meta.objectliteral.js meta.object.member.js variable.other.object.js",
         "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.block.js meta.objectliteral.js meta.object.member.js meta.objectliteral.js meta.object.member.js meta.function-call.js variable.other.object.js",
         "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.objectliteral.js meta.object.member.js meta.objectliteral.js meta.object.member.js meta.function-call.js variable.other.object.js",
+        "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.objectliteral.js meta.object.member.js meta.function-call.js variable.other.object.js",
         "source.ts meta.interface.ts meta.field.declaration.ts meta.definition.property.ts variable.object.property.ts",
         "source.ts meta.class.ts meta.field.declaration.ts meta.definition.property.ts variable.object.property.ts",
+        "source.ts meta.type.declaration.ts meta.object.type.ts meta.field.declaration.ts meta.definition.property.ts variable.object.property.ts",
         "string.quoted.double.json",
         "string.quoted.double.env",
         "string.quoted.single.env",
@@ -447,13 +440,35 @@
         "meta.jsx.children",
         "string.quoted.double.html",
         "string.unquoted.label.js",
-        "support.type.primitive",
         "text.html.basic",
         "text.html.basic"
       ],
       "settings": {
         "fontStyle": "bold",
         "foreground": "#FFEE93"
+      }
+    },
+
+    {
+      "name": "Exodus",
+      "scope": [
+        "keyword.function.go",
+        "keyword.control.flow",
+        "keyword.input.graphql",
+        "keyword.type.graphql",
+        "storage.type.function",
+        "support.function",
+        "storage.type.class",
+        "storage.type.property",
+        "storage.modifier",
+        "storage.type.type",
+        "storage.type.enum",
+        "storage.type.interface",
+        "storage.modifier.async"
+      ],
+      "settings": {
+        "foreground": "#a29bfe",
+        "fontStyle": "bold"
       }
     }
   ]
