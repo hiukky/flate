@@ -12,14 +12,20 @@ type TGender = 0 | 1 | 2 | 9
 interface IData {
   name: string
   age: number
-  gender: TGender
+  gender?: TGender
 }
 
 const dirs = [process.cwd(), __dirname]
 let nickname = 'hiukky'
 var age = 23
 
-console.log({ dirs, nickname, age })
+const data: IData = {
+  name: nickname,
+  gender: 1,
+  age,
+}
+
+console.log({ dirs, nickname, age }, data?.gender)
 
 class Class {
   constructor() {}
