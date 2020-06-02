@@ -131,6 +131,7 @@
         "markup.deleted",
         "meta.group.regexp",
         "punctuation.separator.key-value.html",
+        "punctuation.accessor.optional",
         "source.css",
         "source.php",
         "storage.type.function.arrow",

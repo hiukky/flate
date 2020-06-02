@@ -2,16 +2,19 @@ import React, { useEffect, useState } from 'react'
 
 interface IAppProps {
   loading: boolean
-  background: string
+  colors: {
+    background?: string
+    foreground: string
+  }
 }
 
-const App = ({ loading = true, background = '#55efc4' }: IAppProps) => {
+const App = ({ loading = true, colors }: IAppProps) => {
   const [title, setTitle] = useState('Orbit')
 
   useEffect(() => {
     document.title = title
 
-    console.log({ loading, background })
+    console.log(loading, colors?.background)
 
     return () => {
       setTitle('')
