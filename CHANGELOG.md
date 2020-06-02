@@ -2,6 +2,12 @@
 
 All notable changes to the "orbit" extension will be documented in this file.
 
+## [0.2.4]
+
+Fixes
+
+- Color for accessor optional
+
 ## [0.2.3]
 
 Changes
