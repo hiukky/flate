@@ -92,14 +92,10 @@
         "keyword.other.sql.sqlite",
         "keyword.package.go",
         "keyword.type",
-        "meta.brace.round",
-        "meta.brace.square",
         "punctuation.decorator",
         "punctuation.definition",
         "punctuation.definition.binding-pattern.object",
         "punctuation.definition.block.tag.jsdoc",
-        "punctuation.definition.parameters.begin",
-        "punctuation.definition.parameters.end",
         "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.var.expr.js meta.objectliteral.js punctuation.definition.block.js",
         "source.js meta.objectliteral.js punctuation.definition.block.js",
         "storage.type.class.jsdoc",
@@ -111,7 +107,7 @@
       }
     },
     {
-      "name": "Blue",
+      "name": "Fluorescent Blue",
       "scope": [
         "Constants",
         "constant.other.object.key.js",
@@ -140,6 +136,7 @@
         "markup.quote markup.bold string",
         "markup.quote markup.bold",
         "markup.underline",
+        "meta.brace.square",
         "meta.class-method.js",
         "meta.structure.dictionary.json",
         "meta.structure.dictionary.value.json",
@@ -177,6 +174,7 @@
         "keyword.function.go",
         "keyword.input.graphql",
         "keyword.type.graphql",
+        "keyword.control.return.scss",
         "storage.modifier",
         "storage.modifier.async",
         "storage.type.class",
@@ -185,7 +183,18 @@
         "storage.type.interface",
         "storage.type.property",
         "storage.type.type",
-        "support.function"
+        "support.function",
+        "punctuation.section.embedded.begin",
+        "punctuation.section.embedded.end",
+        "punctuation.section.embedded.begin.jsx",
+        "punctuation.section.embedded.begin.tsx",
+        "punctuation.section.embedded.end.jsx",
+        "punctuation.section.embedded.end.tsx",
+        "punctuation.definition.parameters.begin.jsx",
+        "punctuation.definition.parameters.begin.tsx",
+        "punctuation.definition.parameters.end.jsx",
+        "punctuation.definition.parameters.end.tsx",
+        "variable.scss"
       ],
       "settings": {
         "fontStyle": "bold",
@@ -193,7 +202,7 @@
       }
     },
     {
-      "name": "Fluorecent Red",
+      "name": "Fluorescent Red",
       "scope": [
         "constant",
         "constant.numeric",
@@ -213,15 +222,13 @@
         "meta.group.regexp",
         "punctuation.accessor.optional",
         "punctuation.separator.key-value.html",
+        "punctuation.definition.tag.begin",
+        "punctuation.definition.tag.end",
         "source.css",
         "source.php",
         "storage.type.function.arrow",
         "support.class",
         "support.constant",
-        "support.function",
-        "support.function",
-        "support.function.magic.python",
-        "support.function.misc.scss",
         "support.type.exception.python",
         "text.html.markdown string",
         "variable"
@@ -229,6 +236,21 @@
       "settings": {
         "fontStyle": "bold",
         "foreground": "#e84855"
+      }
+    },
+    {
+      "name": "Fluorescent Yellow",
+      "scope": [
+        "punctuation.definition.block",
+        "punctuation.definition.binding-pattern.object",
+        "punctuation.section.property-list.begin.bracket.curly",
+        "punctuation.section.property-list.end.bracket.curly",
+        "punctuation.definition.interpolation.begin.bracket.curly",
+        "punctuation.definition.interpolation.end.bracket.curly"
+      ],
+      "settings": {
+        "foreground": "#E4CE05",
+        "fontStyle": "bold"
       }
     },
     {
@@ -245,13 +267,15 @@
         "punctuation.definition.list_item.markdown",
         "punctuation.section.class.end",
         "support.function.builtin.python",
+        "support.function",
+        "support.function.magic.python",
+        "support.function.misc.scss",
         "support.type.property-name.json",
         "text.html.markdown",
         "variable.function",
         "variable.language.fenced.markdown",
         "variable.other.bare",
-        "variable.other.env",
-        "variable.scss"
+        "variable.other.env"
       ],
       "settings": {
         "fontStyle": "bold",
@@ -281,8 +305,6 @@
         "punctuation",
         "punctuation.definition.comment",
         "punctuation.definition.tag",
-        "punctuation.definition.tag.begin.html",
-        "punctuation.definition.tag.end.html",
         "punctuation.definition.tag.html",
         "punctuation.section.embedded",
         "punctuation.separator.inheritance.php",
@@ -319,6 +341,10 @@
       "scope": [
         "keyword.control.as",
         "keyword.control.trycatch",
+        "meta.brace.round",
+        "punctuation.definition.parameters.begin",
+        "punctuation.definition.parameters.end",
+        "punctuation.section.function.scss",
         "source meta.block keyword.control.loop",
         "source switch-statement.expr switch-block.expr keyword.control.loop",
         "storage.type"
@@ -344,6 +370,7 @@
         "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.var.expr.js meta.function-call.js variable.other.object.js",
         "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.var.expr.js meta.objectliteral.js meta.object.member.js meta.objectliteral.js meta.object.member.js meta.function-call.js variable.other.object.js",
         "source.js meta.class.js meta.method.declaration.js meta.block.js meta.var.expr.js meta.function-call.js variable.other.object.js",
+        "source.js meta.export.default.js meta.function.expression.js meta.block.js meta.tag.without-attributes.js meta.jsx.children.js meta.tag.without-attributes.js meta.jsx.children.js meta.tag.js meta.tag.attributes.js entity.other.attribute-name.js",
         "source.json"
       ],
       "settings": {
