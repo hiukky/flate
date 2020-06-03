@@ -2,6 +2,13 @@
 
 All notable changes to the "orbit" extension will be documented in this file.
 
+## [0.3.0]
+
+Changes
+
+- New color scheme
+- Fixes and improviments
+
 ## [0.2.4]
 
 Fixes
