@@ -25,7 +25,7 @@ const data: IData = {
   age,
 }
 
-console.log({ dirs, nickname, age }, data?.gender)
+console.log({ dirs, nickname: `${nickname}`, age }, data?.gender)
 
 class Class {
   constructor() {}

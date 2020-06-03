@@ -96,8 +96,6 @@
         "punctuation.definition",
         "punctuation.definition.binding-pattern.object",
         "punctuation.definition.block.tag.jsdoc",
-        "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.var.expr.js meta.objectliteral.js punctuation.definition.block.js",
-        "source.js meta.objectliteral.js punctuation.definition.block.js",
         "storage.type.class.jsdoc",
         "support.type.object.module.js"
       ],
@@ -157,7 +155,6 @@
         "variable.import.parameter.js",
         "variable.language",
         "variable.other.class.js",
-        "variable.other.class.js",
         "variable.other.property",
         "variable.other.readwrite.alias",
         "variable.other.readwrite.alias.tsx"
@@ -194,6 +191,8 @@
         "punctuation.definition.parameters.begin.tsx",
         "punctuation.definition.parameters.end.jsx",
         "punctuation.definition.parameters.end.tsx",
+        "punctuation.definition.template-expression.begin",
+        "punctuation.definition.template-expression.end",
         "variable.scss"
       ],
       "settings": {
@@ -224,6 +223,7 @@
         "punctuation.separator.key-value.html",
         "punctuation.definition.tag.begin",
         "punctuation.definition.tag.end",
+        "punctuation.definition.constant",
         "source.css",
         "source.php",
         "storage.type.function.arrow",
@@ -308,6 +308,7 @@
         "punctuation.definition.tag.html",
         "punctuation.section.embedded",
         "punctuation.separator.inheritance.php",
+        "punctuation.definition.section.case-statement",
         "string.other.link.description.title.markdown",
         "string.regexp",
         "variable.language.fenced.markdown"
@@ -345,6 +346,8 @@
         "punctuation.definition.parameters.begin",
         "punctuation.definition.parameters.end",
         "punctuation.section.function.scss",
+        "punctuation.section.function.begin.bracket.round",
+        "punctuation.section.function.end.bracket.round",
         "source meta.block keyword.control.loop",
         "source switch-statement.expr switch-block.expr keyword.control.loop",
         "storage.type"
@@ -363,6 +366,7 @@
         "entity.other.attribute-name.js.jsx",
         "entity.other.attribute-name.tsx",
         "entity.other.inherited-class",
+        "keyword.control.loop",
         "meta.structure.dictionary.value.json",
         "source.js meta.arrow.js meta.block.js meta.function-call.js variable.other.object.js",
         "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.arrow.js meta.block.js meta.var.expr.js meta.function-call.js variable.other.object.js",
@@ -376,14 +380,6 @@
       "settings": {
         "fontStyle": "bold",
         "foreground": "#f49e4c"
-      }
-    },
-    {
-      "name": "Rosy",
-      "scope": ["keyword.control.conditional", "keyword.control.switch"],
-      "settings": {
-        "fontStyle": "bold",
-        "foreground": "#f7e3af"
       }
     },
     {
@@ -408,7 +404,7 @@
     },
     {
       "name": "Squash",
-      "scope": ["keyword.control.loop"],
+      "scope": ["keyword.control.conditional", "keyword.control.switch"],
       "settings": {
         "fontStyle": "bold",
         "foreground": "#f38375"

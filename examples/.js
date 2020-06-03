@@ -5,7 +5,7 @@ const dirs = [process.cwd(), __dirname]
 let nickname = 'hiukky'
 var age = 23
 
-console.log({ dirs, nickname, age })
+console.log({ dirs, nickname: `${nickname}`, age })
 
 class Class {
   constructor() {}
