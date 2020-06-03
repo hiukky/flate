@@ -19,7 +19,6 @@
     "diffEditor.border": "#DADBDB09",
     "diffEditor.insertedTextBackground": "#6BF17840",
     "diffEditor.removedTextBackground": "#ff595e50",
-
     "dropdown.background": "#1C1D27",
     "dropdown.listBackground": "#1C1D27",
 
@@ -87,19 +86,15 @@
         "keyword.control.export",
         "keyword.control.from",
         "keyword.control.import",
-        "keyword.other.sql.sqlite",
-        "keyword.type",
+        "keyword.import.go",
         "keyword.input",
         "keyword.operator.type.annotation",
+        "keyword.other.sql.sqlite",
         "keyword.package.go",
-        "keyword.import.go",
-        "meta.brace.square",
-        "meta.brace.round",
-        "punctuation.definition.binding-pattern.object",
-        "punctuation.definition.parameters.begin",
-        "punctuation.definition.parameters.end",
-        "punctuation.definition",
+        "keyword.type",
         "punctuation.decorator",
+        "punctuation.definition",
+        "punctuation.definition.binding-pattern.object",
         "punctuation.definition.block.tag.jsdoc",
         "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.var.expr.js meta.objectliteral.js punctuation.definition.block.js",
         "source.js meta.objectliteral.js punctuation.definition.block.js",
@@ -112,7 +107,102 @@
       }
     },
     {
-      "name": "Blue",
+      "name": "Fluorescent Blue",
+      "scope": [
+        "Constants",
+        "constant.other.object.key.js",
+        "entity.name",
+        "entity.name.method.js",
+        "entity.name.module.js",
+        "entity.name.module.js",
+        "entity.name.tag",
+        "entity.name.tag.css",
+        "entity.name.tag.js",
+        "entity.name.type",
+        "entity.name.type.class",
+        "invalid",
+        "invalid.illegal",
+        "keyword.control",
+        "keyword.other.unit.px.css",
+        "markup.bold markup.italic string",
+        "markup.bold markup.italic",
+        "markup.bold string",
+        "markup.bold",
+        "markup.deleted",
+        "markup.deleted.git_gutter",
+        "markup.italic markup.bold string",
+        "markup.italic markup.bold",
+        "markup.italic",
+        "markup.quote markup.bold string",
+        "markup.quote markup.bold",
+        "markup.underline",
+        "meta.brace.square",
+        "meta.class-method.js",
+        "meta.structure.dictionary.json",
+        "meta.structure.dictionary.value.json",
+        "meta.tag.sgml",
+        "source.js",
+        "source.json",
+        "source.sass",
+        "string.other.link",
+        "string.other.link.title.markdown",
+        "string.unquoted.label.js",
+        "support.class.component",
+        "support.other.variable",
+        "support.type",
+        "support.variable.object.node",
+        "tag.decorator.js punctuation.definition.tag.js",
+        "tag.decorator.js",
+        "variable.function.constructor",
+        "variable.import.parameter.js",
+        "variable.language",
+        "variable.other.class.js",
+        "variable.other.class.js",
+        "variable.other.property",
+        "variable.other.readwrite.alias",
+        "variable.other.readwrite.alias.tsx"
+      ],
+      "settings": {
+        "fontStyle": "bold",
+        "foreground": "#00cecb"
+      }
+    },
+    {
+      "name": "Exodus",
+      "scope": [
+        "keyword.control.flow",
+        "keyword.function.go",
+        "keyword.input.graphql",
+        "keyword.type.graphql",
+        "keyword.control.return.scss",
+        "storage.modifier",
+        "storage.modifier.async",
+        "storage.type.class",
+        "storage.type.enum",
+        "storage.type.function",
+        "storage.type.interface",
+        "storage.type.property",
+        "storage.type.type",
+        "support.function",
+        "punctuation.section.embedded.begin",
+        "punctuation.section.embedded.end",
+        "punctuation.section.embedded.begin.jsx",
+        "punctuation.section.embedded.begin.tsx",
+        "punctuation.section.embedded.end.jsx",
+        "punctuation.section.embedded.end.tsx",
+        "punctuation.definition.parameters.begin.jsx",
+        "punctuation.definition.parameters.begin.tsx",
+        "punctuation.definition.parameters.end.jsx",
+        "punctuation.definition.parameters.end.tsx",
+        "variable.scss"
+      ],
+      "settings": {
+        "fontStyle": "bold",
+        "foreground": "#a29bfe"
+      }
+    },
+    {
+      "name": "Fluorescent Red",
       "scope": [
         "constant",
         "constant.numeric",
@@ -123,39 +213,52 @@
         "entity.other.attribute-name.placeholder.css",
         "fenced_code.block.language",
         "keyword.operator",
-        "keyword.other.unit",
-        "keyword.operator.new",
         "keyword.operator.assignment",
         "keyword.operator.assignment.compound",
+        "keyword.operator.new",
+        "keyword.other.unit",
         "markup.bold",
         "markup.deleted",
         "meta.group.regexp",
-        "punctuation.separator.key-value.html",
         "punctuation.accessor.optional",
+        "punctuation.separator.key-value.html",
+        "punctuation.definition.tag.begin",
+        "punctuation.definition.tag.end",
         "source.css",
         "source.php",
         "storage.type.function.arrow",
         "support.class",
         "support.constant",
-        "support.function",
-        "support.function",
-        "support.function.magic.python",
-        "support.function.misc.scss",
         "support.type.exception.python",
         "text.html.markdown string",
         "variable"
       ],
       "settings": {
         "fontStyle": "bold",
-        "foreground": "#4ab2fc"
+        "foreground": "#e84855"
+      }
+    },
+    {
+      "name": "Fluorescent Yellow",
+      "scope": [
+        "punctuation.definition.block",
+        "punctuation.definition.binding-pattern.object",
+        "punctuation.section.property-list.begin.bracket.curly",
+        "punctuation.section.property-list.end.bracket.curly",
+        "punctuation.definition.interpolation.begin.bracket.curly",
+        "punctuation.definition.interpolation.end.bracket.curly"
+      ],
+      "settings": {
+        "foreground": "#E4CE05",
+        "fontStyle": "bold"
       }
     },
     {
       "name": "Green",
       "scope": [
-        "entity.name.tag.yaml",
         "entity.name.function",
         "entity.name.function.sql.sqlite",
+        "entity.name.tag.yaml",
         "keyword.other.special-method",
         "markup.raw.block.fenced.markdown",
         "markup.table",
@@ -163,18 +266,20 @@
         "meta.object-literal.key",
         "punctuation.definition.list_item.markdown",
         "punctuation.section.class.end",
-        "support.type.property-name.json",
         "support.function.builtin.python",
+        "support.function",
+        "support.function.magic.python",
+        "support.function.misc.scss",
+        "support.type.property-name.json",
         "text.html.markdown",
         "variable.function",
         "variable.language.fenced.markdown",
         "variable.other.bare",
-        "variable.other.env",
-        "variable.scss"
+        "variable.other.env"
       ],
       "settings": {
         "fontStyle": "bold",
-        "foreground": "#6BF178"
+        "foreground": "#6bf178"
       }
     },
     {
@@ -200,8 +305,6 @@
         "punctuation",
         "punctuation.definition.comment",
         "punctuation.definition.tag",
-        "punctuation.definition.tag.begin.html",
-        "punctuation.definition.tag.end.html",
         "punctuation.definition.tag.html",
         "punctuation.section.embedded",
         "punctuation.separator.inheritance.php",
@@ -236,114 +339,51 @@
     {
       "name": "Pink",
       "scope": [
-        "Constants",
-        "constant.other.object.key.js",
-        "entity.name",
-        "entity.name.method.js",
-        "entity.name.module.js",
-        "entity.name.module.js",
-        "entity.name.tag",
-        "entity.name.tag.css",
-        "entity.name.tag.js",
-        "entity.name.type.class",
-        "entity.name.type",
-        "invalid",
-        "invalid.illegal",
-        "keyword.control",
-        "keyword.other.unit.px.css",
-        "markup.bold markup.italic string",
-        "markup.bold markup.italic",
-        "markup.bold string",
-        "markup.bold",
-        "markup.deleted",
-        "markup.deleted.git_gutter",
-        "markup.italic markup.bold string",
-        "markup.italic markup.bold",
-        "markup.italic",
-        "markup.quote markup.bold string",
-        "markup.quote markup.bold",
-        "markup.underline",
-        "meta.class-method.js",
-        "meta.structure.dictionary.json",
-        "meta.structure.dictionary.value.json",
-        "meta.tag.sgml",
-        "source.js",
-        "source.json",
-        "source.sass",
-        "string.other.link",
-        "string.other.link.title.markdown",
-        "string.unquoted.label.js",
-        "support.class.component",
-        "support.other.variable",
-        "support.variable.object.node",
-        "support.type",
-        "tag.decorator.js punctuation.definition.tag.js",
-        "tag.decorator.js",
-        "variable.function.constructor",
-        "variable.import.parameter.js",
-        "variable.language",
-        "variable.other.class.js",
-        "variable.other.class.js",
-        "variable.other.property",
-        "variable.other.readwrite.alias",
-        "variable.other.readwrite.alias.tsx"
+        "keyword.control.as",
+        "keyword.control.trycatch",
+        "meta.brace.round",
+        "punctuation.definition.parameters.begin",
+        "punctuation.definition.parameters.end",
+        "punctuation.section.function.scss",
+        "source meta.block keyword.control.loop",
+        "source switch-statement.expr switch-block.expr keyword.control.loop",
+        "storage.type"
       ],
       "settings": {
         "fontStyle": "bold",
-        "foreground": "#ff595e"
-      }
-    },
-    {
-      "name": "Purple",
-      "scope": [
-        "source switch-statement.expr switch-block.expr keyword.control.loop",
-        "source meta.block keyword.control.loop",
-        "storage.type",
-        "keyword.control.as",
-        "keyword.control.trycatch"
-      ],
-      "settings": {
-        "foreground": "#e0aaff",
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "name": "Squash",
-      "scope": ["keyword.control.loop"],
-      "settings": {
-        "foreground": "#ffc857",
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "name": "Tomato",
-      "scope": ["keyword.control.conditional", "keyword.control.switch"],
-      "settings": {
-        "foreground": "#f87060",
-        "fontStyle": "bold"
+        "foreground": "#ff5d8f"
       }
     },
     {
       "name": "Quince",
       "scope": [
         "constant.character.escape.backslash.regexp",
-        "entity.other.attribute-name.html",
         "entity.name.type.instance.jsdoc",
-        "entity.other.inherited-class",
+        "entity.other.attribute-name.html",
         "entity.other.attribute-name.js.jsx",
         "entity.other.attribute-name.tsx",
+        "entity.other.inherited-class",
         "meta.structure.dictionary.value.json",
-        "source.json",
-        "source.js meta.class.js meta.method.declaration.js meta.block.js meta.var.expr.js meta.function-call.js variable.other.object.js",
-        "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.function-call.js variable.other.object.js",
+        "source.js meta.arrow.js meta.block.js meta.function-call.js variable.other.object.js",
         "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.arrow.js meta.block.js meta.var.expr.js meta.function-call.js variable.other.object.js",
-        "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.var.expr.js meta.objectliteral.js meta.object.member.js meta.objectliteral.js meta.object.member.js meta.function-call.js variable.other.object.js",
+        "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.function-call.js variable.other.object.js",
         "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.var.expr.js meta.function-call.js variable.other.object.js",
-        "source.js meta.arrow.js meta.block.js meta.function-call.js variable.other.object.js"
+        "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.var.expr.js meta.objectliteral.js meta.object.member.js meta.objectliteral.js meta.object.member.js meta.function-call.js variable.other.object.js",
+        "source.js meta.class.js meta.method.declaration.js meta.block.js meta.var.expr.js meta.function-call.js variable.other.object.js",
+        "source.js meta.export.default.js meta.function.expression.js meta.block.js meta.tag.without-attributes.js meta.jsx.children.js meta.tag.without-attributes.js meta.jsx.children.js meta.tag.js meta.tag.attributes.js entity.other.attribute-name.js",
+        "source.json"
       ],
       "settings": {
         "fontStyle": "bold",
-        "foreground": "#ffc482"
+        "foreground": "#f49e4c"
+      }
+    },
+    {
+      "name": "Rosy",
+      "scope": ["keyword.control.conditional", "keyword.control.switch"],
+      "settings": {
+        "fontStyle": "bold",
+        "foreground": "#f7e3af"
       }
     },
     {
@@ -357,13 +397,21 @@
         "support.constant.property-value.css",
         "support.orther.namespace.use.php",
         "support.other.namespace.php",
-        "support.type.sys-types",
         "support.type.builtin.graphql",
-        "support.type.primitive"
+        "support.type.primitive",
+        "support.type.sys-types"
       ],
       "settings": {
         "fontStyle": "bold",
-        "foreground": "#DAB785"
+        "foreground": "#eab464"
+      }
+    },
+    {
+      "name": "Squash",
+      "scope": ["keyword.control.loop"],
+      "settings": {
+        "fontStyle": "bold",
+        "foreground": "#f38375"
       }
     },
     {
@@ -376,40 +424,40 @@
     {
       "name": "White",
       "scope": [
-        "string.unquoted.plain.out.yaml",
         "constant.other.color",
         "markup.inline.raw.markdown",
         "meta.definition.property.tsx",
         "punctuation.definition.raw.markdown",
         "source.css",
+        "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.block.js meta.objectliteral.js meta.object.member.js meta.objectliteral.js meta.object.member.js meta.function-call.js variable.other.object.js",
+        "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.objectliteral.js meta.object.member.js meta.function-call.js variable.other.object.js",
+        "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.objectliteral.js meta.object.member.js meta.objectliteral.js meta.object.member.js meta.function-call.js variable.other.object.js",
+        "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.var.expr.js meta.objectliteral.js meta.object.member.js variable.other.object.js",
+        "source.js meta.class.js meta.method.declaration.js meta.block.js meta.var.expr.js meta.function-call.js variable.other.object.js",
         "source.less",
         "source.postcss",
         "source.sass",
         "source.scss",
         "source.stylus",
-        "source.js meta.class.js meta.method.declaration.js meta.block.js meta.var.expr.js meta.function-call.js variable.other.object.js",
-        "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.var.expr.js meta.objectliteral.js meta.object.member.js variable.other.object.js",
-        "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.block.js meta.objectliteral.js meta.object.member.js meta.objectliteral.js meta.object.member.js meta.function-call.js variable.other.object.js",
-        "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.objectliteral.js meta.object.member.js meta.objectliteral.js meta.object.member.js meta.function-call.js variable.other.object.js",
-        "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.objectliteral.js meta.object.member.js meta.function-call.js variable.other.object.js",
-        "source.ts meta.interface.ts meta.field.declaration.ts meta.definition.property.ts variable.object.property.ts",
         "source.ts meta.class.ts meta.field.declaration.ts meta.definition.property.ts variable.object.property.ts",
+        "source.ts meta.interface.ts meta.field.declaration.ts meta.definition.property.ts variable.object.property.ts",
         "source.ts meta.type.declaration.ts meta.object.type.ts meta.field.declaration.ts meta.definition.property.ts variable.object.property.ts",
-        "string.quoted.double.json",
         "string.quoted.double.env",
+        "string.quoted.double.json",
         "string.quoted.single.env",
         "string.quoted.single.yaml",
+        "string.unquoted.plain.out.yaml",
         "support.type.property-name",
         "support.type.property-name.css",
         "text.html.markdown",
+        "variable.graphql",
         "variable.object.property.tsx",
-        "variable.parameter",
+        "variable.other.constant",
         "variable.other.jsdoc",
-        "variable.other.readwrite",
         "variable.other.object",
         "variable.other.object.property",
-        "variable.other.constant",
-        "variable.graphql"
+        "variable.other.readwrite",
+        "variable.parameter"
       ],
       "settings": {
         "fontStyle": "bold",
@@ -433,12 +481,12 @@
         "markup.inserted",
         "markup.inserted.git_gutter",
         "meta.group.braces.curly",
+        "meta.jsx.children",
         "meta.structure.dictionary.jsoYn",
         "meta.structure.dictionary.value.json",
         "punctuation.definition.heading.markdown",
         "source.json",
         "string",
-        "meta.jsx.children",
         "string.quoted.double.html",
         "string.unquoted.label.js",
         "text.html.basic",
@@ -446,30 +494,7 @@
       ],
       "settings": {
         "fontStyle": "bold",
-        "foreground": "#FFEE93"
-      }
-    },
-
-    {
-      "name": "Exodus",
-      "scope": [
-        "keyword.function.go",
-        "keyword.control.flow",
-        "keyword.input.graphql",
-        "keyword.type.graphql",
-        "storage.type.function",
-        "support.function",
-        "storage.type.class",
-        "storage.type.property",
-        "storage.modifier",
-        "storage.type.type",
-        "storage.type.enum",
-        "storage.type.interface",
-        "storage.modifier.async"
-      ],
-      "settings": {
-        "foreground": "#a29bfe",
-        "fontStyle": "bold"
+        "foreground": "#ffe066"
       }
     }
   ]
