@@ -1,0 +1,9 @@
+{
+  "name": "orbit",
+  "license": "MIT",
+  "main": "index.js",
+  "insomnia": {
+    "name": "orbit",
+    "description": "Dark colored theme."
+  }
+}
