@@ -7,14 +7,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hiukky/orbit.git"
+    "url": "git+https://github.com/hiukky/flate.git"
   },
   "author": "Romullo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hiukky/orbit/issues"
+    "url": "https://github.com/hiukky/flate/issues"
   },
-  "homepage": "https://github.com/hiukky/orbit#readme",
+  "homepage": "https://github.com/hiukky/flate#readme",
   "private": true,
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",

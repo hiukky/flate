@@ -1,6 +1,6 @@
 # Change Log
 
-All notable changes to the "orbit" extension will be documented in this file.
+All notable changes to the "flate" extension will be documented in this file.
 
 ## [0.3.0]
 

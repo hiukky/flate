@@ -1,3 +1,3 @@
 <div align="center">
-  <img alt="orbit logo" src="https://github.com/hiukky/orbit/raw/develop/assets/brand.png"/>
+  <img alt="flate logo" src="https://github.com/hiukky/flate/raw/develop/assets/brand.png"/>
 </div>

@@ -9,7 +9,7 @@ interface IAppProps {
 }
 
 const App = ({ loading = true, colors }: IAppProps) => {
-  const [title, setTitle] = useState('Orbit')
+  const [title, setTitle] = useState('Flate')
 
   useEffect(() => {
     document.title = title
