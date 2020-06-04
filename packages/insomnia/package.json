@@ -1,6 +1,6 @@
 {
-  "name": "flate",
-  "version": "0.3.0",
+  "name": "@flate/insomnia",
+  "version": "0.1.0",
   "main": "index.js",
   "author": {
     "name": "Romullo",
