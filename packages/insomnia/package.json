@@ -1,6 +1,7 @@
 {
   "name": "@flate/insomnia",
-  "version": "0.4.0",
+  "description": "Dark colored theme for Insomnia.",
+  "version": "0.4.1",
   "main": "index.js",
   "author": {
     "name": "Romullo",
@@ -22,5 +23,11 @@
   "insomnia": {
     "name": "flate",
     "description": "Dark colored theme."
-  }
+  },
+  "keywords": [
+    "theme",
+    "insomnia",
+    "insomnia-theme",
+    "insomnia-plugin"
+  ]
 }
