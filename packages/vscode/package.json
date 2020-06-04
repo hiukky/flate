@@ -2,9 +2,9 @@
   "name": "flate",
   "displayName": "Flate",
   "description": "Dark Colored Theme for VS Code.",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "publisher": "hiukky",
-  "icon": "https://github.com/hiukky/flate/blob/develop/assets/logo.png?raw=true",
+  "icon": "assets/logo.png",
   "engines": {
     "vscode": "^1.44.0"
   },
