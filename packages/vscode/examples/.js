@@ -1,31 +1,11 @@
-import path from 'path'
-
-enum Gender {
-  'Not known',
-  'Male',
-  'Female',
-  'Not applicable',
-}
-
-type TGender = 0 | 1 | 2 | 9
-
-interface IData {
-  name: string
-  age: number
-  gender?: TGender
-}
+import fs from 'fs'
+const path = require('path')
 
 const dirs = [process.cwd(), __dirname]
 let nickname = 'hiukky'
 var age = 23
 
-const data: IData = {
-  name: nickname,
-  gender: 1,
-  age,
-}
-
-console.log({ dirs, nickname, age }, data?.gender)
+console.log({ dirs, nickname: `${nickname}`, age })
 
 class Class {
   constructor() {}

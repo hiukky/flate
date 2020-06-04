@@ -1,6 +1,14 @@
 # Change Log
 
-All notable changes to the "orbit" extension will be documented in this file.
+All notable changes to the "flate" extension will be documented in this file.
+
+## [0.3.1]
+
+Fixes
+
+- Color of bracers in css/scss functions
+- Color of constants css/scss
+- Color of the template expressions
 
 ## [0.3.0]
 

@@ -1,0 +1,9 @@
+{
+  "name": "flate",
+  "license": "MIT",
+  "main": "index.js",
+  "insomnia": {
+    "name": "flate",
+    "description": "Dark colored theme."
+  }
+}

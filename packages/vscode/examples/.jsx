@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 const App = () => {
-  const [title, setTitle] = useState('Orbit')
+  const [title, setTitle] = useState('Flate')
 
   useEffect(() => {
     document.title = title

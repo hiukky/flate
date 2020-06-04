@@ -1,35 +1,27 @@
 {
-  "name": "orbit",
-  "displayName": "Orbit",
-  "description": "Dark Colored Theme for VS Code.",
-  "version": "0.3.0",
-  "publisher": "hiukky",
-  "icon": "assets/logo.png",
-  "engines": {
-    "vscode": "^1.44.0"
+  "name": "root",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hiukky/orbit"
+    "url": "git+https://github.com/hiukky/flate.git"
   },
-  "categories": [
-    "Themes"
-  ],
-  "contributes": {
-    "themes": [
-      {
-        "label": "Orbit (Bold)",
-        "uiTheme": "vs-dark",
-        "path": "./themes/orbit-color-theme.json"
-      }
-    ]
+  "author": "Romullo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hiukky/flate/issues"
   },
+  "homepage": "https://github.com/hiukky/flate#readme",
+  "private": true,
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@types/node": "^14.0.9",
     "husky": "^4.2.5",
-    "prettier": "^2.0.5",
-    "react": "^16.13.1"
+    "lerna": "^3.20.2",
+    "prettier": "^2.0.5"
   }
 }
