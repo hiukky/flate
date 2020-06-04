@@ -1,1 +1,1 @@
-module.exports.themes = [require('./themes/orbit.json')]
+module.exports.themes = [require('./themes/flate.json')]

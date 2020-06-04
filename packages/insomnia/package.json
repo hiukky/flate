@@ -1,9 +1,26 @@
 {
-  "name": "orbit",
-  "license": "MIT",
+  "name": "flate",
+  "version": "0.3.0",
   "main": "index.js",
+  "author": {
+    "name": "Romullo",
+    "email": "developermarsh@gmail.com",
+    "url": "https://hiukky.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hiukky/flate/issues"
+  },
+  "homepage": "https://github.com/hiukky/flate#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hiukky/flate"
+  },
+  "categories": [
+    "Themes"
+  ],
   "insomnia": {
-    "name": "orbit",
+    "name": "flate",
     "description": "Dark colored theme."
   }
 }
