@@ -1,10 +1,7 @@
 {
-  "name": "root",
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  },
+  "name": "@flate/insomnia",
+  "version": "0.4.0",
+  "main": "index.js",
   "author": {
     "name": "Romullo",
     "email": "developermarsh@gmail.com",
@@ -19,13 +16,11 @@
     "type": "git",
     "url": "https://github.com/hiukky/flate"
   },
-  "private": true,
-  "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
-    "@types/node": "^14.0.10",
-    "husky": "^4.2.5",
-    "lerna": "^3.22.0",
-    "prettier": "^2.0.5"
+  "categories": [
+    "Themes"
+  ],
+  "insomnia": {
+    "name": "flate",
+    "description": "Dark colored theme."
   }
 }
