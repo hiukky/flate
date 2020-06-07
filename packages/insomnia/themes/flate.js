@@ -29,8 +29,16 @@ module.exports = {
     styles: {
       dialog: {
         background: {
-          surprise: '#6bf178',
+          success: '#6bf178',
+          notice: '#ffffff',
+        },
+      },
+      dropdown: {
+        background: {
           success: '#ff5d8f',
+          notice: '#ffffff',
+          surprise: '#6bf178',
+          notice: '#ffe066',
         },
       },
       pane: {
@@ -45,7 +53,6 @@ module.exports = {
           xl: 'rgba(66, 75, 84, 0.8)',
         },
         background: {
-          default: '#1c1d27',
           success: '#6bf178',
           notice: '#ffffff',
           surprise: '#eab464',
@@ -53,7 +60,6 @@ module.exports = {
       },
       paneHeader: {
         background: {
-          default: '#1c1d27',
           success: '#6bf178',
           surprise: '#ff5d8f',
         },
