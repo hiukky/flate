@@ -349,6 +349,8 @@
         "punctuation.section.function.scss",
         "punctuation.section.function.begin.bracket.round",
         "punctuation.section.function.end.bracket.round",
+        "punctuation.definition.media-query.begin.bracket.round",
+        "punctuation.definition.media-query.end.bracket.round",
         "source meta.block keyword.control.loop",
         "source switch-statement.expr switch-block.expr keyword.control.loop",
         "storage.type"
