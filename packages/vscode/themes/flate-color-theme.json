@@ -211,6 +211,7 @@
         "entity.other.attribute-name.id",
         "entity.other.attribute-name.placeholder.css",
         "fenced_code.block.language",
+        "keyword.control.operator.css.scss",
         "keyword.operator",
         "keyword.operator.assignment",
         "keyword.operator.assignment.compound",
