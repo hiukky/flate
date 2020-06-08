@@ -122,6 +122,7 @@
         "invalid.illegal",
         "keyword.control",
         "keyword.other.unit.px.css",
+        "punctuation.definition.binding-pattern.array",
         "markup.bold markup.italic string",
         "markup.bold markup.italic",
         "markup.bold string",
@@ -329,6 +330,7 @@
         "entity.other.attribute-name.pseudo-class.css",
         "keyword.other",
         "keyword.other.unit",
+        "keyword.control.trycatch",
         "source.json",
         "support.constant",
         "support.variable.property"
@@ -342,7 +344,6 @@
       "name": "Pink",
       "scope": [
         "keyword.control.as",
-        "keyword.control.trycatch",
         "meta.brace.round",
         "punctuation.definition.parameters.begin",
         "punctuation.definition.parameters.end",
