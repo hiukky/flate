@@ -172,6 +172,7 @@
         "keyword.function.go",
         "keyword.input.graphql",
         "keyword.type.graphql",
+        "keyword.control.at-rule.function",
         "keyword.control.return.scss",
         "storage.modifier",
         "storage.modifier.async",
