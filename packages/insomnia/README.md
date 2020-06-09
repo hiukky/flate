@@ -14,13 +14,13 @@
     <img alt="npm" src="https://img.shields.io/npm/dt/@flate/insomnia?color=%2300CECB&style=flat-square" />
   </a>
   <a href="https://github.com/hiukky/flate/stargazers">
-    <img alt="GitHub stars" src="https://img.shields.io/github/stars/hiukky/flate?color=%234ab2fc&style=flat-square" />
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/hiukky/flate?color=%23a29bfe&style=flat-square" />
   </a>
   <a href="https://github.com/hiukky/flate/network">
     <img alt="GitHub forks" src="https://img.shields.io/github/forks/hiukky/flate?color=%23ff595e&style=flat-square" />
   </a>
   <a href="https://github.com/hiukky/flate/issues">
-    <img alt="GitHub issues" src="https://img.shields.io/github/issues/hiukky/flate?color=%23FFEE93&style=flat-square" />
+    <img alt="GitHub issues" src="https://img.shields.io/github/issues/hiukky/flate?color=%23eab464&style=flat-square" />
   </a>
 </p>
 
