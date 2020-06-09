@@ -2,6 +2,15 @@
 
 All notable changes to the "flate" extension will be documented in this file.
 
+## [0.4.2]
+
+Fixes
+
+- Color of binding pattern array
+- Color for media query bracket css/scss
+- Control operator css/scss
+- Fixes and improviments
+
 ## [0.4.0]
 
 Fixes
