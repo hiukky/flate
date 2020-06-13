@@ -1,0 +1,78 @@
+{
+  "name": "Flate Exodus",
+  "type": "dark",
+  "colors": {
+    "activityBar.activeBorder": "#f38375",
+    "activityBar.activeFocusBorder": "#f38375",
+    "activityBar.background": "#170227",
+    "activityBar.foreground": "#f38375",
+    "activityBar.inactiveForeground": "#444446",
+    "activityBarBadge.background": "#f38375",
+    "activityBarBadge.foreground": "#170227",
+
+    "badge.background": "#f38375",
+    "badge.foreground": "#170227",
+    "breadcrumbPicker.background": "#170227",
+    "button.background": "#170227",
+
+    "debugToolBar.background": "#170227",
+    "diffEditor.border": "#DADBDB09",
+    "diffEditor.insertedTextBackground": "#6BF17840",
+    "diffEditor.removedTextBackground": "#ff595e50",
+    "dropdown.background": "#170227",
+    "dropdown.listBackground": "#170227",
+
+    "editor.background": "#170227",
+    "editor.lineHighlightBackground": "#170227",
+    "editor.rangeHighlightBackground": "#170227",
+    "editor.selectionBackground": "#DADBDB15",
+    "editorCursor.background": "#170227",
+    "editorGroupHeader.tabsBackground": "#170227",
+    "editorIndentGuide.activeBackground": "#170227",
+    "editorIndentGuide.background": "#170227",
+    "editorLineNumber.foreground": "#444446",
+    "editorOverviewRuler.border": "#170227",
+    "editorSuggestWidget.background": "#170227",
+    "editorSuggestWidget.selectedBackground": "#444446",
+    "editorWidget.background": "#170227",
+    "editorWidget.border": "#170227",
+    "editorWidget.foreground": "#ffffff",
+
+    "focusBorder": "#DADBDB05",
+
+    "input.background": "#170227",
+
+    "list.activeSelectionBackground": "#DADBDB05",
+    "list.activeSelectionForeground": "#DADBDB",
+    "list.focusBackground": "#DADBDB15",
+    "list.hoverBackground": "#170227",
+    "list.inactiveFocusBackground": "#170227",
+    "list.inactiveSelectionBackground": "#170227",
+
+    "peekViewEditor.background": "#170227",
+    "peekViewResult.background": "#170227",
+    "peekViewResult.selectionBackground": "#170227",
+    "peekViewTitle.background": "#170227",
+
+    "scrollbar.shadow": "#00000000",
+    "sideBar.background": "#170227",
+    "sideBar.foreground": "#969b9b",
+    "sideBarSectionHeader.background": "#DADBDB00",
+    "sideBarSectionHeader.border": "#DADBDB00",
+    "statusBar.background": "#170227",
+    "statusBar.debuggingBackground": "#f38375",
+    "statusBar.debuggingForeground": "#170227",
+    "statusBar.foreground": "#DADBDB",
+    "statusBar.noFolderBackground": "#170227",
+    "statusBarItem.prominentBackground": "#170227",
+
+    "tab.activeBackground": "#DADBDB05",
+    "tab.border": "#170227",
+    "tab.inactiveBackground": "#170227",
+    "titleBar.activeBackground": "#170227",
+    "titleBar.inactiveBackground": "#170227",
+
+    "walkThrough.embeddedEditorBackground": "#170227",
+    "widget.shadow": "#00000000"
+  }
+}

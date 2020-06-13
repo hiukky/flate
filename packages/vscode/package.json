@@ -35,6 +35,11 @@
         "label": "Flate (Bold)",
         "uiTheme": "vs-dark",
         "path": "./dist/flate.color-theme.json"
+      },
+      {
+        "label": "Flate Exodus (Bold)",
+        "uiTheme": "vs-dark",
+        "path": "./dist/flate-exodus.color-theme.json"
       }
     ]
   },
