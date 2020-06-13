@@ -25,6 +25,9 @@
   "categories": [
     "Themes"
   ],
+  "scripts": {
+    "dev": "nodemon --watch themes scripts/build.js"
+  },
   "contributes": {
     "themes": [
       {
