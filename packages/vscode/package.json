@@ -33,7 +33,7 @@
       {
         "label": "Flate (Bold)",
         "uiTheme": "vs-dark",
-        "path": "./themes/flate-color-theme.json"
+        "path": "./dist/flate-color-theme.json"
       }
     ]
   },
