@@ -36,12 +36,16 @@ const listThemes = fs
 const baseTheme = getFile(`${dir.themes}/common/base.color-theme.json`)
 
 if (listThemes && baseTheme) {
-  for (let theme of listThemes) {
-    let fileTheme = getFile(`${dir.themes}/${theme}`)
+  for (let themeName of listThemes) {
+    let fileTheme = getFile(`${dir.themes}/${themeName}`)
 
     if (fileTheme) {
       Promise.resolve(
-        createFile(dir.build, { ...baseTheme, ...fileTheme }, theme)
+        createFile(
+          dir.build,
+          Object.assign({}, baseTheme, fileTheme),
+          themeName
+        )
       )
     }
   }
