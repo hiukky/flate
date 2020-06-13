@@ -20,12 +20,12 @@ const getFile = (dirFile) => JSON.parse(fs.readFileSync(dirFile, 'utf8'))
  * @param {String} fileName
  */
 const createFile = (path, file, fileName) => {
-  fs.readdir(path, (err) => {
-    if (err) fs.mkdirSync(path)
+  fs.readdir(path, (error) => {
+    if (error) fs.mkdirSync(path)
   })
 
-  fs.writeFile(`${path}/${fileName}`, JSON.stringify(file), (err) => {
-    if (err) console.error('CREATE FILE ERROR: ', error)
+  fs.writeFile(`${path}/${fileName}`, JSON.stringify(file), (error) => {
+    if (error) return
   })
 }
 
@@ -37,8 +37,12 @@ const baseTheme = getFile(`${dir.themes}/common/base.color-theme.json`)
 
 if (listThemes && baseTheme) {
   for (let theme of listThemes) {
-    Promise.resolve(
-      createFile(dir.build, getFile(`${dir.themes}/${theme}`), theme)
-    )
+    let fileTheme = getFile(`${dir.themes}/${theme}`)
+
+    if (fileTheme) {
+      Promise.resolve(
+        createFile(dir.build, { ...baseTheme, ...fileTheme }, theme)
+      )
+    }
   }
 }
