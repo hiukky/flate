@@ -10,7 +10,7 @@ const dir = {
  *
  * @param {String} dirFile
  */
-const getFile = (dirFile) => JSON.parse(fs.readFileSync(dirFile, 'utf8'))
+const getFile = dirFile => JSON.parse(fs.readFileSync(dirFile, 'utf8'))
 
 /**
  * @function createFile
@@ -20,18 +20,18 @@ const getFile = (dirFile) => JSON.parse(fs.readFileSync(dirFile, 'utf8'))
  * @param {String} fileName
  */
 const createFile = (path, file, fileName) => {
-  fs.readdir(path, (error) => {
+  fs.readdir(path, error => {
     if (error) fs.mkdirSync(path)
   })
 
-  fs.writeFile(`${path}/${fileName}`, JSON.stringify(file), (error) => {
+  fs.writeFile(`${path}/${fileName}`, JSON.stringify(file), error => {
     if (error) return
   })
 }
 
 const listThemes = fs
   .readdirSync(dir.themes)
-  .filter((theme) => theme.match(/\.[0-9a-z]+$/i))
+  .filter(theme => theme.match(/\.[0-9a-z]+$/i))
 
 const baseTheme = getFile(`${dir.themes}/common/base.color-theme.json`)
 
@@ -44,8 +44,8 @@ if (listThemes && baseTheme) {
         createFile(
           dir.build,
           Object.assign({}, baseTheme, fileTheme),
-          themeName
-        )
+          themeName,
+        ),
       )
     }
   }

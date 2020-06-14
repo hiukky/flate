@@ -19,6 +19,9 @@
     "type": "git",
     "url": "https://github.com/hiukky/flate"
   },
+  "scripts": {
+    "format": "prettier --write \"./packages/**/*.{ts,js,tsx}\""
+  },
   "private": true,
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
