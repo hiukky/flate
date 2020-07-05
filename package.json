@@ -24,9 +24,9 @@
   },
   "private": true,
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
-    "@types/node": "^14.0.13",
+    "@commitlint/cli": "^9.0.1",
+    "@commitlint/config-conventional": "^9.0.1",
+    "@types/node": "^14.0.14",
     "husky": "^4.2.5",
     "lerna": "^3.22.1",
     "prettier": "^2.0.5"
