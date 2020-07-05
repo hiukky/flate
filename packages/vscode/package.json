@@ -40,6 +40,11 @@
         "label": "Flate Exodus (Bold)",
         "uiTheme": "vs-dark",
         "path": "./dist/flate-exodus.color-theme.json"
+      },
+      {
+        "label": "Flate Arc (Bold)",
+        "uiTheme": "vs-dark",
+        "path": "./dist/flate-arc.color-theme.json"
       }
     ]
   },
