@@ -34,17 +34,17 @@
       {
         "label": "Flate (Bold)",
         "uiTheme": "vs-dark",
-        "path": "./dist/flate.color-theme.json"
+        "path": "./dist/flate.json"
       },
       {
         "label": "Flate Exodus (Bold)",
         "uiTheme": "vs-dark",
-        "path": "./dist/flate-exodus.color-theme.json"
+        "path": "./dist/flate-exodus.json"
       },
       {
         "label": "Flate Arc (Bold)",
         "uiTheme": "vs-dark",
-        "path": "./dist/flate-arc.color-theme.json"
+        "path": "./dist/flate-arc.json"
       }
     ]
   },
