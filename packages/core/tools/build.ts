@@ -4,8 +4,10 @@ import SCSS from './scss'
 
 import { IBuild, TRootDir, TCreateFile, TTheme } from './types'
 
-class Build extends SCSS implements IBuild {
+class Build implements IBuild {
   readonly rootDir: TRootDir
+
+  public scss = new SCSS()
 
   public theme: TTheme = {
     stage: '',
@@ -18,7 +20,6 @@ class Build extends SCSS implements IBuild {
    * @param {TRootDir} rootDir
    */
   constructor(rootDir: TRootDir) {
-    super()
     this.rootDir = rootDir
   }
 
@@ -40,7 +41,7 @@ class Build extends SCSS implements IBuild {
    *
    * @param {String} pathFile
    */
-  getFile(pathFile: string): object {
+  static getFile(pathFile: string): object {
     return JSON.parse(fs.readFileSync(pathFile, 'utf8'))
   }
 
@@ -74,7 +75,7 @@ class Build extends SCSS implements IBuild {
   mergeColors(theme: any): this {
     this.theme.stage = JSON.stringify(theme)
 
-    Object.entries(this.getColors(theme.variant)).flatMap(
+    Object.entries(this.scss.getColors(theme.variant)).flatMap(
       ([nameColor, color]) => {
         this.theme.stage = this.theme.stage.replace(
           new RegExp(`\\${nameColor}`, 'g'),
@@ -98,8 +99,8 @@ class Build extends SCSS implements IBuild {
   stage(): this {
     this.listThemes.map(themeName => {
       this.mergeColors({
-        ...this.getFile(`${this.rootDir.themes}/common/base.json`),
-        ...this.getFile(`${this.rootDir.themes}/${themeName}`),
+        ...Build.getFile(`${this.rootDir.themes}/common/base.json`),
+        ...Build.getFile(`${this.rootDir.themes}/${themeName}`),
       })
 
       this.theme.final[themeName] = JSON.parse(this.theme.stage)

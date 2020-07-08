@@ -1,0 +1,93 @@
+{
+  "theme": {
+    "background": {
+      "default": "$primaryColor",
+      "success": "$secondaryColor",
+      "notice": "$yellow",
+      "warning": "$quince",
+      "danger": "$red",
+      "surprise": "$pink",
+      "info": "$cyan"
+    },
+    "foreground": { "default": "#ffffff" },
+    "highlight": {
+      "default": "rgba(66, 75, 84, 1)",
+      "xxs": "rgba(66, 75, 84, 0.05)",
+      "xs": "rgba(66, 75, 84, 0.1)",
+      "sm": "rgba(66, 75, 84, 0.25)",
+      "md": "rgba(66, 75, 84, 0.35)",
+      "lg": "rgba(66, 75, 84, 0.5)",
+      "xl": "rgba(66, 75, 84, 0.8)"
+    },
+    "rawCss": ".CodeMirror { color: #e74c3c !important;}",
+    "styles": {
+      "dialog": {
+        "background": { "success": "$secondaryColor", "notice": "#ffffff" }
+      },
+      "dropdown": {
+        "background": {
+          "success": "$pink",
+          "notice": "$yellow",
+          "surprise": "$secondaryColor"
+        }
+      },
+      "pane": {
+        "foreground": { "default": "$yellow" },
+        "highlight": {
+          "default": "rgba(66, 75, 84, 1)",
+          "xxs": "rgba(66, 75, 84, 0.05)",
+          "xs": "rgba(66, 75, 84, 0.1)",
+          "sm": "rgba(66, 75, 84, 0.25)",
+          "md": "rgba(66, 75, 84, 0.35)",
+          "lg": "rgba(66, 75, 84, 0.5)",
+          "xl": "rgba(66, 75, 84, 0.8)"
+        },
+        "background": {
+          "success": "$secondaryColor",
+          "notice": "#ffffff",
+          "surprise": "#eab464"
+        }
+      },
+      "paneHeader": {
+        "background": { "success": "$secondaryColor", "surprise": "$pink" },
+        "foreground": { "default": "#ffffff" },
+        "highlight": {
+          "default": "rgba(66, 75, 84, 1)",
+          "xxs": "rgba(66, 75, 84, 0.05)",
+          "xs": "rgba(66, 75, 84, 0.1)",
+          "sm": "rgba(66, 75, 84, 0.25)",
+          "md": "rgba(66, 75, 84, 0.35)",
+          "lg": "rgba(66, 75, 84, 0.5)",
+          "xl": "rgba(66, 75, 84, 0.8)"
+        }
+      },
+      "sidebar": {
+        "foreground": { "default": "$secondaryColor" },
+        "highlight": {
+          "default": "rgba(66, 75, 84, 1)",
+          "xxs": "rgba(66, 75, 84, 0.05)",
+          "xs": "rgba(66, 75, 84, 0.1)",
+          "sm": "rgba(66, 75, 84, 0.25)",
+          "md": "rgba(66, 75, 84, 0.35)",
+          "lg": "rgba(66, 75, 84, 0.5)",
+          "xl": "rgba(66, 75, 84, 0.8)"
+        },
+        "background": { "surprise": "$secondaryColor", "success": "$pink" }
+      },
+      "sidebarHeader": {
+        "background": { "default": "$secondaryColor" },
+        "highlight": {
+          "default": "rgba(66, 75, 84, 1)",
+          "xxs": "rgba(66, 75, 84, 0.05)",
+          "xs": "rgba(66, 75, 84, 0.1)",
+          "sm": "rgba(66, 75, 84, 0.25)",
+          "md": "rgba(66, 75, 84, 0.35)",
+          "lg": "rgba(66, 75, 84, 0.5)",
+          "xl": "rgba(66, 75, 84, 0.8)"
+        },
+        "foreground": { "default": "$primaryColor" }
+      },
+      "sidebarList": { "foreground": { "default": "#ffffff" } }
+    }
+  }
+}

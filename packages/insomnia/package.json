@@ -20,6 +20,10 @@
   "categories": [
     "Themes"
   ],
+  "scripts": {
+    "dev": "nodemon --watch themes scripts/build.ts",
+    "build": "node scripts/build.js"
+  },
   "insomnia": {
     "name": "flate",
     "description": "Dark colored theme."

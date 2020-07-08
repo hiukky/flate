@@ -16,7 +16,6 @@ export type TCreateFile = {
 
 export interface IBuild {
   rootDir: TRootDir
-  getFile(path: string): object
   stage(cb: (theme: any) => object): this
   compile(): void
 }
