@@ -1,5 +1,5 @@
 import fs from 'fs'
-import path from 'path'
+import { join } from 'path'
 
 import { IScss } from './types'
 
@@ -23,14 +23,17 @@ class Scss implements IScss {
    * @param {String} file
    */
   parse(file: string): object {
-    var schemeJSON = {}
+    let schemeJSON = {}
 
     if (file) {
       file
         .split(/\n/)
         .filter(s => !!s)
         .map(s => s.replace(';', '').split(':'))
-        .map(([k, v]) => (schemeJSON = { ...schemeJSON, [k]: v.trim() }))
+        .map(([k, v]) => {
+          schemeJSON = { ...schemeJSON, [k]: v?.trim() }
+          return true
+        })
     }
 
     return schemeJSON
@@ -45,25 +48,31 @@ class Scss implements IScss {
    * @param {String} fileName
    */
   toJSON(path: string, fileName: string) {
-    var schemeJSON: { [k: string]: any } = {}
-    var dependencies: { [k: string]: any } = {}
-    var file = this.read(`${path}/${fileName}`)
+    let schemeJSON: { [k: string]: any } = {}
+    let dependencies: { [k: string]: any } = {}
+    let file = ''
+
+    if (path && fileName) {
+      file = this.read(`${path}/${fileName}`)
+    }
 
     if (file) {
       file = file
         .split(';')
         .filter(row => {
-          if (row.match(/\@import/)) {
-            let key = row.split(' ')[1].slice(1, -1)
+          if (row.match(/@import/)) {
+            const key = row.split(' ')[1].slice(1, -1)
 
             dependencies = {
-              [key]: this.parse(this.read(`${path}/` + key.replace('./', ''))),
+              [key]: this.parse(
+                this.read(`${path}/_${key.replace('./', '')}.scss`),
+              ),
             }
-          } else {
-            return row
+
+            return false
           }
 
-          return
+          return row
         })
         .join(';')
 
@@ -72,16 +81,17 @@ class Scss implements IScss {
 
     if (Object.entries(file).length) {
       if (Object.entries(dependencies).length) {
-        dependencies = Object.values(dependencies)[0]
+        ;[dependencies] = Object.values(dependencies)
       }
 
-      Object.entries(file).map(
-        ([k, v]) =>
-          (schemeJSON = {
-            ...schemeJSON,
-            [k]: v.match(/\$/) ? dependencies[v] || schemeJSON[v] : v,
-          }),
-      )
+      Object.entries(file).map(([k, v]) => {
+        schemeJSON = {
+          ...schemeJSON,
+          [k]: v.match(/\$/) ? dependencies[v] || schemeJSON[v] : v,
+        }
+
+        return file
+      })
 
       return { ...dependencies, ...schemeJSON }
     }
@@ -98,10 +108,10 @@ class Scss implements IScss {
    */
   getColors(variant: string) {
     return this.toJSON(
-      path.join(__dirname, '..', '..', '/core/colors'),
+      join(__dirname, '..', '..', '/core/colors'),
       `${variant}.scss`,
     )
   }
 }
 
-export default new Scss()
+export default Scss

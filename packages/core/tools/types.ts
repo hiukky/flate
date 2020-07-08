@@ -4,7 +4,8 @@ export type TRootDir = {
 }
 
 export type TTheme = {
-  [k: string]: object
+  stage: string
+  final: { [k: string]: object }
 }
 
 export type TCreateFile = {
@@ -15,8 +16,7 @@ export type TCreateFile = {
 
 export interface IBuild {
   rootDir: TRootDir
-  getFile(path: string): void
-  createFile({ file, fileName, path }: TCreateFile): void
+  getFile(path: string): object
   stage(cb: (theme: any) => object): this
   compile(): void
 }

@@ -1,10 +1,16 @@
 import fs from 'fs'
 
+import SCSS from './scss'
+
 import { IBuild, TRootDir, TCreateFile, TTheme } from './types'
 
-class Build implements IBuild {
+class Build extends SCSS implements IBuild {
   readonly rootDir: TRootDir
-  public theme: TTheme = {}
+
+  public theme: TTheme = {
+    stage: '',
+    final: {},
+  }
 
   /**
    * @constructor
@@ -12,6 +18,7 @@ class Build implements IBuild {
    * @param {TRootDir} rootDir
    */
   constructor(rootDir: TRootDir) {
+    super()
     this.rootDir = rootDir
   }
 
@@ -24,15 +31,6 @@ class Build implements IBuild {
     return fs
       .readdirSync(this.rootDir.themes)
       .filter(theme => theme.match(/\.[0-9a-z]+$/i))
-  }
-
-  /**
-   * @method getBaseTheme
-   *
-   * Obtains the basic theme of each implementation.
-   */
-  get getBaseTheme(): object {
-    return this.getFile(`${this.rootDir.themes}/common/base.json`)
   }
 
   /**
@@ -56,14 +54,38 @@ class Build implements IBuild {
    * @param {String} options.file
    * @param {String} options.fileName
    */
-  createFile({ path, file, fileName }: TCreateFile): void {
+  static createFile({ path, file, fileName }: TCreateFile): void {
     fs.readdir(path, error => {
       if (error) fs.mkdirSync(path)
     })
 
     fs.writeFile(`${path}/${fileName}`, JSON.stringify(file), error => {
-      if (error) return
+      if (error) throw error
     })
+  }
+
+  /**
+   * @method mergeColors
+   *
+   * Replace all colors.
+   *
+   * @param {any} theme
+   */
+  mergeColors(theme: any): this {
+    this.theme.stage = JSON.stringify(theme)
+
+    Object.entries(this.getColors(theme.variant)).flatMap(
+      ([nameColor, color]) => {
+        this.theme.stage = this.theme.stage.replace(
+          new RegExp(`\\${nameColor}`, 'g'),
+          color,
+        )
+
+        return true
+      },
+    )
+
+    return this
   }
 
   /**
@@ -73,17 +95,17 @@ class Build implements IBuild {
    *
    * @param {Function} callback
    */
-  stage(cb: (theme: any) => object): this {
-    this.listThemes.map(
-      themeName =>
-        (this.theme[themeName] = cb(
-          Object.assign(
-            {},
-            this.getBaseTheme,
-            this.getFile(`${this.rootDir.themes}/${themeName}`),
-          ),
-        )),
-    )
+  stage(): this {
+    this.listThemes.map(themeName => {
+      this.mergeColors({
+        ...this.getFile(`${this.rootDir.themes}/common/base.json`),
+        ...this.getFile(`${this.rootDir.themes}/${themeName}`),
+      })
+
+      this.theme.final[themeName] = JSON.parse(this.theme.stage)
+
+      return themeName
+    })
 
     return this
   }
@@ -94,9 +116,11 @@ class Build implements IBuild {
    * Responsible for the construction.
    */
   compile(): void {
-    if (this.theme) {
-      Object.entries(this.theme).map(([name, theme]) =>
-        this.createFile({
+    this.stage()
+
+    if (this.theme.final) {
+      Object.entries(this.theme.final).map(([name, theme]) =>
+        Build.createFile({
           path: this.rootDir.build,
           file: theme,
           fileName: name,
