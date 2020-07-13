@@ -2,6 +2,23 @@
 
 All notable changes to the "flate" extension will be documented in this file.
 
+## [0.5.0]
+
+Features
+
+- Added Arc and Exodus variants
+
+Fixes
+
+- Fixes and improviments
+
+Fixes
+
+- Color of binding pattern array
+- Color for media query bracket css/scss
+- Control operator css/scss
+- Fixes and improviments
+
 ## [0.4.2]
 
 Fixes

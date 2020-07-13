@@ -2,7 +2,7 @@
   "name": "flate",
   "displayName": "Flate",
   "description": "Dark Colored Theme for VS Code.",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "publisher": "hiukky",
   "author": {
     "name": "Romullo",
@@ -27,7 +27,7 @@
   ],
   "scripts": {
     "dev": "nodemon --watch themes scripts/build.ts",
-    "build": "node scripts/build.js"
+    "build": "node scripts/build.ts"
   },
   "contributes": {
     "themes": [
@@ -37,14 +37,14 @@
         "path": "./dist/flate.json"
       },
       {
-        "label": "Flate Exodus (Bold)",
-        "uiTheme": "vs-dark",
-        "path": "./dist/flate-exodus.json"
-      },
-      {
         "label": "Flate Arc (Bold)",
         "uiTheme": "vs-dark",
         "path": "./dist/flate-arc.json"
+      },
+      {
+        "label": "Flate Exodus (Bold)",
+        "uiTheme": "vs-dark",
+        "path": "./dist/flate-exodus.json"
       }
     ]
   },
