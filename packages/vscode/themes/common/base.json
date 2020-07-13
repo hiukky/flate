@@ -240,21 +240,6 @@
       }
     },
     {
-      "name": "Yellow",
-      "scope": [
-        "punctuation.definition.block",
-        "punctuation.definition.binding-pattern.object",
-        "punctuation.section.property-list.begin.bracket.curly",
-        "punctuation.section.property-list.end.bracket.curly",
-        "punctuation.definition.interpolation.begin.bracket.curly",
-        "punctuation.definition.interpolation.end.bracket.curly"
-      ],
-      "settings": {
-        "foreground": "$yellow",
-        "fontStyle": "bold"
-      }
-    },
-    {
       "name": "Green",
       "scope": [
         "entity.name.function",
@@ -271,12 +256,10 @@
         "support.function",
         "support.function.magic.python",
         "support.function.misc.scss",
-        "support.type.property-name.json",
         "text.html.markdown",
         "variable.function",
         "variable.language.fenced.markdown",
-        "variable.other.bare",
-        "variable.other.env"
+        "variable.other.bare"
       ],
       "settings": {
         "fontStyle": "bold",
@@ -320,6 +303,25 @@
       }
     },
     {
+      "name": "Highlights",
+      "scope": [
+        "support.type.property-name.json",
+        "variable.other.env",
+        "keyword.other.definition.insert_final_newline.editorconfig",
+        "keyword.other.definition.root.editorconfig",
+        "keyword.other.definition.indent_size.editorconfig",
+        "keyword.other.definition.indent_style.editorconfig",
+        "keyword.other.definition.indent_style.editorconfig",
+        "keyword.other.definition.end_of_line.editorconfig",
+        "keyword.other.definition.charset.editorconfig",
+        "keyword.other.definition.trim_trailing_whitespace.editorconfig"
+      ],
+      "settings": {
+        "fontStyle": "bold",
+        "foreground": "$secondaryColor"
+      }
+    },
+    {
       "name": "Orange",
       "scope": [
         "constant.character",
@@ -343,6 +345,8 @@
       "name": "Pink",
       "scope": [
         "keyword.control.as",
+        "keyword.operator.assignment.env",
+        "punctuation.separator.key-value.editorconfig",
         "meta.brace.round",
         "punctuation.definition.parameters.begin",
         "punctuation.definition.parameters.end",
@@ -483,13 +487,19 @@
         "meta.jsx.children",
         "meta.structure.dictionary.jsoYn",
         "meta.structure.dictionary.value.json",
+        "punctuation.definition.block",
+        "punctuation.definition.binding-pattern.object",
+        "punctuation.section.property-list.begin.bracket.curly",
+        "punctuation.section.property-list.end.bracket.curly",
+        "punctuation.definition.interpolation.begin.bracket.curly",
+        "punctuation.definition.interpolation.end.bracket.curly",
         "punctuation.definition.heading.markdown",
         "source.json",
-        "string",
         "string.quoted.double.html",
         "string.unquoted.label.js",
         "text.html.basic",
-        "text.html.basic"
+        "text.html.basic",
+        "string"
       ],
       "settings": {
         "fontStyle": "bold",
