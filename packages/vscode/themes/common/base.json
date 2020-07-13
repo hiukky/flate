@@ -15,8 +15,8 @@
 
     "debugToolBar.background": "$primaryColor",
     "diffEditor.border": "#DADBDB09",
-    "diffEditor.insertedTextBackground": "$secondaryColor",
-    "diffEditor.removedTextBackground": "#ff595e50",
+    "diffEditor.insertedTextBackground": "#6BF17830",
+    "diffEditor.removedTextBackground": "#ff595e30",
     "dropdown.background": "$primaryColor",
     "dropdown.listBackground": "$primaryColor",
 
