@@ -19,7 +19,7 @@
       "lg": "rgba(66, 75, 84, 0.5)",
       "xl": "rgba(66, 75, 84, 0.8)"
     },
-    "rawCss": ".CodeMirror { color: #e74c3c !important;}",
+    "rawCss": ".CodeMirror { color: $yellow !important;}",
     "styles": {
       "dialog": {
         "background": { "success": "$secondaryColor", "notice": "#ffffff" }
@@ -28,7 +28,7 @@
         "background": {
           "success": "$pink",
           "notice": "$yellow",
-          "surprise": "$secondaryColor"
+          "surprise": "$green"
         }
       },
       "pane": {
@@ -72,7 +72,7 @@
           "lg": "rgba(66, 75, 84, 0.5)",
           "xl": "rgba(66, 75, 84, 0.8)"
         },
-        "background": { "surprise": "$secondaryColor", "success": "$pink" }
+        "background": { "surprise": "$green", "success": "$pink" }
       },
       "sidebarHeader": {
         "background": { "default": "$secondaryColor" },
