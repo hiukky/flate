@@ -98,7 +98,6 @@
         "support.type.object.module.js"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$beige"
       }
     },
@@ -159,7 +158,6 @@
         "variable.other.readwrite.alias.tsx"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$cyan"
       }
     },
@@ -196,7 +194,6 @@
         "variable.scss"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$purple"
       }
     },
@@ -235,7 +232,6 @@
         "variable"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$red"
       }
     },
@@ -262,7 +258,6 @@
         "variable.other.bare"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$green"
       }
     },
@@ -298,7 +293,6 @@
         "variable.language.fenced.markdown"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$grey"
       }
     },
@@ -317,7 +311,6 @@
         "keyword.other.definition.trim_trailing_whitespace.editorconfig"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$secondaryColor"
       }
     },
@@ -337,7 +330,6 @@
         "support.variable.property"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$orange"
       }
     },
@@ -360,7 +352,6 @@
         "storage.type"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$pink"
       }
     },
@@ -385,7 +376,6 @@
         "source.json"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$quince"
       }
     },
@@ -405,7 +395,6 @@
         "support.type.sys-types"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$spiced"
       }
     },
@@ -413,7 +402,6 @@
       "name": "Squash",
       "scope": ["keyword.control.conditional", "keyword.control.switch"],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$squash"
       }
     },
@@ -463,7 +451,6 @@
         "variable.parameter"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$white"
       }
     },
@@ -502,7 +489,6 @@
         "string"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$yellow"
       }
     }
