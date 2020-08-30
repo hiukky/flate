@@ -1,22 +1,36 @@
+export type TObject<T> = {
+  [k: string]: T
+}
+
 export type TRootDir = {
   themes: string
   build: string
 }
 
 export type TTheme = {
-  stage: string
-  final: { [k: string]: object }
+  stage: TObject<any>
+  final: TObject<any>
+  variants: TObject<any>[]
+}
+
+export type TSetting = {
+  fileType: 'json'
 }
 
 export type TCreateFile = {
   path: string
-  file: object
+  file: TObject<any>
   fileName: string
+}
+export type TBuildProps = {
+  rootDir: TRootDir
 }
 
 export interface IBuild {
   rootDir: TRootDir
-  stage(cb: (theme: any) => object): this
+  theme: TTheme
+  settings: TSetting
+  stage(): void
   compile(): void
 }
 

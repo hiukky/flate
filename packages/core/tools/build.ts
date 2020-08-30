@@ -2,16 +2,28 @@ import fs from 'fs'
 
 import SCSS from './scss'
 
-import { IBuild, TRootDir, TCreateFile, TTheme } from './types'
+import {
+  IBuild,
+  TRootDir,
+  TCreateFile,
+  TTheme,
+  TSetting,
+  TBuildProps,
+} from './types'
 
 class Build implements IBuild {
   readonly rootDir: TRootDir
 
   public scss = new SCSS()
 
+  public settings: TSetting = {
+    fileType: 'json',
+  }
+
   public theme: TTheme = {
-    stage: '',
+    stage: {},
     final: {},
+    variants: [],
   }
 
   /**
@@ -19,7 +31,7 @@ class Build implements IBuild {
    *
    * @param {TRootDir} rootDir
    */
-  constructor(rootDir: TRootDir) {
+  constructor({ rootDir }: TBuildProps) {
     this.rootDir = rootDir
   }
 
@@ -66,27 +78,83 @@ class Build implements IBuild {
   }
 
   /**
+   * @method createVariants
+   *
+   * Create new variant.
+   */
+  createVariants(): void {
+    if (this.theme.variants.length) {
+      this.theme.variants.forEach(theme => {
+        this.theme.final[
+          `${theme.variant}.${theme.fontStyle}.${this.settings.fileType}`
+        ] = theme
+      })
+    } else {
+      this.theme.final[
+        `${this.theme.stage.variant}.${this.settings.fileType}`
+      ] = this.theme.stage
+    }
+  }
+
+  /**
+   * @method setColors
+   *
+   * I defined all colors based on the declared variables.
+   */
+  setColors(): this {
+    const theme = this.theme.stage
+
+    Object.entries(this.scss.getColors(theme.variant)).forEach(
+      ([nameColor, color]) => {
+        this.theme.stage = JSON.parse(
+          JSON.stringify(this.theme.stage).replace(
+            new RegExp(`\\${nameColor}`, 'g'),
+            color,
+          ),
+        )
+      },
+    )
+
+    return this
+  }
+
+  /**
+   * @method setFontStyle
+   *
+   * Creates different variants with different font styles.
+   */
+  setFontStyles(): this {
+    let theme = this.theme.stage
+
+    if (theme.fontStyle) {
+      Object.values(theme.fontStyle).forEach((fontStyle: any) => {
+        theme = {
+          ...theme,
+          tokenColors: theme.tokenColors.map((token: any) => ({
+            ...token,
+            settings: { ...token.settings, fontStyle },
+          })),
+        }
+
+        theme.fontStyle = fontStyle
+
+        this.theme.variants.push(theme)
+      })
+    }
+
+    return this
+  }
+
+  /**
    * @method mergeColors
    *
    * Replace all colors.
    *
    * @param {any} theme
    */
-  mergeColors(theme: any): this {
-    this.theme.stage = JSON.stringify(theme)
-
-    Object.entries(this.scss.getColors(theme.variant)).flatMap(
-      ([nameColor, color]) => {
-        this.theme.stage = this.theme.stage.replace(
-          new RegExp(`\\${nameColor}`, 'g'),
-          color,
-        )
-
-        return true
-      },
-    )
-
-    return this
+  merge(theme: any): void {
+    this.theme.stage = theme
+    this.setColors().setFontStyles().createVariants()
   }
 
   /**
@@ -96,19 +164,13 @@ class Build implements IBuild {
    *
    * @param {Function} callback
    */
-  stage(): this {
-    this.listThemes.map(themeName => {
-      this.mergeColors({
+  stage(): void {
+    this.listThemes.forEach(themeName => {
+      this.merge({
         ...Build.getFile(`${this.rootDir.themes}/common/base.json`),
         ...Build.getFile(`${this.rootDir.themes}/${themeName}`),
       })
-
-      this.theme.final[themeName] = JSON.parse(this.theme.stage)
-
-      return themeName
     })
-
-    return this
   }
 
   /**
