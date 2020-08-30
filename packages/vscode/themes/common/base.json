@@ -41,11 +41,12 @@
     "input.background": "$primaryColor",
 
     "list.activeSelectionBackground": "#DADBDB05",
-    "list.activeSelectionForeground": "#DADBDB",
+    "list.activeSelectionForeground": "$white",
     "list.focusBackground": "#DADBDB15",
     "list.hoverBackground": "$primaryColor",
     "list.inactiveFocusBackground": "$primaryColor",
-    "list.inactiveSelectionBackground": "$primaryColor",
+    "list.inactiveSelectionBackground": "#DADBDB05",
+    "list.inactiveSelectionForeground": "$white",
 
     "peekViewEditor.background": "$primaryColor",
     "peekViewResult.background": "$primaryColor",
