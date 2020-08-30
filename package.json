@@ -22,7 +22,8 @@
   },
   "scripts": {
     "format": "prettier --write \"./packages/**/*.{ts,js}\"",
-    "build": "lerna run build"
+    "clean": "rimraf packages/**/dist",
+    "build": "yarn clean && lerna run build"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.1.2",
@@ -37,6 +38,7 @@
     "husky": "^4.2.5",
     "lerna": "^3.22.1",
     "prettier": "^2.1.1",
+    "rimraf": "^3.0.2",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.2"
   }
