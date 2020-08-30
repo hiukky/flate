@@ -32,19 +32,49 @@
   "contributes": {
     "themes": [
       {
-        "label": "Flate (Bold)",
+        "label": "Flate",
         "uiTheme": "vs-dark",
         "path": "./dist/flate.json"
       },
       {
-        "label": "Flate Arc (Bold)",
+        "label": "Flate (Italic)",
+        "uiTheme": "vs-dark",
+        "path": "./dist/flate.italic.json"
+      },
+      {
+        "label": "Flate (Bold)",
+        "uiTheme": "vs-dark",
+        "path": "./dist/flate.bold.json"
+      },
+      {
+        "label": "Flate Arc",
         "uiTheme": "vs-dark",
         "path": "./dist/flate-arc.json"
       },
       {
-        "label": "Flate Exodus (Bold)",
+        "label": "Flate Arc (Italic)",
+        "uiTheme": "vs-dark",
+        "path": "./dist/flate-arc.italic.json"
+      },
+      {
+        "label": "Flate Arc (Bold)",
+        "uiTheme": "vs-dark",
+        "path": "./dist/flate-arc.bold.json"
+      },
+      {
+        "label": "Flate Exodus",
         "uiTheme": "vs-dark",
         "path": "./dist/flate-exodus.json"
+      },
+      {
+        "label": "Flate Exodus (Italic)",
+        "uiTheme": "vs-dark",
+        "path": "./dist/flate-exodus.italic.json"
+      },
+      {
+        "label": "Flate Exodus (Bold)",
+        "uiTheme": "vs-dark",
+        "path": "./dist/flate-exodus.bold.json"
       }
     ]
   },

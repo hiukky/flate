@@ -1,5 +1,6 @@
 {
   "name": "Flate Exodus",
   "variant": "flate-exodus",
-  "type": "dark"
+  "type": "dark",
+  "fontStyle": ["none", "bold", "italic"]
 }

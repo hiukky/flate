@@ -86,7 +86,11 @@ class Build implements IBuild {
     if (this.theme.variants.length) {
       this.theme.variants.forEach(theme => {
         this.theme.final[
-          `${theme.variant}.${theme.fontStyle}.${this.settings.fileType}`
+          `${theme.variant}.${
+            theme.fontStyle
+              ? `${theme.fontStyle}.${this.settings.fileType}`
+              : this.settings.fileType
+          }`
         ] = theme
       })
     } else {
@@ -132,11 +136,13 @@ class Build implements IBuild {
           ...theme,
           tokenColors: theme.tokenColors.map((token: any) => ({
             ...token,
-            settings: { ...token.settings, fontStyle },
+            settings: {
+              ...token.settings,
+              fontStyle: fontStyle === 'none' ? '' : fontStyle,
+            },
           })),
+          fontStyle: fontStyle === 'none' ? '' : fontStyle,
         }
-
-        theme.fontStyle = fontStyle
 
         this.theme.variants.push(theme)
       })
