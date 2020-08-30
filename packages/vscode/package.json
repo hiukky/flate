@@ -62,19 +62,19 @@
         "path": "./dist/flate-arc.bold.json"
       },
       {
-        "label": "Flate Exodus",
+        "label": "Flate Punk",
         "uiTheme": "vs-dark",
-        "path": "./dist/flate-exodus.json"
+        "path": "./dist/flate-punk.json"
       },
       {
-        "label": "Flate Exodus (Italic)",
+        "label": "Flate Punk (Italic)",
         "uiTheme": "vs-dark",
-        "path": "./dist/flate-exodus.italic.json"
+        "path": "./dist/flate-punk.italic.json"
       },
       {
-        "label": "Flate Exodus (Bold)",
+        "label": "Flate Punk (Bold)",
         "uiTheme": "vs-dark",
-        "path": "./dist/flate-exodus.bold.json"
+        "path": "./dist/flate-punk.bold.json"
       }
     ]
   },
