@@ -15,5 +15,16 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/hiukky/flate"
+  },
+  "scripts": {
+    "test": "ava"
+  },
+  "ava": {
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
   }
 }

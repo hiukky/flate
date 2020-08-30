@@ -67,7 +67,7 @@ class Build implements IBuild {
    * @param {String} options.file
    * @param {String} options.fileName
    */
-  static createFile({ path, file, fileName }: TCreateFile): void {
+  static createFile({ path, file, fileName }: TCreateFile): string {
     if (!fs.existsSync(path)) {
       fs.mkdirSync(path)
     }
@@ -75,6 +75,8 @@ class Build implements IBuild {
     fs.writeFileSync(`${path}/${fileName}`, JSON.stringify(file), {
       encoding: 'utf8',
     })
+
+    return 'created'
   }
 
   /**
@@ -82,12 +84,12 @@ class Build implements IBuild {
    *
    * Create new variant.
    */
-  createVariants(): void {
+  createVariants(): string {
     if (this.theme.variants.length) {
       this.theme.variants.forEach(theme => {
         this.theme.final[
           `${theme.variant}.${
-            theme.fontStyle
+            theme.fontStyle && typeof theme.fontStyle === 'string'
               ? `${theme.fontStyle}.${this.settings.fileType}`
               : this.settings.fileType
           }`
@@ -98,6 +100,8 @@ class Build implements IBuild {
         `${this.theme.stage.variant}.${this.settings.fileType}`
       ] = this.theme.stage
     }
+
+    return 'created'
   }
 
   /**
@@ -152,9 +156,9 @@ class Build implements IBuild {
   }
 
   /**
-   * @method mergeColors
+   * @method merge
    *
-   * Replace all colors.
+   * Apply changes according to recurrence.
    *
    * @param {any} theme
    */
