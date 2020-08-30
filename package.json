@@ -21,7 +21,8 @@
     "url": "https://github.com/hiukky/flate"
   },
   "scripts": {
-    "format": "prettier --write \"./packages/**/*.{ts,js}\""
+    "format": "prettier --write \"./packages/**/*.{ts,js}\"",
+    "build": "lerna run build"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.1.2",

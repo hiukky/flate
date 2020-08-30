@@ -68,12 +68,12 @@ class Build implements IBuild {
    * @param {String} options.fileName
    */
   static createFile({ path, file, fileName }: TCreateFile): void {
-    fs.readdir(path, error => {
-      if (error) fs.mkdirSync(path)
-    })
+    if (!fs.existsSync(path)) {
+      fs.mkdirSync(path)
+    }
 
-    fs.writeFile(`${path}/${fileName}`, JSON.stringify(file), error => {
-      if (error) throw error
+    fs.writeFileSync(`${path}/${fileName}`, JSON.stringify(file), {
+      encoding: 'utf8',
     })
   }
 
