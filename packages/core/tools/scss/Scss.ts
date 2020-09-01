@@ -3,7 +3,7 @@ import { join } from 'path'
 
 import { IScss } from './types'
 
-class Scss implements IScss {
+export default class Scss implements IScss {
   /**
    * @method read
    *
@@ -16,13 +16,13 @@ class Scss implements IScss {
   }
 
   /**
-   * @method parse
+   * @method toJSON
    *
    * Parse the read scss file to JSON.
    *
    * @param {String} file
    */
-  parse(file: string): object {
+  toJSON(file: string): object {
     let schemeJSON = {}
 
     if (file) {
@@ -40,14 +40,14 @@ class Scss implements IScss {
   }
 
   /**
-   * @method toJSON
+   * @method resolve
    *
    * Merge complete files read and their dependencies.
    *
    * @param {String} path
    * @param {String} fileName
    */
-  toJSON(path: string, fileName: string) {
+  resolve(path: string, fileName: string) {
     let schemeJSON: { [k: string]: any } = {}
     let dependencies: { [k: string]: any } = {}
     let file = ''
@@ -64,7 +64,7 @@ class Scss implements IScss {
             const key = row.split(' ')[1].slice(1, -1)
 
             dependencies = {
-              [key]: this.parse(
+              [key]: this.toJSON(
                 this.read(`${path}/_${key.replace('./', '')}.scss`),
               ),
             }
@@ -76,7 +76,7 @@ class Scss implements IScss {
         })
         .join(';')
 
-      file = this.parse(file) as any
+      file = this.toJSON(file) as any
     }
 
     if (Object.entries(file).length) {
@@ -104,14 +104,13 @@ class Scss implements IScss {
    *
    * Obtains a color scheme according to the variant.
    *
+   * @param {String} path
    * @param {String} variant
    */
-  getColors(variant: string) {
-    return this.toJSON(
-      join(__dirname, '..', '..', '/core/colors'),
+  getColors(path: string | null, variant: string): object {
+    return this.resolve(
+      path || join(__dirname, '..', '..', '..', '/core/colors'),
       `${variant}.scss`,
     )
   }
 }
-
-export default Scss

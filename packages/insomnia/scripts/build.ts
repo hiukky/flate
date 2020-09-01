@@ -1,6 +1,6 @@
-import { Build } from '../../core'
+import { BuildInsomnia } from '../../core'
 
-new Build({
+new BuildInsomnia({
   rootDir: {
     themes: `${process.cwd()}/themes`,
     build: `${process.cwd()}/dist`,

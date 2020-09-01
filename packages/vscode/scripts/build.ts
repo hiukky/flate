@@ -1,6 +1,6 @@
-import { Build } from '../../core'
+import { BuildCode } from '../../core'
 
-new Build({
+new BuildCode({
   rootDir: {
     themes: `${process.cwd()}/themes`,
     build: `${process.cwd()}/dist`,

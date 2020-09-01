@@ -22,7 +22,7 @@ export type TCreateFile = {
   file: TObject<any>
   fileName: string
 }
-export type TBuildProps = {
+export type TBaseProps = {
   rootDir: TRootDir
 }
 
@@ -30,13 +30,21 @@ export interface IBuild {
   rootDir: TRootDir
   theme: TTheme
   settings: TSetting
-  stage(): void
-  compile(): void
+  listThemes: string[]
+  getFile(pathFile: string): object
+  createFile(props: TCreateFile): string
+  setColors(): this
 }
 
-export interface IScss {
-  read(path: string): string
-  parse(file: string): object
-  toJSON(path: string, fileName: string): object
-  getColors(variant: string): object
+export interface IBuildCommon {
+  merge(theme: any): void
+  stage(): void
+  compile(): string
 }
+
+export interface IBuildCode extends IBuildCommon {
+  setFontStyles(): this
+  createVariants(): string
+}
+
+export interface IBuildInsomnia extends IBuildCommon {}
