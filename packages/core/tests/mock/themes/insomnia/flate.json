@@ -1,0 +1,17 @@
+{
+  "name": "flate",
+  "variant": "flate",
+  "displayName": "Flate",
+  "theme": {
+    "background": {
+      "default": "$primaryColor",
+      "success": "$secondaryColor",
+      "notice": "$yellow",
+      "warning": "$quince",
+      "danger": "$red",
+      "surprise": "$pink",
+      "info": "$cyan"
+    },
+    "foreground": { "default": "#ffffff" }
+  }
+}

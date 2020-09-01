@@ -20,6 +20,9 @@
     "test": "ava"
   },
   "ava": {
+    "files": [
+      "!tests/constants"
+    ],
     "extensions": [
       "ts"
     ],
