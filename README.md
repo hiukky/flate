@@ -3,8 +3,11 @@
 </div>
 
 <p align="center">
-  <a href="httdivs://github.com/hiukky/flate/blob/develop/LICENSE">
-    <img alt="GitHub license" src="https://img.shields.io/github/license/hiukky/flate?color=%236BF178&style=flat-square" />
+  <a href="https://codecov.io/gh/hiukky/flate">
+    <img src="https://codecov.io/gh/hiukky/flate/branch/develop/graph/badge.svg" />
+  </a>
+  <a href="https://travis-ci.org/github/hiukky/flate">
+    <img src="https://travis-ci.org/hiukky/flate.svg?branch=develop" />
   </a>
   <a href="https://github.com/hiukky/flate/stargazers">
     <img alt="GitHub stars" src="https://img.shields.io/github/stars/hiukky/flate?color=%23a29bfe&style=flat-square" />
@@ -31,3 +34,10 @@
 ### [Insomnia](https://github.com/hiukky/flate/blob/develop/packages/insomnia/README.md)
 
 <img src="https://github.com/hiukky/flate/blob/develop/packages/insomnia/assets/insomnia.png?raw=true" />
+
+<div align="center">
+  <br>
+  <a href="httdivs://github.com/hiukky/flate/blob/develop/LICENSE">
+    <img alt="GitHub license" src="https://img.shields.io/github/license/hiukky/flate?color=%236BF178&style=flat-square" />
+  </a>
+</div>

@@ -17,7 +17,8 @@
     "url": "https://github.com/hiukky/flate"
   },
   "scripts": {
-    "test": "ava"
+    "test": "nyc --reporter=lcov ava",
+    "coverage": "codecov"
   },
   "ava": {
     "files": [

@@ -24,7 +24,8 @@
     "format": "prettier --write \"./packages/**/*.{ts,js}\"",
     "clean": "rimraf packages/**/dist",
     "build": "yarn clean && lerna run build",
-    "test": "nyc lerna run test"
+    "test": "lerna run test",
+    "coverage": "lerna run coverage"
   },
   "devDependencies": {
     "@ava/typescript": "^1.1.1",
@@ -36,6 +37,7 @@
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",
     "ava": "^3.12.1",
+    "codecov": "^3.7.2",
     "eslint": "^7.8.1",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-prettier": "^6.11.0",
