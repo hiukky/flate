@@ -2,6 +2,7 @@
   "extends": "@istanbuljs/nyc-config-typescript",
   "all": true,
   "check-coverage": true,
-  "include": ["packages/core"],
-  "exclude": ["**/types.ts", "**/index.ts"]
+  "reporter": ["text", "lcov"],
+  "include": ["packages/**"],
+  "exclude": ["**/types.ts", "**/index.ts", "**/*.spec.ts"]
 }

@@ -24,8 +24,8 @@
     "format": "prettier --write \"./packages/**/*.{ts,js}\"",
     "clean": "rimraf packages/**/dist",
     "build": "yarn clean && lerna run build",
-    "test": "lerna run test",
-    "coverage": "lerna run coverage"
+    "test": "nyc lerna run test",
+    "coverage": "codecov"
   },
   "devDependencies": {
     "@ava/typescript": "^1.1.1",
