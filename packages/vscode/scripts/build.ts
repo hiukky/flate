@@ -1,4 +1,4 @@
-import { BuildCode } from '../../core'
+import { BuildCode } from '@flate/core'
 
 new BuildCode({
   rootDir: {

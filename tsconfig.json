@@ -17,7 +17,10 @@
     "baseUrl": ".",
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@flate/*": ["packages/*"]
+    }
   },
   "include": ["packages/**/*"],
   "exclude": ["node_modules", "dist"]

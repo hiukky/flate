@@ -33,5 +33,8 @@
     "insomnia",
     "insomnia-theme",
     "insomnia-plugin"
-  ]
+  ],
+  "dependencies": {
+    "@flate/core": "*"
+  }
 }

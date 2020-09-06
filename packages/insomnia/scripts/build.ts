@@ -1,4 +1,4 @@
-import { BuildInsomnia } from '../../core'
+import { BuildInsomnia } from '@flate/core'
 
 new BuildInsomnia({
   rootDir: {
