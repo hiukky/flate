@@ -2,15 +2,26 @@
 
 All notable changes to the "flate" extension will be documented in this file.
 
+## [0.6.0]
+
+Changes
+
+- Color scheme improvements
+
+Features
+
+- Added normal, italic and bold fonts
+
+Fixes
+
+- Color of selected file
+- Fixes and improviments
+
 ## [0.5.0]
 
 Features
 
 - Added Arc and Exodus variants
-
-Fixes
-
-- Fixes and improviments
 
 Fixes
 
