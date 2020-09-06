@@ -2,8 +2,6 @@
   <img alt="flate logo" src="./assets/banner.svg"/>
 </div>
 
-<br/>
-
 <p align="center">
   <a href="https://travis-ci.org/github/hiukky/flate">
     <img alt="Travis (.org) branch" src="https://img.shields.io/travis/hiukky/flate/develop?color=%2323d18c&style=for-the-badge&colorA=1C1D27">
@@ -22,6 +20,9 @@
   </a>
   <a href="httdivs://github.com/hiukky/flate/blob/develop/LICENSE">
     <img alt="GitHub license" src="https://img.shields.io/github/license/hiukky/flate?color=%23eab464&style=for-the-badge&colorA=1C1D27" />
+  </a>
+  <a href="https://www.npmjs.com/package/@flate/insomnia">
+    <img alt="NPM" src="https://img.shields.io/npm/dt/@flate/insomnia?color=%23f49e4c&style=for-the-badge&colorA=1C1D27" />
   </a>
 </p>
 
@@ -53,6 +54,7 @@ After installing and activating the plugin, click on the **themes** tab and look
 <img src="./assets/themes.png" />
 
 <h2> Variants </h2>
+Choose the one that best suits you!
 
 <div align="center">
   <h3>Flate</h3>

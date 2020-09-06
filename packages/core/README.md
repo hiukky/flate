@@ -3,11 +3,6 @@
 </div>
 
 <p align="center">
-  <sub>Built with ❤︎ by <a href="https://hiukky.com">Hiukky</a>
-  <br/>
-</p>
-
-<p align="center">
   <a href="https://travis-ci.org/github/hiukky/flate">
     <img alt="Travis (.org) branch" src="https://img.shields.io/travis/hiukky/flate/develop?color=%2323d18c&style=for-the-badge&colorA=1C1D27">
   </a>
@@ -29,6 +24,11 @@
 </p>
 
 <h3 align="center"> The Heart of Flate! </h3>
+
+<p align="center">
+  <sub>Built with ❤︎ by <a href="https://hiukky.com">Hiukky</a>
+  <br/>
+</p>
 
 <br>
 
