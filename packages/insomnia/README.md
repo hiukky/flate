@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="flate logo" src="./assets/banner.svg"/>
+  <img alt="flate logo" src="https://raw.githubusercontent.com/hiukky/flate/7590ad5c0cc7cc2c1b73de04aff5f04bda6187c0/packages/insomnia/assets/banner.svg"/>
 </div>
 
 <p align="center">
@@ -39,29 +39,29 @@
 
 To install this theme go to Insomnia **preferences**.
 
-<img src="./assets/preferences.png" />
+<img src="https://github.com/hiukky/flate/raw/develop/packages/insomnia/assets/preferences.png" />
 
 ### Preferences > Plugins
 
 In the **plugins** session text field, type `@flate/insomnia` and click the **Install Plugin** button.
 
-<img src="./assets/plugins.png" />
+<img src="https://github.com/hiukky/flate/raw/develop/packages/insomnia/assets/plugins.png" />
 
 ### Preferences > Themes
 
 After installing and activating the plugin, click on the **themes** tab and look for the **Flate** theme. Once you have done that, select the same and that's it, theme installed successfully!
 
-<img src="./assets/themes.png" />
+<img src="https://github.com/hiukky/flate/raw/develop/packages/insomnia/assets/themes.png" />
 
 <h2> Variants </h2>
 Choose the one that best suits you!
 
 <div align="center">
   <h3>Flate</h3>
-  <img src="./assets/variant-flate.png" />
+  <img src="https://github.com/hiukky/flate/raw/develop/packages/insomnia/assets/variant-flate.png" />
   <h3>Flate Arc</h3>
-  <img src="./assets/variant-arc.png" />
+  <img src="https://github.com/hiukky/flate/raw/develop/packages/insomnia/assets/variant-arc.png" />
   <br/><br/>
   <h3>Flate Punk</h3>
-  <img src="./assets/variant-punk.png" />
+  <img src="https://github.com/hiukky/flate/raw/develop/packages/insomnia/assets/variant-punk.png" />
 </div>

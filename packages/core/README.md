@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="flate logo" src="./assets/banner.svg"/>
+  <img alt="flate logo" src="https://raw.githubusercontent.com/hiukky/flate/7590ad5c0cc7cc2c1b73de04aff5f04bda6187c0/packages/core/assets/banner.svg"/>
 </div>
 
 <p align="center">
@@ -39,7 +39,7 @@ Flate has a very varied color scheme, being formed by 13 color variations and 3 
 
 <div>
   <br>
-  <img alt="flate logo" src="./assets/colors.svg"/>
+  <img alt="flate colors" src="https://raw.githubusercontent.com/hiukky/flate/7590ad5c0cc7cc2c1b73de04aff5f04bda6187c0/packages/core/assets/colors.svg"/>
 </div>
 
 <h3> Variants </h3>
@@ -47,7 +47,7 @@ These are the 3 variants available for Flate at the moment! I tried :/... if any
 
 <div>
   <br>
-  <img alt="flate logo" src="./assets/variants.svg"/>
+  <img alt="flate variants" src="https://raw.githubusercontent.com/hiukky/flate/7590ad5c0cc7cc2c1b73de04aff5f04bda6187c0/packages/core/assets/variants.svg"/>
 </div>
 
 <h2> Tools </h2>

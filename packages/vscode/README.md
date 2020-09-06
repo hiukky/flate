@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="flate logo" src="./assets/banner.svg"/>
+  <img alt="flate logo" src="https://github.com/hiukky/flate/raw/develop/packages/vscode/assets/banner.png"/>
 </div>
 
 <p align="center">
@@ -44,10 +44,10 @@ Choose the one that best suits you!
 
 <div align="center">
   <h3>Flate</h3>
-  <img src="./assets/variant-flate.png" />
+  <img src="https://github.com/hiukky/flate/raw/develop/packages/vscode/assets/variant-flate.png" />
   <h3>Flate Arc</h3>
-  <img src="./assets/variant-arc.png" />
+  <img src="https://github.com/hiukky/flate/raw/develop/packages/vscode/assets/variant-arc.png" />
   <br/><br/>
   <h3>Flate Punk</h3>
-  <img src="./assets/variant-punk.png" />
+  <img src="https://github.com/hiukky/flate/raw/develop/packages/vscode/assets/variant-punk.png" />
 </div>
