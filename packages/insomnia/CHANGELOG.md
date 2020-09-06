@@ -2,6 +2,17 @@
 
 All notable changes to the "flate" extension will be documented in this file.
 
+## [0.6.0]
+
+Changes
+
+- Color scheme improvements
+
+Fixes
+
+- Reduced package size
+- Fixes and improviments
+
 ## [0.5.0]
 
 Features
