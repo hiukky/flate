@@ -37,6 +37,7 @@ export interface IBuild {
 }
 
 export interface IBuildCommon {
+  createVariants(): string
   merge(theme: any): void
   stage(): void
   compile(): string

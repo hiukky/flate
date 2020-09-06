@@ -3,9 +3,29 @@ import Build from './Build'
 import { IBuildInsomnia } from './types'
 
 export default class BuildInsomnia extends Build implements IBuildInsomnia {
+  /**
+   * @method createVariants
+   *
+   * Create new theme variants.
+   */
+  createVariants(): string {
+    this.theme.final[
+      `${this.theme.stage.variant}.${this.settings.fileType}`
+    ] = this.theme.stage
+
+    return 'created'
+  }
+
+  /**
+   * @function merge
+   *
+   * Where the magic happens.
+   *
+   * @param theme
+   */
   merge(theme: any): void {
     this.theme.stage = theme
-    this.setColors()
+    this.setColors().createVariants()
   }
 
   /**

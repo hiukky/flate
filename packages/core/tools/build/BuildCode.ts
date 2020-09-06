@@ -6,7 +6,7 @@ export default class BuildCode extends Build implements IBuildCode {
   /**
    * @method createVariants
    *
-   * Create new variant.
+   * Create new theme variants.
    */
   createVariants(): string {
     if (this.theme.variants.length) {
@@ -57,6 +57,13 @@ export default class BuildCode extends Build implements IBuildCode {
     return this
   }
 
+  /**
+   * @function merge
+   *
+   * Where the magic happens.
+   *
+   * @param theme
+   */
   merge(theme: any): void {
     this.theme.stage = theme
     this.setColors().setFontStyles().createVariants()
