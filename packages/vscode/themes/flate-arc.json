@@ -1,5 +1,6 @@
 {
   "name": "Flate Arc",
   "variant": "flate-arc",
-  "type": "dark"
+  "type": "dark",
+  "fontStyle": ["none", "bold", "italic"]
 }

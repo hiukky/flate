@@ -18,10 +18,12 @@
     }
   },
   "rules": {
-    "class-methods-use-this": "off",
-    "no-unused-vars": "off",
-    "global-require": "off",
-    "@typescript-eslint/no-unused-vars": "error",
+    "class-methods-use-this": 0,
+    "no-unused-vars": 0,
+    "global-require": 0,
+    "@typescript-eslint/no-unused-vars": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/prefer-default-export": 0,
     "import/extensions": [
       "error",
       "ignorePackages",

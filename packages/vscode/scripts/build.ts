@@ -1,6 +1,8 @@
-import { Build } from '../../core'
+import { BuildCode } from '@flate/core'
 
-new Build({
-  themes: `${process.cwd()}/themes`,
-  build: `${process.cwd()}/dist`,
+new BuildCode({
+  rootDir: {
+    themes: `${process.cwd()}/themes`,
+    build: `${process.cwd()}/dist`,
+  },
 }).compile()

@@ -1,6 +1,8 @@
-import { Build } from '../../core'
+import { BuildInsomnia } from '@flate/core'
 
-new Build({
-  themes: `${process.cwd()}/themes`,
-  build: `${process.cwd()}/dist`,
+new BuildInsomnia({
+  rootDir: {
+    themes: `${process.cwd()}/themes`,
+    build: `${process.cwd()}/dist`,
+  },
 }).compile()

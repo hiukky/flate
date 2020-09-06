@@ -41,11 +41,12 @@
     "input.background": "$primaryColor",
 
     "list.activeSelectionBackground": "#DADBDB05",
-    "list.activeSelectionForeground": "#DADBDB",
+    "list.activeSelectionForeground": "$blush",
     "list.focusBackground": "#DADBDB15",
     "list.hoverBackground": "$primaryColor",
     "list.inactiveFocusBackground": "$primaryColor",
-    "list.inactiveSelectionBackground": "$primaryColor",
+    "list.inactiveSelectionBackground": "#DADBDB05",
+    "list.inactiveSelectionForeground": "$blush",
 
     "peekViewEditor.background": "$primaryColor",
     "peekViewResult.background": "$primaryColor",
@@ -98,7 +99,6 @@
         "support.type.object.module.js"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$beige"
       }
     },
@@ -159,7 +159,6 @@
         "variable.other.readwrite.alias.tsx"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$cyan"
       }
     },
@@ -196,7 +195,6 @@
         "variable.scss"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$purple"
       }
     },
@@ -235,7 +233,6 @@
         "variable"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$red"
       }
     },
@@ -249,7 +246,6 @@
         "markup.raw.block.fenced.markdown",
         "markup.table",
         "meta.function-call",
-        "meta.object-literal.key",
         "punctuation.definition.list_item.markdown",
         "punctuation.section.class.end",
         "support.function.builtin.python",
@@ -262,7 +258,6 @@
         "variable.other.bare"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$green"
       }
     },
@@ -298,7 +293,6 @@
         "variable.language.fenced.markdown"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$grey"
       }
     },
@@ -317,7 +311,6 @@
         "keyword.other.definition.trim_trailing_whitespace.editorconfig"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$secondaryColor"
       }
     },
@@ -337,7 +330,6 @@
         "support.variable.property"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$orange"
       }
     },
@@ -360,7 +352,6 @@
         "storage.type"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$pink"
       }
     },
@@ -385,7 +376,6 @@
         "source.json"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$quince"
       }
     },
@@ -395,6 +385,7 @@
         "entity.name",
         "markup.changed.git_gutter",
         "meta.property-value.scss",
+        "variable.other.object",
         "meta.use.php",
         "support.class",
         "support.constant.property-value.css",
@@ -405,7 +396,6 @@
         "support.type.sys-types"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$spiced"
       }
     },
@@ -413,7 +403,6 @@
       "name": "Squash",
       "scope": ["keyword.control.conditional", "keyword.control.switch"],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$squash"
       }
     },
@@ -430,6 +419,7 @@
         "constant.other.color",
         "markup.inline.raw.markdown",
         "meta.definition.property.tsx",
+        "meta.object-literal.key",
         "punctuation.definition.raw.markdown",
         "source.css",
         "source.js meta.class.js meta.method.declaration.js meta.block.js meta.block.js meta.block.js meta.objectliteral.js meta.object.member.js meta.objectliteral.js meta.object.member.js meta.function-call.js variable.other.object.js",
@@ -442,6 +432,7 @@
         "source.sass",
         "source.scss",
         "source.stylus",
+        "source meta.class meta.method.declaration meta.block meta.block meta.arrow meta.block variable.other.object",
         "source.ts meta.class.ts meta.field.declaration.ts meta.definition.property.ts variable.object.property.ts",
         "source.ts meta.interface.ts meta.field.declaration.ts meta.definition.property.ts variable.object.property.ts",
         "source.ts meta.type.declaration.ts meta.object.type.ts meta.field.declaration.ts meta.definition.property.ts variable.object.property.ts",
@@ -457,14 +448,12 @@
         "variable.object.property.tsx",
         "variable.other.constant",
         "variable.other.jsdoc",
-        "variable.other.object",
         "variable.other.object.property",
         "variable.other.readwrite",
         "variable.parameter"
       ],
       "settings": {
-        "fontStyle": "bold",
-        "foreground": "$white"
+        "foreground": "$blush"
       }
     },
     {
@@ -502,7 +491,6 @@
         "string"
       ],
       "settings": {
-        "fontStyle": "bold",
         "foreground": "$yellow"
       }
     }
