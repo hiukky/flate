@@ -14,7 +14,16 @@ const PROPS = {
   },
 }
 
-test('BUILD CODE: Create Variants', ({ assert, deepEqual }) => {
+test('BUILD CODE: Create many Variants', ({ assert, deepEqual }) => {
+  const build = new BuildCode(PROPS)
+
+  build.theme.stage = themeBase
+
+  assert('created', build.createVariants())
+  deepEqual({ [SETTINGS.themeName]: themeBase }, build.theme.final)
+})
+
+test('BUILD CODE: Create variant', ({ assert, deepEqual }) => {
   const build = new BuildCode(PROPS)
 
   build.theme.variants.push(themeBase)
