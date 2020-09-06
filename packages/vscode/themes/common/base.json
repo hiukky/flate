@@ -41,12 +41,12 @@
     "input.background": "$primaryColor",
 
     "list.activeSelectionBackground": "#DADBDB05",
-    "list.activeSelectionForeground": "$white",
+    "list.activeSelectionForeground": "$blush",
     "list.focusBackground": "#DADBDB15",
     "list.hoverBackground": "$primaryColor",
     "list.inactiveFocusBackground": "$primaryColor",
     "list.inactiveSelectionBackground": "#DADBDB05",
-    "list.inactiveSelectionForeground": "$white",
+    "list.inactiveSelectionForeground": "$blush",
 
     "peekViewEditor.background": "$primaryColor",
     "peekViewResult.background": "$primaryColor",
@@ -453,7 +453,7 @@
         "variable.parameter"
       ],
       "settings": {
-        "foreground": "$white"
+        "foreground": "$blush"
       }
     },
     {
