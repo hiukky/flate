@@ -3,6 +3,6 @@
   "all": true,
   "check-coverage": true,
   "reporter": ["text", "lcov"],
-  "include": ["packages/**"],
+  "include": ["packages/core"],
   "exclude": ["**/types.ts", "**/index.ts", "**/*.spec.ts"]
 }
