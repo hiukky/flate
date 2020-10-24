@@ -1,0 +1,8 @@
+$background: $primaryColor;
+$foreground: $white;
+$caret_color: $white;
+
+.app {
+  background-color: $background;
+  border-color: $foreground;
+}
