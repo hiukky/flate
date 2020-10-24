@@ -1,6 +1,6 @@
-import { BuildCode } from '@flate/core'
+import { VScodeBuilder } from '@flate/core'
 
-new BuildCode({
+new VScodeBuilder({
   rootDir: {
     themes: `${process.cwd()}/themes`,
     build: `${process.cwd()}/dist`,

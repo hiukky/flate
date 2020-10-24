@@ -1,9 +1,8 @@
 import fs from 'fs'
 import { join } from 'path'
+import { IScss } from './scss.interface'
 
-import { IScss } from './types'
-
-export default class Scss implements IScss {
+export class ScssTool implements IScss {
   /**
    * @method read
    *
@@ -109,7 +108,7 @@ export default class Scss implements IScss {
    */
   getColors(path: string | null, variant: string): object {
     return this.resolve(
-      path || join(__dirname, '..', '..', '..', '/core/colors'),
+      path || join(__dirname, '..', '..', 'scss'),
       `${variant}.scss`,
     )
   }

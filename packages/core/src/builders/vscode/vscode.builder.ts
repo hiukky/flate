@@ -1,8 +1,7 @@
-import Build from './Build'
+import { BaseBuilder } from '../base'
+import { IVscodeBuilder } from './vscode.interface'
 
-import { IBuildCode } from './types'
-
-export default class BuildCode extends Build implements IBuildCode {
+export class VScodeBuilder extends BaseBuilder implements IVscodeBuilder {
   /**
    * @method createVariants
    *

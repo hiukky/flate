@@ -26,8 +26,7 @@ export type TBaseProps = {
   rootDir: TRootDir
 }
 
-export interface IBuild {
-  rootDir: TRootDir
+export interface IBaseBuilder {
   theme: TTheme
   settings: TSetting
   listThemes: string[]
@@ -36,16 +35,9 @@ export interface IBuild {
   setColors(): this
 }
 
-export interface IBuildCommon {
+export interface IBuilderCommon {
   createVariants(): string
   merge(theme: any): void
   stage(): void
   compile(): string
 }
-
-export interface IBuildCode extends IBuildCommon {
-  setFontStyles(): this
-  createVariants(): string
-}
-
-export interface IBuildInsomnia extends IBuildCommon {}

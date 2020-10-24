@@ -14,6 +14,7 @@ before_install:
 
 install:
   - npm install
+  - npm i ./packages/colors packages/core
   - npm i ./packages/core packages/insomnia
   - npm i ./packages/core packages/vscode
   - npm run build

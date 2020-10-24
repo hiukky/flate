@@ -23,7 +23,7 @@
   </a>
 </p>
 
-<h3 align="center"> The Heart of Flate! </h3>
+<h3 align="center"> You choose the color palette! </h3>
 
 <p align="center">
   <sub>Built with ❤︎ by <a href="https://hiukky.com">Hiukky</a>

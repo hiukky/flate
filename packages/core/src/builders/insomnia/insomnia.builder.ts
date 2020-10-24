@@ -1,8 +1,7 @@
-import Build from './Build'
+import { BaseBuilder } from '../base'
+import { IInsomaniaBuilder } from '.'
 
-import { IBuildInsomnia } from './types'
-
-export default class BuildInsomnia extends Build implements IBuildInsomnia {
+export class InsomniaBuilder extends BaseBuilder implements IInsomaniaBuilder {
   /**
    * @method createVariants
    *

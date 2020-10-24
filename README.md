@@ -37,6 +37,7 @@
 Available packages.
 
 - [Core](https://github.com/hiukky/flate/tree/master/packages/core)
+- [Colors](https://github.com/hiukky/flate/tree/master/packages/colors)
 
 ## Themes
 

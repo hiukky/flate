@@ -1,10 +1,10 @@
 import test from 'ava'
 
-import { BuildInsomnia } from '../tools'
+import themeBase from '../../../mock/themes/insomnia/flate.json'
 
-import themeBase from './mock/themes/insomnia/flate.json'
+import { InsomniaBuilder } from './insomnia.builder'
 
-import { DEFAULT_PROPS, SETTINGS } from './constants'
+import { DEFAULT_PROPS, SETTINGS } from '../../constants'
 
 const PROPS = {
   ...DEFAULT_PROPS,
@@ -15,7 +15,7 @@ const PROPS = {
 }
 
 test('BUILD INSOMNIA: Create variant', ({ assert, deepEqual }) => {
-  const build = new BuildInsomnia(PROPS)
+  const build = new InsomniaBuilder(PROPS)
 
   build.theme.stage = themeBase
 
@@ -24,7 +24,7 @@ test('BUILD INSOMNIA: Create variant', ({ assert, deepEqual }) => {
 })
 
 test('BUILD INSOMNIA: Compilation', ({ assert }) => {
-  const expected = new BuildInsomnia(PROPS).compile()
+  const expected = new InsomniaBuilder(PROPS).compile()
 
   assert('done', expected)
 })

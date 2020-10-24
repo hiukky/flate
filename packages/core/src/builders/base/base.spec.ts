@@ -1,11 +1,11 @@
 import test from 'ava'
 import rimraf from 'rimraf'
 
-import themeBase from './mock/themes/flate.json'
+import themeBase from '../../../mock/themes/flate.json'
 
-import { Build } from '../tools/build'
+import { BaseBuilder } from './base.builder'
 
-import { COLORS, DEFAULT_PROPS, SETTINGS } from './constants'
+import { COLORS, DEFAULT_PROPS, SETTINGS } from '../../constants'
 
 const clean = () => rimraf.sync(`${DEFAULT_PROPS.rootDir.build}`)
 
@@ -13,13 +13,13 @@ test.beforeEach(clean)
 test.afterEach(clean)
 
 test('BUILD: List Themes', ({ deepEqual }) => {
-  const build = new Build(DEFAULT_PROPS)
+  const build = new BaseBuilder(DEFAULT_PROPS)
 
   deepEqual([SETTINGS.themeName], build.listThemes)
 })
 
 test('BUILD: Get File', ({ deepEqual }) => {
-  const build = new Build(DEFAULT_PROPS)
+  const build = new BaseBuilder(DEFAULT_PROPS)
 
   deepEqual(
     themeBase,
@@ -28,7 +28,7 @@ test('BUILD: Get File', ({ deepEqual }) => {
 })
 
 test('BUILD: Create File', ({ assert }) => {
-  const build = new Build(DEFAULT_PROPS)
+  const build = new BaseBuilder(DEFAULT_PROPS)
 
   assert(
     'created',
@@ -41,7 +41,7 @@ test('BUILD: Create File', ({ assert }) => {
 })
 
 test('BUILD: Set Colors', ({ deepEqual }) => {
-  const build = new Build(DEFAULT_PROPS)
+  const build = new BaseBuilder(DEFAULT_PROPS)
 
   const stage = {
     ...themeBase,

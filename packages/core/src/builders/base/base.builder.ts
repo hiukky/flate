@@ -1,23 +1,22 @@
 import fs from 'fs'
+import { ScssTool } from '@flate/colors'
 import {
-  IBuild,
-  TRootDir,
-  TTheme,
+  IBaseBuilder,
   TSetting,
+  TTheme,
   TBaseProps,
   TCreateFile,
-} from './types'
+  TRootDir,
+} from '.'
 
-import { Scss } from '../scss'
-
-export default class Build implements IBuild {
+export class BaseBuilder implements IBaseBuilder {
   readonly rootDir: TRootDir
 
   public settings: TSetting = {
     fileType: 'json',
   }
 
-  public scss = new Scss()
+  public scss = new ScssTool()
 
   public theme: TTheme = {
     stage: {},
@@ -87,7 +86,7 @@ export default class Build implements IBuild {
     const theme = this.theme.stage
 
     Object.entries(this.scss.getColors(null, theme.variant)).forEach(
-      ([nameColor, color]) => {
+      ([nameColor, color]: any) => {
         this.theme.stage = JSON.parse(
           JSON.stringify(this.theme.stage).replace(
             new RegExp(`\\${nameColor}`, 'g'),

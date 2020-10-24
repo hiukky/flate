@@ -6,9 +6,8 @@ export const SETTINGS = {
 
 export const DEFAULT_PROPS = {
   rootDir: {
-    build: path.join(__dirname, '..', 'mock', 'temp', 'dist'),
-    themes: path.join(__dirname, '..', 'mock', 'themes'),
-    scss: path.join(__dirname, '..', 'mock', 'scss'),
+    build: path.join(__dirname, '..', '..', 'mock', 'temp', 'dist'),
+    themes: path.join(__dirname, '..', '..', 'mock', 'themes'),
   },
 }
 
