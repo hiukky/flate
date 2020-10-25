@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="flate logo" src="./assets/banner.svg"/>
+  <img alt="flate logo" src="https://raw.githubusercontent.com/hiukky/flate/e2088e9735f709a0b59a3f1c38a20a579814eee1/packages/ulauncher/assets/banner.svg"/>
 </div>
 
 <p align="center">
@@ -23,26 +23,9 @@
   </a>
 </p>
 
-<h3 align="center"> A package of dark themes with a mix of cool colors. </h3>
+<h3 align="center">Dark colored theme for Ulauncher.</h3>
 
 <p align="center">
   <sub>Built with ❤︎ by <a href="https://hiukky.com">Hiukky</a>
   <br/>
 </p>
-
-<br>
-
-## Packages
-
-Available packages.
-
-- [Core](https://github.com/hiukky/flate/tree/master/packages/core)
-- [Colors](https://github.com/hiukky/flate/tree/master/packages/colors)
-
-## Themes
-
-Available themes.
-
-- [VS Code](https://github.com/hiukky/flate/tree/master/packages/vscode)
-- [Insomnia](https://github.com/hiukky/flate/tree/master/packages/insomnia)
-- [Ulauncher](https://github.com/hiukky/flate/tree/master/packages/ulauncher)
