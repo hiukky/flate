@@ -1,79 +1,87 @@
-// Flate
-$background: $primaryColor;
-$foreground: $white;
-$accent: $white;
-$highlight: $white;
-$caret_color: $white;
+/**
+ * Flate colors
+ */
+@define-color background $primaryColor;
+@define-color foreground $white;
+@define-color highlight $white;
+@define-color accent $white;
+@define-color caret_color $white;
 
-// App Window
-$bg_color: $background;
-$window_bg: $background;
-$window_border_color: darker($background);
-$prefs_backgroud: $foreground;
+/**
+ * App Window
+ */
+@define-color bg_color @background;
+@define-color window_bg @background;
+@define-color window_border_color darker(@background);
+@define-color prefs_backgroud @foreground;
 
-// Input
-$selected_bg_color: $foreground;
-$selected_fg_color: $background;
-$input_color: $foreground;
-$caret_color: $foreground;
+/**
+ * Input
+ */
+@define-color selected_bg_color @foreground;
+@define-color selected_fg_color @background;
+@define-color input_color @foreground;
+@define-color caret_color @foreground;
 
-// Result items
-$item_name: $foreground;
-$item_text: $foreground;
-$item_box_selected: $background;
-$item_text_selected: $accent;
-$item_name_selected: $accent;
-$item_shortcut_color: $foreground;
-$item_shortcut_shadow: darker($background);
-$item_shortcut_color_sel: $highlight;
-$item_shortcut_shadow_sel: darker($item_box_selected);
+/**
+ * Result items
+ */
+@define-color item_name @foreground;
+@define-color item_text @foreground;
+@define-color item_box_selected @background;
+@define-color item_text_selected @accent;
+@define-color item_name_selected @accent;
+@define-color item_shortcut_color @foreground;
+@define-color item_shortcut_shadow darker(@background);
+@define-color item_shortcut_color_sel @highlight;
+@define-color item_shortcut_shadow_sel darker(@item_box_selected);
 
 .app {
-  background-color: $background;
-  border-color: $foreground;
+  background-color: @window_bg;
+  border-color: @window_border_color;
 }
 
 .input {
-  color: $input_color;
+  color: @input_color;
 }
 
 .input *:selected,
 .input *:focus,
 *:selected:focus {
-  background-color: alpha ($selected_bg_color, 0.9);
-  color: $selected_fg_color;
+  background-color: alpha (@selected_bg_color, 0.9);
+  color: @selected_fg_color;
 }
 
 .item-text {
-  color: $item_text;
+  color: @item_text;
 }
 .item-name {
-  color: $item_name;
+  color: @item_name;
 }
 
 .selected.item-box {
-  background-color: $item_box_selected;
-  border-left: 1px solid $window_border_color;
-  border-right: 1px solid $window_border_color;
+  background-color: @item_box_selected;
+  border-left: 1px solid @window_border_color;
+  border-right: 1px solid @window_border_color;
 }
 .selected.item-box .item-text {
-  color: $item_text_selected;
+  color: @item_text_selected;
 }
 .selected.item-box .item-name {
-  color: $item_name_selected;
+  color: @item_name_selected;
 }
 .item-shortcut {
-  color: $item_shortcut_color;
-  text-shadow: 1px 1px 1px $item_shortcut_shadow;
+  color: @item_shortcut_color;
+  text-shadow: 1px 1px 1px @item_shortcut_shadow;
 }
 .selected.item-box .item-shortcut {
-  color: $item_shortcut_color_sel;
-  text-shadow: 1px 1px 1px $item_shortcut_shadow_sel;
+  color: @item_shortcut_color_sel;
+  text-shadow: 1px 1px 1px @item_shortcut_shadow_sel;
 }
 
 .prefs-btn {
   opacity: 0.8;
 }
 .prefs-btn:hover {
-  background-color: $prefs_backgroud;
+  background-color: @prefs_backgroud;
 }

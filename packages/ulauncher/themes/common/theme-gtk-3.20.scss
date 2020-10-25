@@ -1,5 +1,5 @@
 .input {
-  caret-color: $caret_color;
+  caret-color: @caret_color;
 }
 
 .selected.item-box {
