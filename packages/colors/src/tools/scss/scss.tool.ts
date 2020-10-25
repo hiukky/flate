@@ -1,12 +1,21 @@
 import fs from 'fs'
-import { join } from 'path'
+import { resolve } from 'path'
 import { IScss } from './scss.interface'
 
 export class ScssTool implements IScss {
   /**
+   * @function colorDirectory
+   *
+   * @desc Get the directory of scss files with color scheme.
+   */
+  get colorDirectory() {
+    return resolve(__dirname, '..', '..', 'scss')
+  }
+
+  /**
    * @method read
    *
-   * Read the reported scss files.
+   * @desc Read the reported scss files.
    *
    * @param {String} path
    */
@@ -17,7 +26,7 @@ export class ScssTool implements IScss {
   /**
    * @method toJSON
    *
-   * Parse the read scss file to JSON.
+   * @desc Parse the read scss file to JSON.
    *
    * @param {String} file
    */
@@ -41,7 +50,7 @@ export class ScssTool implements IScss {
   /**
    * @method resolve
    *
-   * Merge complete files read and their dependencies.
+   * @desc Merge complete files read and their dependencies.
    *
    * @param {String} path
    * @param {String} fileName
@@ -101,15 +110,12 @@ export class ScssTool implements IScss {
   /**
    * @method getColors
    *
-   * Obtains a color scheme according to the variant.
+   * @desc Obtains a color scheme according to the variant.
    *
    * @param {String} path
    * @param {String} variant
    */
   getColors(path: string | null, variant: string): object {
-    return this.resolve(
-      path || join(__dirname, '..', '..', 'scss'),
-      `${variant}.scss`,
-    )
+    return this.resolve(path || this.colorDirectory, `${variant}.scss`)
   }
 }
