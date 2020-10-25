@@ -1,4 +1,3 @@
-import sass from 'node-sass'
 import { BaseBuilder } from '../base'
 import {
   IUlauncherBuilder,
@@ -43,20 +42,20 @@ export class UlauncherBuilder extends BaseBuilder implements IUlauncherBuilder {
    * @desc Returns the default theme scss with the variant color scheme applied.
    *
    * @param {TThemeType} type
-   * @param {string} variant
    */
-  getTheme(type: 'main' | 'gtk', variant: string): string {
-    const theme = sass.renderSync({
-      data: [
-        `@import "${this.scss.colorDirectory}/${variant}.scss";`,
-        type === 'gtk'
-          ? `@import "${this.rootDir.themes}/common/${this.fileNames.theme}";`
-          : '',
-        ...this.readCommonTheme(type).split('\n'),
-      ].join('\n'),
-    })
+  getTheme(type: 'main' | 'gtk'): string {
+    const theme = this.scss.read(
+      `${this.rootDir.themes}/common/${
+        type === 'main' ? this.fileNames.theme : this.fileNames.themeGtk
+      }.scss`,
+    )
 
-    return theme.css.toString()
+    return type === 'main'
+      ? theme
+      : [
+          `@import url("${this.fileNames.theme}.css");`,
+          ...theme.split('\n'),
+        ].join('\n')
   }
 
   /**
@@ -105,8 +104,8 @@ export class UlauncherBuilder extends BaseBuilder implements IUlauncherBuilder {
       const [variant] = themeName.split('.')
 
       this.merge({
-        [`${this.fileNames.theme}.css`]: this.getTheme('main', variant),
-        [`${this.fileNames.themeGtk}.css`]: this.getTheme('gtk', variant),
+        [`${this.fileNames.theme}.css`]: this.getTheme('main'),
+        [`${this.fileNames.themeGtk}.css`]: this.getTheme('gtk'),
         [`${this.fileNames.manifest}.json`]: this.createManifest(themeName),
         variant,
       })
