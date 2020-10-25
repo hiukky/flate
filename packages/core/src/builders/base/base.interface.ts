@@ -19,7 +19,7 @@ export type TSetting = {
 
 export type TCreateFile = {
   path: string
-  file: TObject<any>
+  file: TObject<any> | string
   fileName: string
 }
 export type TBaseProps = {

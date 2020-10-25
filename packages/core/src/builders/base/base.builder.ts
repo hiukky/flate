@@ -67,12 +67,16 @@ export class BaseBuilder implements IBaseBuilder {
    */
   createFile({ path, file, fileName }: TCreateFile): string {
     if (!fs.existsSync(path)) {
-      fs.mkdirSync(path)
+      fs.mkdirSync(path, { recursive: true })
     }
 
-    fs.writeFileSync(`${path}/${fileName}`, JSON.stringify(file), {
-      encoding: 'utf8',
-    })
+    fs.writeFileSync(
+      `${path}/${fileName}`,
+      typeof file === 'string' ? file : JSON.stringify(file),
+      {
+        encoding: 'utf8',
+      },
+    )
 
     return 'created'
   }
