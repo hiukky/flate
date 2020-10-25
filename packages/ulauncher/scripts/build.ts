@@ -1,6 +1,6 @@
-import { BuildInsomnia } from '@flate/core'
+import { UlauncherBuilder } from '@flate/core'
 
-new BuildInsomnia({
+new UlauncherBuilder({
   rootDir: {
     themes: `${process.cwd()}/themes`,
     build: `${process.cwd()}/dist`,
