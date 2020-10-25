@@ -1,8 +1,79 @@
+// Flate
 $background: $primaryColor;
 $foreground: $white;
+$accent: $white;
+$highlight: $white;
 $caret_color: $white;
+
+// App Window
+$bg_color: $background;
+$window_bg: $background;
+$window_border_color: darker($background);
+$prefs_backgroud: $foreground;
+
+// Input
+$selected_bg_color: $foreground;
+$selected_fg_color: $background;
+$input_color: $foreground;
+$caret_color: $foreground;
+
+// Result items
+$item_name: $foreground;
+$item_text: $foreground;
+$item_box_selected: $background;
+$item_text_selected: $accent;
+$item_name_selected: $accent;
+$item_shortcut_color: $foreground;
+$item_shortcut_shadow: darker($background);
+$item_shortcut_color_sel: $highlight;
+$item_shortcut_shadow_sel: darker($item_box_selected);
 
 .app {
   background-color: $background;
   border-color: $foreground;
+}
+
+.input {
+  color: $input_color;
+}
+
+.input *:selected,
+.input *:focus,
+*:selected:focus {
+  background-color: alpha ($selected_bg_color, 0.9);
+  color: $selected_fg_color;
+}
+
+.item-text {
+  color: $item_text;
+}
+.item-name {
+  color: $item_name;
+}
+
+.selected.item-box {
+  background-color: $item_box_selected;
+  border-left: 1px solid $window_border_color;
+  border-right: 1px solid $window_border_color;
+}
+.selected.item-box .item-text {
+  color: $item_text_selected;
+}
+.selected.item-box .item-name {
+  color: $item_name_selected;
+}
+.item-shortcut {
+  color: $item_shortcut_color;
+  text-shadow: 1px 1px 1px $item_shortcut_shadow;
+}
+.selected.item-box .item-shortcut {
+  color: $item_shortcut_color_sel;
+  text-shadow: 1px 1px 1px $item_shortcut_shadow_sel;
+}
+
+.prefs-btn {
+  opacity: 0.8;
+}
+.prefs-btn:hover {
+  background-color: $prefs_backgroud;
 }
