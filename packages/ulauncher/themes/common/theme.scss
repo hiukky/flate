@@ -2,33 +2,34 @@
  * Flate colors
  */
 @define-color background $primaryColor;
+@define-color selected_hover  alpha ($grey, 0.5);
 @define-color foreground $white;
-@define-color highlight $white;
+@define-color foreground_title $grey;
 @define-color accent $white;
-@define-color caret_color $white;
+@define-color highlight $secondaryColor;
 
 /**
- * App Window
- */
+  * App Window
+  */
 @define-color bg_color @background;
 @define-color window_bg @background;
 @define-color window_border_color darker(@background);
 @define-color prefs_backgroud @foreground;
 
 /**
- * Input
- */
+   * Input
+   */
 @define-color selected_bg_color @foreground;
 @define-color selected_fg_color @background;
 @define-color input_color @foreground;
 @define-color caret_color @foreground;
 
 /**
- * Result items
- */
+   * Result items
+   */
 @define-color item_name @foreground;
-@define-color item_text @foreground;
-@define-color item_box_selected @background;
+@define-color item_text @foreground_title;
+@define-color item_box_selected @selected_hover;
 @define-color item_text_selected @accent;
 @define-color item_name_selected @accent;
 @define-color item_shortcut_color @foreground;
@@ -48,7 +49,7 @@
 .input *:selected,
 .input *:focus,
 *:selected:focus {
-  background-color: alpha (@selected_bg_color, 0.9);
+  background-color: alpha (@selected_bg_color, 0.5);
   color: @selected_fg_color;
 }
 
