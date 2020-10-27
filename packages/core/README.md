@@ -32,23 +32,5 @@
 
 <br>
 
-<h2> Colors </h2>
-
-<h3>Palette</h3>
-Flate has a very varied color scheme, being formed by 13 color variations and 3 dark bases which are <strong>Flate</strong>, <strong>Flate Arc</strong> and <strong>Flate Punk</strong>.
-
-<div>
-  <br>
-  <img alt="flate colors" src="https://raw.githubusercontent.com/hiukky/flate/7590ad5c0cc7cc2c1b73de04aff5f04bda6187c0/packages/core/assets/colors.svg"/>
-</div>
-
-<h3> Variants </h3>
-These are the 3 variants available for Flate at the moment! I tried :/... if any of the variants doesn't suit your tastes, feel free to use your creativity and share your PR with your suggestions.
-
-<div>
-  <br>
-  <img alt="flate variants" src="https://raw.githubusercontent.com/hiukky/flate/7590ad5c0cc7cc2c1b73de04aff5f04bda6187c0/packages/core/assets/variants.svg"/>
-</div>
-
 <h2> Tools </h2>
 This package will be independent in the future. Here are the tools you need to make creating your themes very easy and productive.

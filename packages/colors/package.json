@@ -1,5 +1,5 @@
 {
-  "name": "@flate/core",
+  "name": "@flate/colors",
   "main": "index.ts",
   "version": "0.6.0",
   "author": {
@@ -19,9 +19,6 @@
   "scripts": {
     "test": "ava"
   },
-  "devDependencies": {
-    "@flate/core": "*"
-  },
   "ava": {
     "extensions": [
       "ts"
@@ -29,8 +26,5 @@
     "require": [
       "ts-node/register"
     ]
-  },
-  "dependencies": {
-    "@flate/colors": "^0.6.0"
   }
 }

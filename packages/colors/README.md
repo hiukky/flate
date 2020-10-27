@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="flate logo" src="./assets/banner.svg"/>
+  <img alt="flate logo" src="https://raw.githubusercontent.com/hiukky/flate/f12ccc0b9eed8d7961b4b47e48bc92072237934b/packages/colors/assets/banner.svg"/>
 </div>
 
 <p align="center">
@@ -23,7 +23,7 @@
   </a>
 </p>
 
-<h3 align="center"> A package of dark themes with a mix of cool colors. </h3>
+<h3 align="center"> You choose the color palette! </h3>
 
 <p align="center">
   <sub>Built with ❤︎ by <a href="https://hiukky.com">Hiukky</a>
@@ -32,17 +32,20 @@
 
 <br>
 
-## Packages
+<h2> Colors </h2>
 
-Available packages.
+<h3>Palette</h3>
+Flate has a very varied color scheme, being formed by 13 color variations and 3 dark bases which are <strong>Flate</strong>, <strong>Flate Arc</strong> and <strong>Flate Punk</strong>.
 
-- [Core](https://github.com/hiukky/flate/tree/master/packages/core)
-- [Colors](https://github.com/hiukky/flate/tree/master/packages/colors)
+<div>
+  <br>
+  <img alt="flate colors" src="https://raw.githubusercontent.com/hiukky/flate/7590ad5c0cc7cc2c1b73de04aff5f04bda6187c0/packages/core/assets/colors.svg"/>
+</div>
 
-## Themes
+<h3> Variants </h3>
+These are the 3 variants available for Flate at the moment! I tried :/... if any of the variants doesn't suit your tastes, feel free to use your creativity and share your PR with your suggestions.
 
-Available themes.
-
-- [VS Code](https://github.com/hiukky/flate/tree/master/packages/vscode)
-- [Insomnia](https://github.com/hiukky/flate/tree/master/packages/insomnia)
-- [Ulauncher](https://github.com/hiukky/flate/tree/master/packages/ulauncher)
+<div>
+  <br>
+  <img alt="flate variants" src="https://raw.githubusercontent.com/hiukky/flate/7590ad5c0cc7cc2c1b73de04aff5f04bda6187c0/packages/core/assets/variants.svg"/>
+</div>

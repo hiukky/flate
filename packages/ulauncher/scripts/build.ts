@@ -1,6 +1,6 @@
-import { VScodeBuilder } from '@flate/core'
+import { UlauncherBuilder } from '@flate/core'
 
-new VScodeBuilder({
+new UlauncherBuilder({
   rootDir: {
     themes: `${process.cwd()}/themes`,
     build: `${process.cwd()}/dist`,
