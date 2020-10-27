@@ -3,7 +3,10 @@ import test from 'ava'
 import { resolve } from 'path'
 import { ScssTool } from './scss.tool'
 
-import { COLORS, DEFAULT_PROPS } from '../../constants'
+import { COLORS } from '../constants'
+import { getMockPath } from '../utils'
+
+const DEFAULT_PROPS = getMockPath('scss')
 
 test('Tools SCSS: Read File', ({ is }) => {
   const colors = new ScssTool().read(`${DEFAULT_PROPS.rootDir.scss}/theme.scss`)
@@ -41,7 +44,7 @@ test('Tools SCSS: Get colors', ({ deepEqual }) => {
 
 test('Tools SCSS: Get colors directory', ({ assert }) => {
   const scss = new ScssTool()
-  const expectedPath = resolve(__dirname, '..', '..', 'scss')
+  const expectedPath = resolve(__dirname, 'scss')
 
   assert(expectedPath, scss.colorDirectory)
 })

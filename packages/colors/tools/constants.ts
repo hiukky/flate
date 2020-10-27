@@ -1,11 +1,3 @@
-import path from 'path'
-
-export const DEFAULT_PROPS = {
-  rootDir: {
-    scss: path.join(__dirname, '..', '..', 'mock'),
-  },
-}
-
 export const COLORS = {
   stage: {
     a: '$red',

@@ -1,1 +1,1 @@
-export * from './src/builders'
+export * from './builders'

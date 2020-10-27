@@ -1,14 +1,5 @@
-import path from 'path'
-
 export const SETTINGS = {
   themeName: 'flate.json',
-}
-
-export const DEFAULT_PROPS = {
-  rootDir: {
-    build: path.join(__dirname, '..', '..', 'mock', 'temp', 'dist'),
-    themes: path.join(__dirname, '..', '..', 'mock', 'themes'),
-  },
 }
 
 export const COLORS = {

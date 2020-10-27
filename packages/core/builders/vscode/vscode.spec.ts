@@ -2,20 +2,15 @@ import test from 'ava'
 
 import { VScodeBuilder } from './vscode.builder'
 
-import themeBase from '../../../mock/themes/vscode/flate.json'
+import themeBase from './mock/flate.json'
 
-import { DEFAULT_PROPS, SETTINGS } from '../../constants'
+import { SETTINGS } from '../constants'
+import { getMockPath } from '../utils'
 
-const PROPS = {
-  ...DEFAULT_PROPS,
-  rootDir: {
-    ...DEFAULT_PROPS.rootDir,
-    themes: DEFAULT_PROPS.rootDir.themes.concat('/vscode'),
-  },
-}
+const DEFAULT_PROPS = getMockPath('vscode')
 
 test('BUILD CODE: Create many Variants', ({ assert, deepEqual }) => {
-  const build = new VScodeBuilder(PROPS)
+  const build = new VScodeBuilder(DEFAULT_PROPS)
 
   build.theme.stage = themeBase
 
@@ -24,7 +19,7 @@ test('BUILD CODE: Create many Variants', ({ assert, deepEqual }) => {
 })
 
 test('BUILD CODE: Create variant', ({ assert, deepEqual }) => {
-  const build = new VScodeBuilder(PROPS)
+  const build = new VScodeBuilder(DEFAULT_PROPS)
 
   build.theme.variants.push(themeBase)
 
@@ -33,7 +28,7 @@ test('BUILD CODE: Create variant', ({ assert, deepEqual }) => {
 })
 
 test('BUILD CODE: Set Font Styles', ({ deepEqual }) => {
-  const build = new VScodeBuilder(PROPS)
+  const build = new VScodeBuilder(DEFAULT_PROPS)
 
   build.theme.stage = themeBase
 
@@ -61,6 +56,6 @@ test('BUILD CODE: Set Font Styles', ({ deepEqual }) => {
 })
 
 test('BUILD CODE: Compilation', ({ assert }) => {
-  const expected = new VScodeBuilder(PROPS).compile()
+  const expected = new VScodeBuilder(DEFAULT_PROPS).compile()
   assert('done', expected)
 })

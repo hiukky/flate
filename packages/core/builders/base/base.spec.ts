@@ -1,16 +1,16 @@
 import test from 'ava'
-import rimraf from 'rimraf'
 
-import themeBase from '../../../mock/themes/flate.json'
+import themeBase from './mock/flate.json'
 
 import { BaseBuilder } from './base.builder'
 
-import { COLORS, DEFAULT_PROPS, SETTINGS } from '../../constants'
+import { COLORS, SETTINGS } from '../constants'
+import { getMockPath, clean } from '../utils'
 
-const clean = () => rimraf.sync(`${DEFAULT_PROPS.rootDir.build}`)
+const DEFAULT_PROPS = getMockPath('base')
 
-test.beforeEach(clean)
-test.afterEach(clean)
+test.beforeEach(() => clean(DEFAULT_PROPS.rootDir.build))
+test.afterEach(() => clean(DEFAULT_PROPS.rootDir.build))
 
 test('BUILD: List Themes', ({ deepEqual }) => {
   const build = new BaseBuilder(DEFAULT_PROPS)

@@ -1,1 +1,1 @@
-export * from './src/tools'
+export * from './tools'
