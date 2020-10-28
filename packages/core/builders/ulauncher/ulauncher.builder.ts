@@ -67,8 +67,8 @@ export class UlauncherBuilder extends BaseBuilder implements IUlauncherBuilder {
    */
   createManifest(themeName: string): Object {
     return {
-      ...this.getFile(`${this.rootDir.themes}/common/base.json`),
-      ...this.getFile(`${this.rootDir.themes}/${themeName}`),
+      ...this.getFileJSON(`${this.rootDir.themes}/common/base.json`),
+      ...this.getFileJSON(`${this.rootDir.themes}/${themeName}`),
     }
   }
 

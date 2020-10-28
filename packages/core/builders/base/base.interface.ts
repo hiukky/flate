@@ -30,7 +30,8 @@ export interface IBaseBuilder {
   theme: TTheme
   settings: TSetting
   listThemes: string[]
-  getFile(pathFile: string): object
+  getFile(pathFile: string): string
+  getFileJSON(pathFile: string): Object
   createFile(props: TCreateFile): string
   setColors(): this
 }

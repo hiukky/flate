@@ -1,0 +1,23 @@
+{
+  "name": "@flate/kitty",
+  "main": "index.ts",
+  "version": "0.6.0",
+  "author": {
+    "name": "Romullo",
+    "email": "developermarsh@gmail.com",
+    "url": "https://hiukky.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hiukky/flate/issues"
+  },
+  "homepage": "https://github.com/hiukky/flate#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hiukky/flate"
+  },
+  "scripts": {
+    "dev": "nodemon --watch themes scripts/build.ts",
+    "build": "ts-node scripts/build.ts"
+  }
+}

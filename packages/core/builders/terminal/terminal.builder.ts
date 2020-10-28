@@ -1,17 +1,21 @@
 import { BaseBuilder } from '../base'
-import { IInsomaniaBuilder } from '.'
+import { ITerminalBuilder, IProps, TExtension } from './terminal.interface'
 
-export class InsomniaBuilder extends BaseBuilder implements IInsomaniaBuilder {
+export class TerminalBuilder extends BaseBuilder implements ITerminalBuilder {
+  private extension: TExtension
+
+  constructor({ rootDir, extension }: IProps) {
+    super({ rootDir })
+    this.extension = extension
+  }
+
   /**
    * @method createVariants
    *
    * Create new theme variants.
    */
   createVariants(): string {
-    this.theme.final[
-      `${this.theme.stage.variant}.${this.settings.fileType}`
-    ] = this.theme.stage
-
+    this.theme.final[this.theme.stage.variant] = this.theme.stage.payload
     return 'created'
   }
 
@@ -34,9 +38,13 @@ export class InsomniaBuilder extends BaseBuilder implements IInsomaniaBuilder {
    */
   stage(): void {
     this.listThemes.forEach(themeName => {
+      const [variant] = themeName.split('.')
+
       this.merge({
-        ...this.getFileJSON(`${this.rootDir.themes}/common/base.json`),
-        ...this.getFileJSON(`${this.rootDir.themes}/${themeName}`),
+        payload: this.getFile(
+          `${this.rootDir.themes}/common/base.${this.extension}`,
+        ),
+        variant,
       })
     })
   }
@@ -54,7 +62,7 @@ export class InsomniaBuilder extends BaseBuilder implements IInsomaniaBuilder {
         this.createFile({
           path: this.rootDir.build,
           file: theme,
-          fileName: name,
+          fileName: `${name}.${this.extension}`,
         }),
       )
     }

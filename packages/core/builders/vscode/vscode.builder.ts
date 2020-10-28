@@ -76,8 +76,8 @@ export class VScodeBuilder extends BaseBuilder implements IVscodeBuilder {
   stage(): void {
     this.listThemes.forEach(themeName => {
       this.merge({
-        ...this.getFile(`${this.rootDir.themes}/common/base.json`),
-        ...this.getFile(`${this.rootDir.themes}/${themeName}`),
+        ...this.getFileJSON(`${this.rootDir.themes}/common/base.json`),
+        ...this.getFileJSON(`${this.rootDir.themes}/${themeName}`),
       })
     })
   }
