@@ -1,0 +1,42 @@
+colors:
+  primary:
+    background: '$primaryColor'
+    foreground: '$purple'
+    dim_foreground: '$beige'
+    bright_foreground: '$blush'
+    dim_background: '$beige'
+    bright_background: '$beige'
+
+  cursor:
+    text: '$grey'
+    cursor: '$blush'
+
+  normal:
+    black: '$beige'
+    red: '$red'
+    green: '$green'
+    yellow: '$yellow'
+    blue: '$cyan'
+    magenta: '$purple'
+    cyan: '$cyan'
+    white: '$blush'
+
+  bright:
+    black: '$beige'
+    red: '$red'
+    green: '$green'
+    yellow: '$yellow'
+    blue: '$cyan'
+    magenta: '$purple'
+    cyan: '$cyan'
+    white: '$blush'
+
+  dim:
+    black: '$beige'
+    red: '$red'
+    green: '$green'
+    yellow: '$yellow'
+    blue: '$cyan'
+    magenta: '$purple'
+    cyan: '$cyan'
+    white: '$blush'
