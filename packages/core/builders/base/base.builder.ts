@@ -47,12 +47,23 @@ export class BaseBuilder implements IBaseBuilder {
   /**
    * @method getFile
    *
+   * Load any file with theme specifications.
+   *
+   * @param {String} pathFile
+   */
+  getFile(pathFile: string): string {
+    return fs.readFileSync(pathFile, 'utf8').toString()
+  }
+
+  /**
+   * @method getFileJSON
+   *
    * Loads the JSON file with theme specifications.
    *
    * @param {String} pathFile
    */
-  getFile(pathFile: string): object {
-    return JSON.parse(fs.readFileSync(pathFile, 'utf8'))
+  getFileJSON(pathFile: string): Object {
+    return JSON.parse(this.getFile(pathFile))
   }
 
   /**
