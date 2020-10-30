@@ -1,4 +1,4 @@
-import { UlauncherBuilder } from '@flate/core'
+import { UlauncherBuilder } from '@flate/builders'
 
 new UlauncherBuilder({
   rootDir: {

@@ -1,5 +1,5 @@
 {
-  "name": "@flate/core",
+  "name": "@flate/builders",
   "main": "index.ts",
   "version": "0.6.0",
   "author": {
@@ -20,7 +20,7 @@
     "test": "ava"
   },
   "devDependencies": {
-    "@flate/core": "*"
+    "@flate/builders": "*"
   },
   "ava": {
     "extensions": [
@@ -31,6 +31,7 @@
     ]
   },
   "dependencies": {
-    "@flate/colors": "^0.6.0"
+    "@flate/colors": "^0.6.0",
+    "undefined": "/home/hiukky/Develop/others/flate/packages/core/colors"
   }
 }

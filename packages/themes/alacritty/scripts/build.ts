@@ -1,4 +1,4 @@
-import { TerminalBuilder } from '@flate/core'
+import { TerminalBuilder } from '@flate/builders'
 
 new TerminalBuilder({
   rootDir: {

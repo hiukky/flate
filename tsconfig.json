@@ -19,7 +19,8 @@
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
     "paths": {
-      "@flate/*": ["packages/*"]
+      "@flate/builders": ["packages/core/builders/*"],
+      "@flate/colors": ["packages/core/colors/*"]
     }
   },
   "include": ["packages/**/*"],

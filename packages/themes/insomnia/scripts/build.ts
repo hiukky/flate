@@ -1,6 +1,6 @@
-import { VScodeBuilder } from '@flate/core'
+import { InsomniaBuilder } from '@flate/builders'
 
-new VScodeBuilder({
+new InsomniaBuilder({
   rootDir: {
     themes: `${process.cwd()}/themes`,
     build: `${process.cwd()}/dist`,

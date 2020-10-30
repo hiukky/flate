@@ -35,6 +35,6 @@
     "insomnia-plugin"
   ],
   "devDependencies": {
-    "@flate/core": "*"
+    "@flate/builders": "*"
   }
 }
