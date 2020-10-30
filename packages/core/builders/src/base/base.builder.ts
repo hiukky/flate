@@ -1,20 +1,20 @@
 import fs from 'fs'
 import { ScssTool } from '@flate/colors'
+import { EXTENSIONS } from '../constants'
 import {
   IBaseBuilder,
-  TSetting,
   TTheme,
   TBaseProps,
   TCreateFile,
   TRootDir,
+  TExtensions,
+  TFileType,
 } from '.'
 
 export class BaseBuilder implements IBaseBuilder {
   readonly rootDir: TRootDir
 
-  public settings: TSetting = {
-    fileType: 'json',
-  }
+  public extensions: TExtensions = EXTENSIONS
 
   public scss = new ScssTool()
 
@@ -45,25 +45,36 @@ export class BaseBuilder implements IBaseBuilder {
   }
 
   /**
+   * @method parseFile
+   *
+   * Parsing a file search result.
+   *
+   * @param {unknown} scheme
+   * @param {TFileType} scheme
+   */
+  parseFile<T = string>(data: string, scheme?: TFileType): T {
+    switch (scheme) {
+      case 'json':
+        return JSON.parse(data)
+      default:
+        return (data.toString() as unknown) as T
+    }
+  }
+
+  /**
    * @method getFile
    *
    * Load any file with theme specifications.
    *
    * @param {String} pathFile
    */
-  getFile(pathFile: string): string {
-    return fs.readFileSync(pathFile, 'utf8').toString()
-  }
+  getFile<T = any>(pathFile: string): T {
+    const extension = pathFile.split(/\.(?=[^.]+$)/)[1] as TFileType
 
-  /**
-   * @method getFileJSON
-   *
-   * Loads the JSON file with theme specifications.
-   *
-   * @param {String} pathFile
-   */
-  getFileJSON(pathFile: string): Object {
-    return JSON.parse(this.getFile(pathFile))
+    return this.parseFile<T>(
+      fs.readFileSync(pathFile, 'utf8').toString(),
+      extension,
+    )
   }
 
   /**

@@ -2,6 +2,12 @@ export type TObject<T> = {
   [k: string]: T
 }
 
+export type TFileType = 'json' | 'yml' | 'conf'
+
+export type TExtensions = {
+  [k in TFileType]: string
+}
+
 export type TRootDir = {
   themes: string
   build: string
@@ -28,10 +34,10 @@ export type TBaseProps = {
 
 export interface IBaseBuilder {
   theme: TTheme
-  settings: TSetting
+  extensions: TExtensions
   listThemes: string[]
-  getFile(pathFile: string): string
-  getFileJSON(pathFile: string): Object
+  getFile<T = any>(pathFile: string): T
+  parseFile<T = any>(data: string, scheme?: TFileType): T
   createFile(props: TCreateFile): string
   setColors(): this
 }

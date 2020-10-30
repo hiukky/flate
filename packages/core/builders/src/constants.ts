@@ -1,3 +1,9 @@
+export const EXTENSIONS = {
+  json: '.json',
+  yml: '.yml',
+  conf: '.conf',
+}
+
 export const SETTINGS = {
   themeName: 'flate.json',
 }
