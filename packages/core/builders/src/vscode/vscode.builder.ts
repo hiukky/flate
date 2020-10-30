@@ -13,7 +13,7 @@ export class VScodeBuilder extends BaseBuilder implements IVscodeBuilder {
         this.theme.final[
           `${theme.variant}${
             theme.fontStyle && typeof theme.fontStyle === 'string'
-              ? `${theme.fontStyle}${this.extensions.json}`
+              ? `.${theme.fontStyle}${this.extensions.json}`
               : this.extensions.json
           }`
         ] = theme
