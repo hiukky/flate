@@ -8,13 +8,13 @@ import { getMockPath } from '../utils'
 
 const DEFAULT_PROPS = getMockPath('scss')
 
-test('Tools SCSS: Read File', ({ is }) => {
+test('SCSS: Read File', ({ is }) => {
   const colors = new ScssTool().read(`${DEFAULT_PROPS.rootDir.scss}/theme.scss`)
 
   is('$cyan: #00cecb;$red: #e84855;', colors.replace('\n', '').slice(0, -1))
 })
 
-test('Tools SCSS: Parse File to JSON', ({ deepEqual }) => {
+test('SCSS: Parse File to JSON', ({ deepEqual }) => {
   const scss = new ScssTool()
 
   const colors = scss.read(`${DEFAULT_PROPS.rootDir.scss}/theme.scss`)
@@ -22,7 +22,7 @@ test('Tools SCSS: Parse File to JSON', ({ deepEqual }) => {
   deepEqual(COLORS.scssJSON, scss.toJSON(colors))
 })
 
-test('Tools SCSS: Resolve scss dependencies and return in JSON format', ({
+test('SCSS: Resolve scss dependencies and return in JSON format', ({
   deepEqual,
 }) => {
   const scss = new ScssTool()
@@ -33,7 +33,7 @@ test('Tools SCSS: Resolve scss dependencies and return in JSON format', ({
   )
 })
 
-test('Tools SCSS: Get colors', ({ deepEqual }) => {
+test('SCSS: Get colors', ({ deepEqual }) => {
   const scss = new ScssTool()
 
   deepEqual(
@@ -42,7 +42,7 @@ test('Tools SCSS: Get colors', ({ deepEqual }) => {
   )
 })
 
-test('Tools SCSS: Get colors directory', ({ assert }) => {
+test('SCSS: Get colors directory', ({ assert }) => {
   const scss = new ScssTool()
   const expectedPath = resolve(__dirname, 'scss')
 

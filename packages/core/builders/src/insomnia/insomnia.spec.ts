@@ -9,7 +9,7 @@ import { getMockPath } from '../utils'
 
 const DEFAULT_PROPS = getMockPath('insomnia')
 
-test('BUILD INSOMNIA: Create variant', ({ assert, deepEqual }) => {
+test('INSOMNIA: Create variant', ({ assert, deepEqual }) => {
   const build = new InsomniaBuilder(DEFAULT_PROPS)
 
   build.theme.stage = themeBase
@@ -18,7 +18,7 @@ test('BUILD INSOMNIA: Create variant', ({ assert, deepEqual }) => {
   deepEqual({ [SETTINGS.themeName]: themeBase }, build.theme.final)
 })
 
-test('BUILD INSOMNIA: Compilation', ({ assert }) => {
+test('INSOMNIA: Compilation', ({ assert }) => {
   const expected = new InsomniaBuilder(DEFAULT_PROPS).compile()
 
   assert('done', expected)

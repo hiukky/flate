@@ -10,7 +10,7 @@ const DEFAULT_PROPS = getMockPath('base')
 test.beforeEach(() => clean(DEFAULT_PROPS.rootDir.build))
 test.afterEach(() => clean(DEFAULT_PROPS.rootDir.build))
 
-test('BUILD: List Files', ({ deepEqual }) => {
+test('BASE: List Files', ({ deepEqual }) => {
   const build = new BaseBuilder(DEFAULT_PROPS)
 
   const filter = (data: Array<string>) =>
@@ -19,7 +19,7 @@ test('BUILD: List Files', ({ deepEqual }) => {
   deepEqual(filter(Object.values(EXTENSIONS)), filter(build.listThemes))
 })
 
-test('BUILD: Get JSON File', ({ deepEqual }) => {
+test('BASE: Get JSON File', ({ deepEqual }) => {
   const build = new BaseBuilder(DEFAULT_PROPS)
 
   deepEqual(
@@ -28,7 +28,7 @@ test('BUILD: Get JSON File', ({ deepEqual }) => {
   )
 })
 
-test('BUILD: Get CONF File', ({ assert }) => {
+test('BASE: Get CONF File', ({ assert }) => {
   const build = new BaseBuilder(DEFAULT_PROPS)
 
   assert(
@@ -37,7 +37,7 @@ test('BUILD: Get CONF File', ({ assert }) => {
   )
 })
 
-test('BUILD: Get YML File', ({ assert }) => {
+test('BASE: Get YML File', ({ assert }) => {
   const build = new BaseBuilder(DEFAULT_PROPS)
 
   assert(
@@ -46,7 +46,7 @@ test('BUILD: Get YML File', ({ assert }) => {
   )
 })
 
-test('BUILD: Create File', ({ assert }) => {
+test('BASE: Create File', ({ assert }) => {
   const build = new BaseBuilder(DEFAULT_PROPS)
 
   assert(
@@ -59,7 +59,7 @@ test('BUILD: Create File', ({ assert }) => {
   )
 })
 
-test('BUILD: Set Colors', ({ deepEqual }) => {
+test('BASE: Set Colors', ({ deepEqual }) => {
   const build = new BaseBuilder(DEFAULT_PROPS)
 
   const stage = {
@@ -79,7 +79,7 @@ test('BUILD: Set Colors', ({ deepEqual }) => {
   deepEqual(final, build.theme.stage)
 })
 
-test('BUILD: Parse output to JSON', ({ deepEqual }) => {
+test('BASE: Parse output to JSON', ({ deepEqual }) => {
   const build = new BaseBuilder(DEFAULT_PROPS)
 
   deepEqual(
@@ -88,7 +88,7 @@ test('BUILD: Parse output to JSON', ({ deepEqual }) => {
   )
 })
 
-test('BUILD: Parse output to String', ({ deepEqual }) => {
+test('BASE: Parse output to String', ({ deepEqual }) => {
   const build = new BaseBuilder(DEFAULT_PROPS)
 
   deepEqual(FILE_JSON.toString(), build.parseFile(FILE_JSON))
