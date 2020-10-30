@@ -1,7 +1,7 @@
 import { BaseBuilder } from '../base'
-import { ITerminalBuilder, IProps, TExtension } from './terminal.interface'
+import { IEazyBuilder, IProps, TExtension } from './eazy.interface'
 
-export class TerminalBuilder extends BaseBuilder implements ITerminalBuilder {
+export class EazyBuilder extends BaseBuilder implements IEazyBuilder {
   private extension: TExtension
 
   constructor({ rootDir, extension }: IProps) {

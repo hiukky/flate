@@ -1,6 +1,6 @@
-import { TerminalBuilder } from '@flate/builders'
+import { EazyBuilder } from '@flate/builders'
 
-new TerminalBuilder({
+new EazyBuilder({
   rootDir: {
     themes: `${process.cwd()}/themes`,
     build: `${process.cwd()}/dist`,
