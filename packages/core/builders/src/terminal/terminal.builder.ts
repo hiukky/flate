@@ -6,7 +6,7 @@ export class TerminalBuilder extends BaseBuilder implements ITerminalBuilder {
 
   constructor({ rootDir, extension }: IProps) {
     super({ rootDir })
-    this.extension = extension
+    this.extension = extension || this.extensions.conf
   }
 
   /**

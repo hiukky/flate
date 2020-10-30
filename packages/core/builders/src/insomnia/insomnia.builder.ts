@@ -9,7 +9,7 @@ export class InsomniaBuilder extends BaseBuilder implements IInsomaniaBuilder {
    */
   createVariants(): string {
     this.theme.final[
-      `${this.theme.stage.variant}.${this.settings.fileType}`
+      `${this.theme.stage.variant}${this.extensions.json}`
     ] = this.theme.stage
 
     return 'created'
@@ -35,8 +35,8 @@ export class InsomniaBuilder extends BaseBuilder implements IInsomaniaBuilder {
   stage(): void {
     this.listThemes.forEach(themeName => {
       this.merge({
-        ...this.getFileJSON(`${this.rootDir.themes}/common/base.json`),
-        ...this.getFileJSON(`${this.rootDir.themes}/${themeName}`),
+        ...this.getFile(`${this.rootDir.themes}/common/base.json`),
+        ...this.getFile(`${this.rootDir.themes}/${themeName}`),
       })
     })
   }

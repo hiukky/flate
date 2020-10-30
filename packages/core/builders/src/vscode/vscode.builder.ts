@@ -11,16 +11,16 @@ export class VScodeBuilder extends BaseBuilder implements IVscodeBuilder {
     if (this.theme.variants.length) {
       this.theme.variants.forEach(theme => {
         this.theme.final[
-          `${theme.variant}.${
+          `${theme.variant}${
             theme.fontStyle && typeof theme.fontStyle === 'string'
-              ? `${theme.fontStyle}.${this.settings.fileType}`
-              : this.settings.fileType
+              ? `${theme.fontStyle}${this.extensions.json}`
+              : this.extensions.json
           }`
         ] = theme
       })
     } else {
       this.theme.final[
-        `${this.theme.stage.variant}.${this.settings.fileType}`
+        `${this.theme.stage.variant}${this.extensions.json}`
       ] = this.theme.stage
     }
 
@@ -76,8 +76,8 @@ export class VScodeBuilder extends BaseBuilder implements IVscodeBuilder {
   stage(): void {
     this.listThemes.forEach(themeName => {
       this.merge({
-        ...this.getFileJSON(`${this.rootDir.themes}/common/base.json`),
-        ...this.getFileJSON(`${this.rootDir.themes}/${themeName}`),
+        ...this.getFile(`${this.rootDir.themes}/common/base.json`),
+        ...this.getFile(`${this.rootDir.themes}/${themeName}`),
       })
     })
   }
