@@ -20,23 +20,3 @@ colors:
     magenta: '#a29bfe'
     cyan: '#00cecb'
     white: '#ffffff'
-
-  bright:
-    black: '#000000'
-    red: '#e84855'
-    green: '#23d18c'
-    yellow: '#ffe066'
-    blue: '#5677FC'
-    magenta: '#a29bfe'
-    cyan: '#00cecb'
-    white: '#ffffff'
-
-  dim:
-    black: '#000000'
-    red: '#e84855'
-    green: '#23d18c'
-    yellow: '#ffe066'
-    blue: '#5677FC'
-    magenta: '#a29bfe'
-    cyan: '#00cecb'
-    white: '#ffffff'

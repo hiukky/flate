@@ -20,23 +20,3 @@ colors:
     magenta: '$purple'
     cyan: '$cyan'
     white: '$white'
-
-  bright:
-    black: '$black'
-    red: '$red'
-    green: '$green'
-    yellow: '$yellow'
-    blue: '$blue'
-    magenta: '$purple'
-    cyan: '$cyan'
-    white: '$white'
-
-  dim:
-    black: '$black'
-    red: '$red'
-    green: '$green'
-    yellow: '$yellow'
-    blue: '$blue'
-    magenta: '$purple'
-    cyan: '$cyan'
-    white: '$white'
