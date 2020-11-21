@@ -23,7 +23,7 @@
   },
   "scripts": {
     "format": "prettier --write \"./packages/**/*.{ts,js}\"",
-    "clean": "rimraf packages/**/*/dist",
+    "clean": "rimraf packages/**/*/dist packages/**/*/release",
     "build": "yarn clean && lerna run build",
     "test": "nyc lerna run test",
     "coverage": "codecov"

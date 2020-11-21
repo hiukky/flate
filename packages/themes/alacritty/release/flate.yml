@@ -1,0 +1,42 @@
+colors:
+  primary:
+    background: '#16171e'
+    foreground: '#a29bfe'
+    dim_foreground: '#8f8d88'
+    bright_foreground: '#e9dbdb'
+    dim_background: '#8f8d88'
+    bright_background: '#8f8d88'
+
+  cursor:
+    text: '#424b54'
+    cursor: '#e9dbdb'
+
+  normal:
+    black: '#8f8d88'
+    red: '#e84855'
+    green: '#23d18c'
+    yellow: '#ffe066'
+    blue: '#00cecb'
+    magenta: '#a29bfe'
+    cyan: '#00cecb'
+    white: '#e9dbdb'
+
+  bright:
+    black: '#8f8d88'
+    red: '#e84855'
+    green: '#23d18c'
+    yellow: '#ffe066'
+    blue: '#00cecb'
+    magenta: '#a29bfe'
+    cyan: '#00cecb'
+    white: '#e9dbdb'
+
+  dim:
+    black: '#8f8d88'
+    red: '#e84855'
+    green: '#23d18c'
+    yellow: '#ffe066'
+    blue: '#00cecb'
+    magenta: '#a29bfe'
+    cyan: '#00cecb'
+    white: '#e9dbdb'
