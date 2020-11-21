@@ -1,7 +1,7 @@
 colors:
   primary:
     background: '$primaryColor'
-    foreground: '$purple'
+    foreground: '$white'
     dim_foreground: '$beige'
     bright_foreground: '$blush'
     dim_background: '$beige'
@@ -12,31 +12,31 @@ colors:
     cursor: '$blush'
 
   normal:
-    black: '$beige'
+    black: '$black'
     red: '$red'
     green: '$green'
     yellow: '$yellow'
-    blue: '$cyan'
+    blue: '$blue'
     magenta: '$purple'
     cyan: '$cyan'
-    white: '$blush'
+    white: '$white'
 
   bright:
-    black: '$beige'
+    black: '$black'
     red: '$red'
     green: '$green'
     yellow: '$yellow'
-    blue: '$cyan'
+    blue: '$blue'
     magenta: '$purple'
     cyan: '$cyan'
-    white: '$blush'
+    white: '$white'
 
   dim:
-    black: '$beige'
+    black: '$black'
     red: '$red'
     green: '$green'
     yellow: '$yellow'
-    blue: '$cyan'
+    blue: '$blue'
     magenta: '$purple'
     cyan: '$cyan'
-    white: '$blush'
+    white: '$white'
