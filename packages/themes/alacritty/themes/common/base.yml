@@ -18,5 +18,5 @@ colors:
     yellow: '$yellow'
     blue: '$blue'
     magenta: '$purple'
-    cyan: '$cyan'
+    cyan: '$secondaryColor'
     white: '$white'
