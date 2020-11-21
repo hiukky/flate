@@ -9,25 +9,25 @@ import { getMockPath } from '../utils'
 
 const DEFAULT_PROPS = getMockPath('vscode')
 
-test('VS CODE: Create many Variants', ({ assert, deepEqual }) => {
+test('Create many Variants', ({ is, deepEqual }) => {
   const build = new VScodeBuilder(DEFAULT_PROPS)
 
   build.theme.stage = themeBase
 
-  assert('created', build.createVariants())
+  is('created', build.createVariants())
   deepEqual({ [SETTINGS.themeName]: themeBase }, build.theme.final)
 })
 
-test('VS CODE: Create variant', ({ assert, deepEqual }) => {
+test('Create variant', ({ is, deepEqual }) => {
   const build = new VScodeBuilder(DEFAULT_PROPS)
 
   build.theme.variants.push(themeBase)
 
-  assert('created', build.createVariants())
+  is('created', build.createVariants())
   deepEqual({ [SETTINGS.themeName]: themeBase }, build.theme.final)
 })
 
-test('VS CODE: Set Font Styles', ({ deepEqual }) => {
+test('Set Font Styles', ({ deepEqual }) => {
   const build = new VScodeBuilder(DEFAULT_PROPS)
 
   build.theme.stage = themeBase
@@ -55,7 +55,7 @@ test('VS CODE: Set Font Styles', ({ deepEqual }) => {
   deepEqual(expected, build.theme.variants)
 })
 
-test('VS CODE: Compilation', ({ assert }) => {
+test('Compilation', ({ is }) => {
   const expected = new VScodeBuilder(DEFAULT_PROPS).compile()
-  assert('done', expected)
+  is('done', expected)
 })

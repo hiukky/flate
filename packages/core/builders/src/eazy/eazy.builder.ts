@@ -6,7 +6,7 @@ export class EazyBuilder extends BaseBuilder implements IEazyBuilder {
 
   constructor({ rootDir, extension }: IProps) {
     super({ rootDir })
-    this.extension = extension || this.extensions.conf
+    this.extension = extension
   }
 
   /**

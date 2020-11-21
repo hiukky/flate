@@ -3,14 +3,14 @@ import test from 'ava'
 import { BaseBuilder } from './base.builder'
 import { FILE_CONF, FILE_JSON, FILE_YML, THEME_BASE } from './mock/samples'
 import { COLORS, SETTINGS, EXTENSIONS } from '../constants'
-import { getMockPath, clean } from '../utils'
+import { getMockPath, clean, cleanOutput } from '../utils'
 
 const DEFAULT_PROPS = getMockPath('base')
 
 test.beforeEach(() => clean(DEFAULT_PROPS.rootDir.build))
 test.afterEach(() => clean(DEFAULT_PROPS.rootDir.build))
 
-test('BASE: List Files', ({ deepEqual }) => {
+test('List Files', ({ deepEqual }) => {
   const build = new BaseBuilder(DEFAULT_PROPS)
 
   const filter = (data: Array<string>) =>
@@ -19,7 +19,7 @@ test('BASE: List Files', ({ deepEqual }) => {
   deepEqual(filter(Object.values(EXTENSIONS)), filter(build.listThemes))
 })
 
-test('BASE: Get JSON File', ({ deepEqual }) => {
+test('Get JSON File', ({ deepEqual }) => {
   const build = new BaseBuilder(DEFAULT_PROPS)
 
   deepEqual(
@@ -28,28 +28,28 @@ test('BASE: Get JSON File', ({ deepEqual }) => {
   )
 })
 
-test('BASE: Get CONF File', ({ assert }) => {
+test('Get CONF File', ({ is }) => {
   const build = new BaseBuilder(DEFAULT_PROPS)
 
-  assert(
-    FILE_CONF.toString(),
-    build.getFile(`${build.rootDir.themes}/${EXTENSIONS.conf}`),
+  is(
+    cleanOutput(FILE_CONF.toString()),
+    cleanOutput(build.getFile(`${build.rootDir.themes}/${EXTENSIONS.conf}`)),
   )
 })
 
-test('BASE: Get YML File', ({ assert }) => {
+test('Get YML File', ({ is }) => {
   const build = new BaseBuilder(DEFAULT_PROPS)
 
-  assert(
-    FILE_YML.toString(),
-    build.getFile(`${build.rootDir.themes}/${EXTENSIONS.yml}`),
+  is(
+    cleanOutput(FILE_YML.toString()),
+    cleanOutput(build.getFile(`${build.rootDir.themes}/${EXTENSIONS.yml}`)),
   )
 })
 
-test('BASE: Create File', ({ assert }) => {
+test('Create File', ({ is }) => {
   const build = new BaseBuilder(DEFAULT_PROPS)
 
-  assert(
+  is(
     'created',
     build.createFile({
       path: build.rootDir.build,
@@ -59,7 +59,7 @@ test('BASE: Create File', ({ assert }) => {
   )
 })
 
-test('BASE: Set Colors', ({ deepEqual }) => {
+test('Set Colors', ({ deepEqual }) => {
   const build = new BaseBuilder(DEFAULT_PROPS)
 
   const stage = {
@@ -79,7 +79,7 @@ test('BASE: Set Colors', ({ deepEqual }) => {
   deepEqual(final, build.theme.stage)
 })
 
-test('BASE: Parse output to JSON', ({ deepEqual }) => {
+test('Parse output to JSON', ({ deepEqual }) => {
   const build = new BaseBuilder(DEFAULT_PROPS)
 
   deepEqual(
@@ -88,7 +88,7 @@ test('BASE: Parse output to JSON', ({ deepEqual }) => {
   )
 })
 
-test('BASE: Parse output to String', ({ deepEqual }) => {
+test('Parse output to String', ({ deepEqual }) => {
   const build = new BaseBuilder(DEFAULT_PROPS)
 
   deepEqual(FILE_JSON.toString(), build.parseFile(FILE_JSON))

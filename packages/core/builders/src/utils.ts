@@ -23,3 +23,13 @@ export const getMockPath = (builder: string) => ({
  * @param {string} dir
  */
 export const clean = (dir: string) => rimraf.sync(dir)
+
+/**
+ * @function cleanOutput
+ *
+ * @desc Remove spaces from strings and line breaks.
+ *
+ * @param {string} value
+ */
+export const cleanOutput = (value: string): string =>
+  value.replace(/\s\s+/g, ' ').trim()

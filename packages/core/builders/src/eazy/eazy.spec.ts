@@ -7,7 +7,7 @@ import { EazyBuilder } from './eazy.builder'
 
 const DEFAULT_PROPS: IProps = { ...getMockPath('eazy'), extension: 'conf' }
 
-test('EAZY: Compilation', ({ assert }) => {
+test('Compilation', ({ is }) => {
   const expected = new EazyBuilder(DEFAULT_PROPS).compile()
-  assert('done', expected)
+  is('done', expected)
 })
