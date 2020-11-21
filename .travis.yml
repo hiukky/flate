@@ -14,9 +14,12 @@ before_install:
 
 install:
   - npm i
-  - npm i ./packages/colors packages/core
-  - npm i ./packages/core packages/insomnia
-  - npm i ./packages/core packages/vscode
+  - npm i ./packages/core/colors   packages/core
+  - npm i ./packages/core/builders packages/insomnia
+  - npm i ./packages/core/builders packages/vscode
+  - npm i ./packages/core/builders packages/kitty
+  - npm i ./packages/core/builders packages/alacritty
+  - npm i ./packages/core/builders packages/ulauncher
   - npm run build
 
 script:

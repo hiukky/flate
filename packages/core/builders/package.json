@@ -31,7 +31,6 @@
     ]
   },
   "dependencies": {
-    "@flate/colors": "^0.6.0",
-    "undefined": "/home/hiukky/Develop/others/flate/packages/core/colors"
+    "@flate/colors": "^0.6.0"
   }
 }
