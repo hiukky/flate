@@ -14,5 +14,5 @@
 To install the theme for Alacritty, just execute the command below in the terminal and choose the desired theme variant.
 
 ```sh
-curl -fsSl https://raw.githubusercontent.com/hiukky/flate/develop/packages/themes/alacritty/scripts/install.sh | bash
+bash <(curl -fsSl https://raw.githubusercontent.com/hiukky/flate/develop/packages/themes/alacritty/scripts/install.sh)
 ```
