@@ -4,5 +4,5 @@
   "check-coverage": true,
   "reporter": ["text", "lcov"],
   "include": ["packages/core"],
-  "exclude": ["**/interface.ts", "**/index.ts", "**/*.spec.ts"]
+  "exclude": ["**/*.interface.ts", "**/index.ts", "**/*.spec.ts"]
 }
