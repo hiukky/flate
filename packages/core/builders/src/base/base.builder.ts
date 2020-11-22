@@ -112,7 +112,7 @@ export class BaseBuilder implements IBaseBuilder {
     const theme = this.theme.stage
 
     Object.entries(this.scss.getColors(null, theme.variant)).forEach(
-      ([nameColor, color]: any) => {
+      ([nameColor, color]) => {
         this.theme.stage = JSON.parse(
           JSON.stringify(this.theme.stage).replace(
             new RegExp(`\\${nameColor}`, 'g'),

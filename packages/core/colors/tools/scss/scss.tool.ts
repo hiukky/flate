@@ -1,6 +1,6 @@
 import fs from 'fs'
 import { resolve } from 'path'
-import { IScss } from './scss.interface'
+import { IScss, TColors, TColorsNames } from './scss.interface'
 
 export class ScssTool implements IScss {
   /**
@@ -8,7 +8,7 @@ export class ScssTool implements IScss {
    *
    * @desc Get the directory of scss files with color scheme.
    */
-  get colorDirectory() {
+  get colorDirectory(): string {
     return resolve(__dirname, '..', '..', 'scss')
   }
 
@@ -30,21 +30,19 @@ export class ScssTool implements IScss {
    *
    * @param {String} file
    */
-  toJSON(file: string): object {
-    let schemeJSON = {}
+  toJSON(file: string): TColors {
+    let data: TColors = {} as TColors
 
     if (file) {
-      file
+      data = file
         .split(/\n/)
         .filter(s => !!s)
         .map(s => s.replace(';', '').split(':'))
-        .map(([k, v]) => {
-          schemeJSON = { ...schemeJSON, [k]: v?.trim() }
-          return true
-        })
+        .map(([k, v]) => ({ ...data, [k]: v?.trim() }))
+        .reduce((a, b) => ({ ...a, ...b }))
     }
 
-    return schemeJSON
+    return data
   }
 
   /**
@@ -55,56 +53,26 @@ export class ScssTool implements IScss {
    * @param {String} path
    * @param {String} fileName
    */
-  resolve(path: string, fileName: string) {
-    let schemeJSON: { [k: string]: any } = {}
-    let dependencies: { [k: string]: any } = {}
-    let file = ''
+  resolve(path: string, fileName: string): TColors {
+    const file = this.read(`${path}/${fileName}`).split(';')
 
-    if (path && fileName) {
-      file = this.read(`${path}/${fileName}`)
-    }
+    const [dependencies] = file
+      .filter(row => /@import/.test(row))
+      .map(row => {
+        const key = row.split(' ')[1].slice(1, -1)
 
-    if (file) {
-      file = file
-        .split(';')
-        .filter(row => {
-          if (row.match(/@import/)) {
-            const key = row.split(' ')[1].slice(1, -1)
-
-            dependencies = {
-              [key]: this.toJSON(
-                this.read(`${path}/_${key.replace('./', '')}.scss`),
-              ),
-            }
-
-            return false
-          }
-
-          return row
-        })
-        .join(';')
-
-      file = this.toJSON(file) as any
-    }
-
-    if (Object.entries(file).length) {
-      if (Object.entries(dependencies).length) {
-        ;[dependencies] = Object.values(dependencies)
-      }
-
-      Object.entries(file).map(([k, v]) => {
-        schemeJSON = {
-          ...schemeJSON,
-          [k]: v.match(/\$/) ? dependencies[v] || schemeJSON[v] : v,
-        }
-
-        return file
+        return this.toJSON(this.read(`${path}/_${key.replace('./', '')}.scss`))
       })
 
-      return { ...dependencies, ...schemeJSON }
-    }
+    const mergedDependencies = Object.entries(
+      this.toJSON(file.filter(row => !/@import/.test(row)).join(';')),
+    )
+      .map(([key, value]) => ({
+        [key]: /\$/.test(value) ? dependencies[value as TColorsNames] : value,
+      }))
+      .reduce((a, b) => ({ ...a, ...b }))
 
-    return schemeJSON
+    return { ...dependencies, ...mergedDependencies }
   }
 
   /**
@@ -115,7 +83,7 @@ export class ScssTool implements IScss {
    * @param {String} path
    * @param {String} variant
    */
-  getColors(path: string | null, variant: string): object {
+  getColors(path: string | null, variant: string): TColors {
     return this.resolve(path || this.colorDirectory, `${variant}.scss`)
   }
 }
