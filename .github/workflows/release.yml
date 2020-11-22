@@ -40,7 +40,7 @@ jobs:
 
       # Alacritty
       - name: Alacritty -> Pack
-        run: (cd ${{ env.workdir }}/alacritty && zip -r alacritty.zip release)
+        run: (cd ${{ env.workdir }}/alacritty && zip -r alacritty.zip dist)
 
       - name: Alacritty -> Upload assets
         uses: svenstaro/upload-release-action@v2
