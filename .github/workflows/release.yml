@@ -1,0 +1,52 @@
+name: release
+on: [push]
+
+jobs:
+  # VS Code
+  build:
+    name: Release
+    runs-on: ubuntu-latest
+
+    env:
+      workdir: ./packages/themes
+
+    steps:
+      - name: Project -> Checkout
+        uses: actions/checkout@v2
+
+      - name: Project -> Set up Node
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '14'
+
+      - name: Project -> Install Dependencies
+        run: yarn install
+
+      - name: Project -> Test
+        run: yarn test
+
+      - name: Project -> Build
+        run: yarn build
+
+      # VS Code
+      - name: VS Code -> Upload
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ${{ env.workdir }}/vscode/flate-0.6.0.vsix
+          asset_name: vscode.vsix
+          tag: ${{ github.ref }}
+          overwrite: true
+
+      # Alacritty
+      - name: Alacritty -> Pack
+        run: (cd ${{ env.workdir }}/alacritty && zip -r alacritty.zip release)
+
+      - name: Alacritty -> Upload assets
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ${{ env.workdir }}/alacritty/alacritty.zip
+          asset_name: alacritty.zip
+          tag: ${{ github.ref }}
+          overwrite: true
