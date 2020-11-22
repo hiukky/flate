@@ -8,11 +8,3 @@
   <sub>Built with ❤︎ by <a href="https://hiukky.com">Hiukky</a>
   <br/><br/>
 </p>
-
-## Instalation
-
-To install the theme for Alacritty, just execute the command below in the terminal and choose the desired theme variant.
-
-```sh
-bash <(curl -fsSl https://raw.githubusercontent.com/hiukky/flate/develop/packages/themes/alacritty/scripts/install.sh)
-```
