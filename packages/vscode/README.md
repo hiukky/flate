@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="flate logo" src="https://github.com/hiukky/flate/raw/develop/packages/vscode/assets/banner.png"/>
+  <img alt="flate logo" src="https://github.com/hiukky/flate/raw/master/packages/vscode/assets/banner.png"/>
 </div>
 
 <p align="center">
@@ -18,7 +18,7 @@
   <a href="https://github.com/hiukky/flate/issues">
     <img alt="GitHub issues" src="https://img.shields.io/github/issues/hiukky/flate?style=for-the-badge&color=ffe066&colorA=1C1D27">
   </a>
-  <a href="httdivs://github.com/hiukky/flate/blob/develop/LICENSE">
+  <a href="httdivs://github.com/hiukky/flate/blob/master/LICENSE">
     <img alt="GitHub license" src="https://img.shields.io/github/license/hiukky/flate?color=%23eab464&style=for-the-badge&colorA=1C1D27" />
   </a>
   <a href="https://marketplace.visualstudio.com/items?itemName=hiukky.flate">
@@ -44,10 +44,10 @@ Choose the one that best suits you!
 
 <div align="center">
   <h3>Flate</h3>
-  <img src="https://github.com/hiukky/flate/raw/develop/packages/vscode/assets/variant-flate.png" />
+  <img src="https://github.com/hiukky/flate/raw/master/packages/vscode/assets/variant-flate.png" />
   <h3>Flate Arc</h3>
-  <img src="https://github.com/hiukky/flate/raw/develop/packages/vscode/assets/variant-arc.png" />
+  <img src="https://github.com/hiukky/flate/raw/master/packages/vscode/assets/variant-arc.png" />
   <br/><br/>
   <h3>Flate Punk</h3>
-  <img src="https://github.com/hiukky/flate/raw/develop/packages/vscode/assets/variant-punk.png" />
+  <img src="https://github.com/hiukky/flate/raw/master/packages/vscode/assets/variant-punk.png" />
 </div>

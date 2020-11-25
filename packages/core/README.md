@@ -18,7 +18,7 @@
   <a href="https://github.com/hiukky/flate/issues">
     <img alt="GitHub issues" src="https://img.shields.io/github/issues/hiukky/flate?style=for-the-badge&color=ffe066&colorA=1C1D27">
   </a>
-  <a href="httdivs://github.com/hiukky/flate/blob/develop/LICENSE">
+  <a href="httdivs://github.com/hiukky/flate/blob/master/LICENSE">
     <img alt="GitHub license" src="https://img.shields.io/github/license/hiukky/flate?color=%23eab464&style=for-the-badge&colorA=1C1D27" />
   </a>
 </p>
