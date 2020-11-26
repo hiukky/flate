@@ -1,12 +1,48 @@
 #!/bin/bash
 # By @hiukky https://hiukky.com
 
-# Utils
-. utils.sh
-. config.sh
 
-# Themes
-. alacritty.sh
+BRANCH="develop"
+WORKDIR="$HOME/.tmp/flate"
+VARIANTS=(
+  'flate'
+  'flate-arc'
+  'flate-punk'
+)
+THEMES=(
+  'alacritty'
+)
+
+getURLTheme() {
+  local theme=$1
+
+   if ! printf '%s\n' "${THEMES[@]}" | grep -P "^$theme$" > /dev/null; then
+      echo 'Invalid theme name!'
+      exit 0
+   fi
+
+  echo "https://raw.githubusercontent.com/hiukky/flate/$BRANCH/packages/themes/$theme/release"
+}
+
+checkPkg() {
+  local pkg=$1
+
+   bash $pkg &> /dev/null
+
+  if [[ "$?" -eq 127 ]]; then
+    sudo snap install "$pkg"
+  fi
+}
+
+colorfy() {
+  checkPkg lolcat
+  echo "$1" | lolcat
+}
+
+printfy() {
+  checkPkg figlet
+  figlet "$1" | lolcat
+}
 
 banner() {
   clear
@@ -14,6 +50,26 @@ banner() {
   printfy 'F l a t e'
   colorfy '     Colorful Dark Themes!!'
   echo
+}
+
+installAlacrittyTheme() {
+  local PATH_THEME="$HOME/.config/alacritty/alacritty.yml"
+  local DIR=$WORKDIR/alacritty
+
+  checkPkg yq
+
+  local variant=$1
+
+  mkdir -p $DIR
+  curl GET -s $(getURLTheme alacritty)/$variant.yml > $DIR/$variant.yml
+  sleep 3
+
+  yq d -i $PATH_THEME 'colors'
+  yq m -i -I 4 $PATH_THEME $DIR/$variant.yml
+  rm -rf $DIR
+
+  echo
+  colorfy "Theme successfully installed!"
 }
 
 menu() {
