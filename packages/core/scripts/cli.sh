@@ -1,8 +1,8 @@
 #!/bin/bash
 # By @hiukky https://hiukky.com
 
-
-BRANCH="develop"
+# CONSTANTS
+RELEASE="develop"
 WORKDIR="$HOME/.tmp/flate"
 VARIANTS=(
   'flate'
@@ -12,16 +12,20 @@ VARIANTS=(
 THEMES=(
   'alacritty'
 )
+THEMES_FILES=(
+  'alacritty.zip'
+)
 
+# UTILS
 getURLTheme() {
   local theme=$1
 
-   if ! printf '%s\n' "${THEMES[@]}" | grep -P "^$theme$" > /dev/null; then
+   if ! printf '%s\n' "${THEMES_FILES[@]}" | grep -P "^$theme$" > /dev/null; then
       echo 'Invalid theme name!'
       exit 0
    fi
 
-  echo "https://raw.githubusercontent.com/hiukky/flate/$BRANCH/packages/themes/$theme/release"
+  echo "https://github.com/hiukky/flate/releases/download/$RELEASE/$theme"
 }
 
 checkPkg() {
@@ -52,26 +56,29 @@ banner() {
   echo
 }
 
+# THEMES
 installAlacrittyTheme() {
   local PATH_THEME="$HOME/.config/alacritty/alacritty.yml"
-  local DIR=$WORKDIR/alacritty
+  local THEME="alacritty"
 
   checkPkg yq
 
   local variant=$1
 
-  mkdir -p $DIR
-  curl GET -s $(getURLTheme alacritty)/$variant.yml > $DIR/$variant.yml
+  mkdir -p $WORKDIR
+  curl -sL $(getURLTheme $THEME.zip) > $WORKDIR/$THEME.zip
   sleep 3
 
+  unzip -o $WORKDIR/$THEME.zip -d $WORKDIR/$THEME &> /dev/null && rm -rf $WORKDIR/$THEME.zip
+
   yq d -i $PATH_THEME 'colors'
-  yq m -i -I 4 $PATH_THEME $DIR/$variant.yml
-  rm -rf $DIR
+  yq m -i -I 4 $PATH_THEME $WORKDIR/$THEME/dist/$variant.yml
 
   echo
   colorfy "Theme successfully installed!"
 }
 
+# CLI
 menu() {
   local variant=$1
 
