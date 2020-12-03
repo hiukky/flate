@@ -12,10 +12,12 @@ VARIANTS=(
 THEMES=(
   'alacritty'
   'vscode'
+  'ulauncher'
 )
 THEMES_FILES=(
   'alacritty.zip'
   'vscode.vsix'
+  'ulauncher.zip'
 )
 
 # UTILS
@@ -56,6 +58,10 @@ printfy() {
   figlet "$1" | lolcat
 }
 
+extract() {
+  unzip -o $1.zip -d $1 &> /dev/null && rm -rf $1.zip
+}
+
 banner() {
   clear
 
@@ -69,14 +75,16 @@ installAlacrittyTheme() {
   local PATH_THEME="$HOME/.config/alacritty/alacritty.yml"
   local THEME="alacritty"
   local VARIANT=$1
+  local PKG="alacritty"
 
-  checkPkg yq
+  if ! $(checkPkg $PKG); then
+    installSnapPkg $PKG yq
+  fi
 
   mkdir -p $WORKDIR
   curl -sL $(getURLTheme $THEME.zip) > $WORKDIR/$THEME.zip
   sleep 3
-
-  unzip -o $WORKDIR/$THEME.zip -d $WORKDIR/$THEME &> /dev/null && rm -rf $WORKDIR/$THEME.zip
+  extract $WORKDIR/$THEME
 
   yq d -i $PATH_THEME 'colors'
   yq m -i -I 4 $PATH_THEME $WORKDIR/$THEME/dist/$VARIANT.yml
@@ -96,6 +104,25 @@ installVSCodeTheme() {
   curl -sL $(getURLTheme $THEME.vsix) > $WORKDIR/$THEME.vsix
 
   code --install-extension $WORKDIR/$THEME.vsix
+
+  echo
+  colorfy "Theme successfully installed!"
+}
+
+installUlauncherTheme() {
+  local PATH_THEME="$HOME/.config/ulauncher/user-themes"
+  local THEME="ulauncher"
+  local PKG="ulauncher"
+
+  if ! $(checkPkg $PKG); then
+    installSnapPkg $PKG
+  fi
+
+  mkdir -p $WORKDIR
+  curl -sL $(getURLTheme $THEME.zip) > $WORKDIR/$THEME.zip
+  sleep 3
+  extract $WORKDIR/$THEME
+  cp -R $WORKDIR/$THEME/dist/* $PATH_THEME
 
   echo
   colorfy "Theme successfully installed!"
@@ -135,6 +162,10 @@ menu() {
 
       2)
       installVSCodeTheme
+      break;;
+
+      3)
+      installUlauncherTheme
       break;;
     esac
   done
