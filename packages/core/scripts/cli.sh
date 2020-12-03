@@ -11,9 +11,11 @@ VARIANTS=(
 )
 THEMES=(
   'alacritty'
+  'vscode'
 )
 THEMES_FILES=(
   'alacritty.zip'
+  'vscode.vsix'
 )
 
 # UTILS
@@ -31,11 +33,17 @@ getURLTheme() {
 checkPkg() {
   local pkg=$1
 
-   bash $pkg &> /dev/null
-
-  if [[ "$?" -eq 127 ]]; then
-    sudo snap install "$pkg"
+  if ! type "$pkg" &> /dev/null ; then
+    false; return
   fi
+}
+
+installSnapPkg() {
+  sudo snap install "$1"
+}
+
+installNPMPkg() {
+  sudo npm i -g "$1"
 }
 
 colorfy() {
@@ -60,10 +68,9 @@ banner() {
 installAlacrittyTheme() {
   local PATH_THEME="$HOME/.config/alacritty/alacritty.yml"
   local THEME="alacritty"
+  local VARIANT=$1
 
   checkPkg yq
-
-  local variant=$1
 
   mkdir -p $WORKDIR
   curl -sL $(getURLTheme $THEME.zip) > $WORKDIR/$THEME.zip
@@ -72,32 +79,29 @@ installAlacrittyTheme() {
   unzip -o $WORKDIR/$THEME.zip -d $WORKDIR/$THEME &> /dev/null && rm -rf $WORKDIR/$THEME.zip
 
   yq d -i $PATH_THEME 'colors'
-  yq m -i -I 4 $PATH_THEME $WORKDIR/$THEME/dist/$variant.yml
+  yq m -i -I 4 $PATH_THEME $WORKDIR/$THEME/dist/$VARIANT.yml
+
+  echo
+  colorfy "Theme successfully installed!"
+}
+
+installVSCodeTheme() {
+  local THEME="vscode"
+  local PKG="code"
+
+  if ! $(checkPkg $PKG); then
+    installSnapPkg $PKG
+  fi
+
+  curl -sL $(getURLTheme $THEME.vsix) > $WORKDIR/$THEME.vsix
+
+  code --install-extension $WORKDIR/$THEME.vsix
 
   echo
   colorfy "Theme successfully installed!"
 }
 
 # CLI
-menu() {
-  local variant=$1
-
-  banner
-
-  PS3=$'\nSelect an theme: '
-
-  echo
-
-  select option in "${THEMES[@]}"
-  do
-    case "$REPLY" in
-      1)
-      installAlacrittyTheme $variant
-      break;;
-    esac
-  done
-}
-
 menuVariants() {
   banner
 
@@ -108,10 +112,32 @@ menuVariants() {
     case "$REPLY" in
       1 | 2 | 3)
         local variant=${VARIANTS[$REPLY -1]}
-        menu $variant
+        export VARIANT="$variant"
         break;;
       esac
   done
 }
 
-menuVariants
+menu() {
+  banner
+
+  PS3=$'\nSelect an theme: '
+
+  echo
+
+  select option in "${THEMES[@]}"
+  do
+    case "$REPLY" in
+      1)
+      menuVariants
+      installAlacrittyTheme $VARIANT
+      break;;
+
+      2)
+      installVSCodeTheme
+      break;;
+    esac
+  done
+}
+
+menu
