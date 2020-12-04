@@ -13,11 +13,13 @@ THEMES=(
   'alacritty'
   'vscode'
   'ulauncher'
+  'insomnia'
 )
 THEMES_FILES=(
   'alacritty.zip'
   'vscode.vsix'
   'ulauncher.zip'
+  'insomnia.zip'
 )
 
 # UTILS
@@ -128,6 +130,26 @@ installUlauncherTheme() {
   colorfy "Theme successfully installed!"
 }
 
+installInsomniaTheme() {
+  local PATH_THEME="$HOME/.config/Insomnia/plugins/@flate"
+  local THEME="insomnia"
+  local PKG="insomnia"
+
+  if ! $(checkPkg $PKG); then
+    installSnapPkg $PKG
+  fi
+
+  mkdir -p $WORKDIR
+  curl -sL $(getURLTheme $THEME.zip) > $WORKDIR/$THEME.zip
+  sleep 3
+  extract $WORKDIR/$THEME
+  mkdir -p $PATH_THEME
+  cp -R $WORKDIR/$THEME $PATH_THEME
+
+  echo
+  colorfy "Theme successfully installed!"
+}
+
 # CLI
 menuVariants() {
   banner
@@ -166,6 +188,10 @@ menu() {
 
       3)
       installUlauncherTheme
+      break;;
+
+      4)
+      installInsomniaTheme
       break;;
     esac
   done
