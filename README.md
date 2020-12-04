@@ -34,15 +34,50 @@
 
 ## Packages
 
-Available packages.
+All packages for assistance from construction to installation of themes.
 
-- [Core](https://github.com/hiukky/flate/tree/master/packages/core)
-- [Colors](https://github.com/hiukky/flate/tree/master/packages/colors)
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/hiukky/flate/tree/develop/packages/core/builders">
+      <img src="assets/builders.png" width="75px" height="75px" alt="Builders" />
+      <br /><b>Builders</b></a>
+    </td>
+    <td align="center"><a href="https://github.com/hiukky/flate/tree/develop/packages/core/colors">
+      <img src="assets/colors.png" width="75px" height="75px" alt="Colors" />
+      <br /><b>Colors</b></a>
+    </td>
+    <td align="center"><a href="https://github.com/hiukky/flate/tree/develop/packages/core/scripts">
+      <img src="assets/scripts.png" width="75px" height="75px" alt="Scripts" />
+      <br /><b>Scripts</b></a>
+    </td>
+  </tr>
+</table>
 
 ## Themes
 
-Available themes.
+All themes available so far.
 
-- [VS Code](https://github.com/hiukky/flate/tree/master/packages/vscode)
-- [Insomnia](https://github.com/hiukky/flate/tree/master/packages/insomnia)
-- [Ulauncher](https://github.com/hiukky/flate/tree/master/packages/ulauncher)
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/hiukky/flate/tree/develop/packages/themes/vscode">
+      <img src="assets/vscode.png" width="75px" height="75px" alt="VS Code" />
+      <br /><b>VS Code</b></a>
+    </td>
+    <td align="center"><a href="https://github.com/hiukky/flate/tree/develop/packages/themes/insomnia">
+      <img src="assets/insomnia.png" width="75px" height="75px" alt="Insomnia" />
+      <br /><b>Insomnia</b></a>
+    </td>
+    <td align="center"><a href="https://github.com/hiukky/flate/tree/develop/packages/themes/ulauncher">
+      <img src="assets/ulauncher.png" width="75px" height="75px" alt="Ulauncher" />
+      <br /><b>Insomnia</b></a>
+    </td>
+    <td align="center"><a href="https://github.com/hiukky/flate/tree/develop/packages/themes/alacritty">
+      <img src="assets/alacritty.png" width="75px" height="75px" alt="Alacritty" />
+      <br /><b>Alacritty</b></a>
+    </td>
+    <td align="center"><a href="https://github.com/hiukky/flate/tree/develop/packages/themes/kitty">
+      <img src="assets/kitty.png" width="75px" height="75px" alt="Kitty" />
+      <br /><b>Kitty</b></a>
+    </td>
+  </tr>
+</table>
