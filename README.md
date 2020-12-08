@@ -69,7 +69,7 @@ All themes available so far.
     </td>
     <td align="center"><a href="https://github.com/hiukky/flate/tree/develop/packages/themes/ulauncher">
       <img src="assets/ulauncher.png" width="75px" height="75px" alt="Ulauncher" />
-      <br /><b>Insomnia</b></a>
+      <br /><b>Ulauncher</b></a>
     </td>
     <td align="center"><a href="https://github.com/hiukky/flate/tree/develop/packages/themes/alacritty">
       <img src="assets/alacritty.png" width="75px" height="75px" alt="Alacritty" />
