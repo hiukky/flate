@@ -75,3 +75,16 @@ jobs:
           asset_name: insomnia.zip
           tag: ${{ github.ref }}
           overwrite: true
+
+      # Kitty
+      - name: Kitty -> Pack
+        run: (cd ${{ env.workdir }}/kitty && zip -r kitty.zip dist)
+
+      - name: Kitty -> Upload assets
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ${{ env.workdir }}/kitty/kitty.zip
+          asset_name: kitty.zip
+          tag: ${{ github.ref }}
+          overwrite: true
