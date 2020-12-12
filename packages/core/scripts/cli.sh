@@ -74,6 +74,11 @@ banner() {
   echo
 }
 
+success() {
+  echo
+  colorfy "Theme successfully installed!"
+}
+
 # THEMES
 installAlacrittyTheme() {
   local PATH_THEME="$HOME/.config/alacritty/alacritty.yml"
@@ -93,8 +98,7 @@ installAlacrittyTheme() {
   yq d -i $PATH_THEME 'colors'
   yq m -i -I 4 $PATH_THEME $WORKDIR/$THEME/dist/$VARIANT.yml
 
-  echo
-  colorfy "Theme successfully installed!"
+  success
 }
 
 installVSCodeTheme() {
@@ -109,8 +113,7 @@ installVSCodeTheme() {
 
   code --install-extension $WORKDIR/$THEME.vsix
 
-  echo
-  colorfy "Theme successfully installed!"
+  success
 }
 
 installUlauncherTheme() {
@@ -128,8 +131,7 @@ installUlauncherTheme() {
   extract $WORKDIR/$THEME
   cp -R $WORKDIR/$THEME/dist/* $PATH_THEME
 
-  echo
-  colorfy "Theme successfully installed!"
+  success
 }
 
 installInsomniaTheme() {
@@ -148,8 +150,7 @@ installInsomniaTheme() {
   mkdir -p $PATH_THEME
   cp -R $WORKDIR/$THEME $PATH_THEME
 
-  echo
-  colorfy "Theme successfully installed!"
+  success
 }
 
 installKittyTheme() {
@@ -159,7 +160,7 @@ installKittyTheme() {
   local VARIANT=$1
 
   mkdir -p $WORKDIR
-  curl -sL $(getURLTheme $THEME.zip) > $WORKDIR/$THEME.zip
+  curl -sL $(getURLTheme $THEME.zi) > $WORKDIR/$THEME.zip
   sleep 3
   extract $WORKDIR/$THEME
   mkdir -p $PATH_THEME
@@ -168,8 +169,7 @@ installKittyTheme() {
   sed -i '/flate/Id' $PATH_THEME/kitty.conf
   bash -c "echo -e '#: Flate color scheme \ninclude $HOME/.config/kitty/flate.conf'" >> $PATH_THEME/kitty.conf
 
-  echo
-  colorfy "Theme successfully installed!"
+  success
 }
 
 # CLI
