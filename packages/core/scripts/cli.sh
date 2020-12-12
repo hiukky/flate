@@ -28,7 +28,7 @@ THEMES_FILES=(
 )
 
 # UTILS
-getURLTheme() {
+get_url_theme() {
   local theme=$1
 
    if ! printf '%s\n' "${THEMES_FILES[@]}" | grep -P "^$theme$" > /dev/null; then
@@ -39,7 +39,7 @@ getURLTheme() {
   echo "https://github.com/hiukky/flate/releases/download/$RELEASE/$theme"
 }
 
-checkPkg() {
+check_pkg() {
   local pkg=$1
 
   if ! type "$pkg" &> /dev/null ; then
@@ -47,21 +47,21 @@ checkPkg() {
   fi
 }
 
-installSnapPkg() {
+install_snap_pkg() {
   sudo snap install "$1"
 }
 
-installNPMPkg() {
+install_npm_pkg() {
   sudo npm i -g "$1"
 }
 
 colorfy() {
-  checkPkg lolcat
-  echo "$1" | lolcat
+  check_pkg lolcat
+  echo -e "$1" | lolcat
 }
 
 printfy() {
-  checkPkg figlet
+  check_pkg figlet
   figlet "$1" | lolcat
 }
 
@@ -71,15 +71,17 @@ extract() {
 
 banner() {
   clear
-
-  printfy 'F l a t e'
-  colorfy '     Colorful Dark Themes!!'
+  printfy '           F l a t e'
+  colorfy '    Colorful Dark themes built with ❤︎ by @hiukky'
   echo
 }
 
 success() {
-  echo
-  colorfy "Theme successfully installed!"
+  colorfy "\nTheme successfully installed!"
+}
+
+installing() {
+  colorfy "\nInstalling..."
 }
 
 err() {
@@ -89,87 +91,79 @@ err() {
 }
 
 # THEMES
-installAlacrittyTheme() {
+install_alacritty_theme() {
   local PATH_THEME="$HOME/.config/alacritty/alacritty.yml"
   local THEME="alacritty"
   local VARIANT=$1
   local PKG="alacritty"
 
-  if ! $(checkPkg $PKG); then
-    installSnapPkg $PKG yq
+  if ! $(check_pkg $PKG); then
+    install_snap_pkg $PKG yq
   fi
 
   mkdir -p $WORKDIR
-  curl -sL $(getURLTheme $THEME.zip) > $WORKDIR/$THEME.zip
+  curl -sL $(get_url_theme $THEME.zip) > $WORKDIR/$THEME.zip
   sleep 3
   extract $WORKDIR/$THEME
 
   yq d -i $PATH_THEME 'colors'
   yq m -i -I 4 $PATH_THEME $WORKDIR/$THEME/dist/$VARIANT.yml
-
-  success
 }
 
-installVSCodeTheme() {
+install_code_theme() {
   local THEME="vscode"
   local PKG="code"
 
-  if ! $(checkPkg $PKG); then
-    installSnapPkg $PKG
+  if ! $(check_pkg $PKG); then
+    install_snap_pkg $PKG
   fi
 
-  curl -sL $(getURLTheme $THEME.vsix) > $WORKDIR/$THEME.vsix
+  curl -sL $(get_url_theme $THEME.vsix) > $WORKDIR/$THEME.vsix
 
   code --install-extension $WORKDIR/$THEME.vsix
-
-  success
 }
 
-installUlauncherTheme() {
+install_ulauncher_theme() {
   local PATH_THEME="$HOME/.config/ulauncher/user-themes"
   local THEME="ulauncher"
   local PKG="ulauncher"
 
-  if ! $(checkPkg $PKG); then
-    installSnapPkg $PKG
+  if ! $(check_pkg $PKG); then
+    install_snap_pkg $PKG
   fi
 
   mkdir -p $WORKDIR
-  curl -sL $(getURLTheme $THEME.zip) > $WORKDIR/$THEME.zip
+  curl -sL $(get_url_theme $THEME.zip) > $WORKDIR/$THEME.zip
   sleep 3
   extract $WORKDIR/$THEME
   cp -R $WORKDIR/$THEME/dist/* $PATH_THEME
-
-  success
 }
 
-installInsomniaTheme() {
+install_insomnia_theme() {
   local PATH_THEME="$HOME/.config/Insomnia/plugins/@flate"
   local THEME="insomnia"
   local PKG="insomnia"
 
-  if ! $(checkPkg $PKG); then
-    installSnapPkg $PKG
+  if ! $(check_pkg $PKG); then
+    install_snap_pkg $PKG
   fi
 
   mkdir -p $WORKDIR
-  curl -sL $(getURLTheme $THEME.zip) > $WORKDIR/$THEME.zip
+  curl -sL $(get_url_theme $THEME.zip) > $WORKDIR/$THEME.zip
   sleep 3
   extract $WORKDIR/$THEME
   mkdir -p $PATH_THEME
   cp -R $WORKDIR/$THEME $PATH_THEME
-
-  success
 }
 
-installKittyTheme() {
+install_kitty_theme() {
   local PATH_THEME="$HOME/.config/kitty"
   local THEME="kitty"
   local PKG="kitty"
   local VARIANT=$1
 
   mkdir -p $WORKDIR
-  curl -sL $(getURLTheme $THEME.zip) > $WORKDIR/$THEME.zip
+  curl -sL $(get_url_theme $THEME.zip) > $WORKDIR/$THEME.zip
   sleep 3
   extract $WORKDIR/$THEME
   mkdir -p $PATH_THEME
@@ -177,12 +171,10 @@ installKittyTheme() {
 
   sed -i '/flate/Id' $PATH_THEME/kitty.conf
   bash -c "echo -e '#: Flate color scheme \ninclude $HOME/.config/kitty/flate.conf'" >> $PATH_THEME/kitty.conf
-
-  success
 }
 
 # CLI
-menuVariants() {
+menu_variants() {
   banner
 
   PS3=$'\nSelect an variant: '
@@ -209,28 +201,35 @@ menu() {
   do
     case "$REPLY" in
       1)
-      menuVariants
-      installAlacrittyTheme $VARIANT
+      menu_variants
+      installing
+      install_alacritty_theme $VARIANT
       break;;
 
       2)
-      menuVariants
-      installKittyTheme $VARIANT
+      menu_variants
+      installing
+      install_kitty_theme $VARIANT
       break;;
 
       3)
-      installVSCodeTheme
+      installing
+      install_code_theme
       break;;
 
       4)
-      installUlauncherTheme
+      installing
+      install_ulauncher_theme
       break;;
 
       5)
-      installInsomniaTheme
+      installing
+      install_insomnia_theme
       break;;
     esac
   done
+
+  success
 }
 
 menu
