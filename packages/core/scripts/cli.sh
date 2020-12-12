@@ -11,12 +11,14 @@ VARIANTS=(
 )
 THEMES=(
   'alacritty'
+  'kitty'
   'vscode'
   'ulauncher'
   'insomnia'
 )
 THEMES_FILES=(
   'alacritty.zip'
+  'kitty.zip'
   'vscode.vsix'
   'ulauncher.zip'
   'insomnia.zip'
@@ -150,6 +152,26 @@ installInsomniaTheme() {
   colorfy "Theme successfully installed!"
 }
 
+installKittyTheme() {
+  local PATH_THEME="$HOME/.config/kitty"
+  local THEME="kitty"
+  local PKG="kitty"
+  local VARIANT=$1
+
+  mkdir -p $WORKDIR
+  curl -sL $(getURLTheme $THEME.zip) > $WORKDIR/$THEME.zip
+  sleep 3
+  extract $WORKDIR/$THEME
+  mkdir -p $PATH_THEME
+  cp -R $WORKDIR/$THEME/dist/$VARIANT.conf $PATH_THEME/flate.conf
+
+  sed -i '/flate/Id' $PATH_THEME/kitty.conf
+  bash -c "echo -e '#: Flate color scheme \ninclude $HOME/.config/kitty/flate.conf'" >> $PATH_THEME/kitty.conf
+
+  echo
+  colorfy "Theme successfully installed!"
+}
+
 # CLI
 menuVariants() {
   banner
@@ -183,14 +205,19 @@ menu() {
       break;;
 
       2)
-      installVSCodeTheme
+      menuVariants
+      installKittyTheme $VARIANT
       break;;
 
       3)
-      installUlauncherTheme
+      installVSCodeTheme
       break;;
 
       4)
+      installUlauncherTheme
+      break;;
+
+      5)
       installInsomniaTheme
       break;;
     esac
