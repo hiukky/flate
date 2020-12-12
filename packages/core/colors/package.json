@@ -1,7 +1,7 @@
 {
   "name": "@flate/colors",
   "main": "index.ts",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "author": {
     "name": "Romullo",
     "email": "developermarsh@gmail.com",
