@@ -1,6 +1,9 @@
 #!/bin/bash
 # By @hiukky https://hiukky.com
 
+set -eE
+trap 'err $LINENO' ERR
+
 # CONSTANTS
 RELEASE="develop"
 WORKDIR="$HOME/.tmp/flate"
@@ -77,6 +80,12 @@ banner() {
 success() {
   echo
   colorfy "Theme successfully installed!"
+}
+
+err() {
+    echo
+    tput setaf 1; echo "Error occurred:"
+    awk 'NR>L-4 && NR<L+4 { printf "%-5d%3s%s\n",NR,(NR==L?">>>":""),$0 }' L=$1 $0
 }
 
 # THEMES
@@ -160,7 +169,7 @@ installKittyTheme() {
   local VARIANT=$1
 
   mkdir -p $WORKDIR
-  curl -sL $(getURLTheme $THEME.zi) > $WORKDIR/$THEME.zip
+  curl -sL $(getURLTheme $THEME.zip) > $WORKDIR/$THEME.zip
   sleep 3
   extract $WORKDIR/$THEME
   mkdir -p $PATH_THEME
