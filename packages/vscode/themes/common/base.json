@@ -289,6 +289,10 @@
         "punctuation.separator.inheritance.php",
         "punctuation.definition.section.case-statement",
         "string.other.link.description.title.markdown",
+        "string.quoted.docstring.multi",
+        "string.quoted.docstring.multi.python constant.character.escape",
+        "string.quoted.docstring.multi.python punctuation.definition.string.begin",
+        "string.quoted.docstring.multi.python punctuation.definition.string.end",
         "string.regexp",
         "variable.language.fenced.markdown"
       ],
