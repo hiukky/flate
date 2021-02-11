@@ -1,8 +1,8 @@
 {
   "version": "0.6.1",
+  "npmClient": "yarn",
   "useWorkspaces": true,
   "packages": ["packages/core/*", "packages/themes/*"],
-  "npmClient": "yarn",
   "exact": true,
   "command": {
     "publish": {
