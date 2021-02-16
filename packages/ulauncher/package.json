@@ -1,0 +1,29 @@
+{
+  "name": "@flate/ulauncher",
+  "main": "index.ts",
+  "version": "0.6.0",
+  "author": {
+    "name": "Romullo",
+    "email": "developermarsh@gmail.com",
+    "url": "https://hiukky.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hiukky/flate/issues"
+  },
+  "homepage": "https://github.com/hiukky/flate#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hiukky/flate"
+  },
+  "scripts": {
+    "dev": "tsnd --respawn -r tsconfig-paths/register builder.ts"
+  },
+  "dependencies": {
+    "@zort/ulauncher": "0.1.0-alpha.5"
+  },
+  "devDependencies": {
+    "ts-node-dev": "1.1.1",
+    "tsconfig-paths": "3.9.0"
+  }
+}

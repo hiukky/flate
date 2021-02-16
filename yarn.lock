@@ -1785,6 +1785,13 @@
   resolved "https://registry.yarnpkg.com/@zort/core/-/core-0.1.0-alpha.3.tgz#f177bc4a971399d48ee69dc626376dac5c2bc072"
   integrity sha512-NEa1OY3QdAZubM5hP4Yaus6jWr9QSSOUUSR2e73mO+rCuortmfrTNM4VgDv5D2trcLXdrAq5MyNAG7cSAIMa9Q==
 
+"@zort/ulauncher@0.1.0-alpha.5":
+  version "0.1.0-alpha.5"
+  resolved "https://registry.yarnpkg.com/@zort/ulauncher/-/ulauncher-0.1.0-alpha.5.tgz#ed2162457a3f834e917eebaa2d34dcd38c9cd2f3"
+  integrity sha512-wj/6z9bn+PGJU1Tna7WlZZGVrl+f+9uF0wTYoAxCn0wuDDU5mkSwbybm589GN4nxcDwFUTb7R2/MjF5/j32P9w==
+  dependencies:
+    "@zort/core" "0.1.0-alpha.3"
+
 JSONStream@^1.0.4, JSONStream@^1.3.4:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/JSONStream/-/JSONStream-1.3.5.tgz#3208c1f08d3a4d99261ab64f92302bc15e111ca0"
