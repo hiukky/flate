@@ -1785,6 +1785,13 @@
   resolved "https://registry.yarnpkg.com/@zort/core/-/core-0.1.0-alpha.3.tgz#f177bc4a971399d48ee69dc626376dac5c2bc072"
   integrity sha512-NEa1OY3QdAZubM5hP4Yaus6jWr9QSSOUUSR2e73mO+rCuortmfrTNM4VgDv5D2trcLXdrAq5MyNAG7cSAIMa9Q==
 
+"@zort/insomnia@0.1.0-alpha.5":
+  version "0.1.0-alpha.5"
+  resolved "https://registry.yarnpkg.com/@zort/insomnia/-/insomnia-0.1.0-alpha.5.tgz#3eb0d54113b3ff403cd2d8c20cb669e91f6fe0ac"
+  integrity sha512-kkKl1sA7KF0u1UTwNihR4DueuMRxPxE9qS+EfHPdYzc8EuYAxA2Q4TEOX2On0mDNLAFpQdbx7jSDHx4tbwBqAg==
+  dependencies:
+    "@zort/core" "0.1.0-alpha.3"
+
 "@zort/ulauncher@0.1.0-alpha.5":
   version "0.1.0-alpha.5"
   resolved "https://registry.yarnpkg.com/@zort/ulauncher/-/ulauncher-0.1.0-alpha.5.tgz#ed2162457a3f834e917eebaa2d34dcd38c9cd2f3"

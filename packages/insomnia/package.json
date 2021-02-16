@@ -1,0 +1,43 @@
+{
+  "name": "@flate/insomnia",
+  "description": "Dark colored theme for Insomnia.",
+  "version": "0.6.1",
+  "main": "index.js",
+  "author": {
+    "name": "Romullo",
+    "email": "developermarsh@gmail.com",
+    "url": "https://hiukky.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hiukky/flate/issues"
+  },
+  "homepage": "https://github.com/hiukky/flate#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hiukky/flate"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "scripts": {
+    "dev": "tsnd --respawn -r tsconfig-paths/register builder.ts"
+  },
+  "insomnia": {
+    "name": "flate",
+    "description": "Dark colored theme."
+  },
+  "keywords": [
+    "theme",
+    "insomnia",
+    "insomnia-theme",
+    "insomnia-plugin"
+  ],
+  "dependencies": {
+    "@zort/insomnia": "0.1.0-alpha.5"
+  },
+  "devDependencies": {
+    "ts-node-dev": "1.1.1",
+    "tsconfig-paths": "3.9.0"
+  }
+}
