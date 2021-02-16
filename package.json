@@ -27,7 +27,7 @@
     "posttest": "rimraf dist",
     "format": "prettier --write \"**/*.ts\"",
     "lint": "yarn eslint \"**/*.ts\" --fix",
-    "build": "lerna run dev --stream"
+    "build": "lerna run build --stream"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",

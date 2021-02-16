@@ -19,7 +19,7 @@
     "url": "https://github.com/hiukky/flate"
   },
   "scripts": {
-    "build": "tsnd --respawn -r tsconfig-paths/register builder.ts"
+    "build": "tsnd -r tsconfig-paths/register builder.ts"
   },
   "contributes": {
     "themes": [
@@ -75,6 +75,6 @@
     "tsconfig-paths": "3.9.0"
   },
   "dependencies": {
-    "@zort/code": "0.1.0-alpha.5"
+    "@zort/code": "0.1.0-alpha.7"
   }
 }

@@ -21,7 +21,7 @@
     "Themes"
   ],
   "scripts": {
-    "dev": "tsnd --respawn -r tsconfig-paths/register builder.ts"
+    "build": "tsnd -r tsconfig-paths/register builder.ts"
   },
   "insomnia": {
     "name": "flate",
@@ -33,11 +33,11 @@
     "insomnia-theme",
     "insomnia-plugin"
   ],
-  "dependencies": {
-    "@zort/insomnia": "0.1.0-alpha.5"
-  },
   "devDependencies": {
     "ts-node-dev": "1.1.1",
     "tsconfig-paths": "3.9.0"
+  },
+  "dependencies": {
+    "@zort/insomnia": "0.1.0-alpha.7"
   }
 }
