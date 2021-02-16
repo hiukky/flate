@@ -2,12 +2,16 @@
   "compilerOptions": {
     "lib": ["ESNext"],
     "target": "ESNext",
-    "module": "ESNext",
+    "module": "CommonJS",
     "baseUrl": ".",
     "strict": true,
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@flate/*": ["flate/*"]
+    }
   },
   "include": ["packages/**/*"],
   "exclude": ["node_modules", "dist"]

@@ -1,0 +1,25 @@
+@import "https://fonts.googleapis.com/css?family=Inter:400,500,700|Lato:400,700|Nunito:400,600,700&display=swap";
+
+@function gtkalpha($c, $a) {
+    @return unquote('alpha(#{$c},#{$a})');
+}
+
+$font: "Nunito",
+sans-serif;
+$background-color: #2d3436;
+
+html,
+body {
+    font-family: 100% $font;
+    background: $background-color;
+}
+
+.class {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#id {
+    position: absolute;
+    display: flex;
+}
