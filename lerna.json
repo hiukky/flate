@@ -5,8 +5,11 @@
   "packages": ["packages/*"],
   "exact": true,
   "command": {
+    "version": {
+      "message": "chore(release): %s",
+      "allowBranch": ["main", "develop"]
+    },
     "publish": {
-      "directory": ["dist", "meta"],
       "conventionalCommits": true
     }
   }
