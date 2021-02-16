@@ -19,7 +19,7 @@
     "url": "https://github.com/hiukky/flate"
   },
   "scripts": {
-    "dev": "tsnd --respawn -r tsconfig-paths/register builder.ts"
+    "build": "tsnd --respawn -r tsconfig-paths/register builder.ts"
   },
   "contributes": {
     "themes": [

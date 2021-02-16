@@ -1,9 +1,8 @@
 import { Insomnia } from '@zort/insomnia'
 import { getThemesDir } from '@flate/setup'
 
-new Insomnia({
-  dir: {
-    dist: `${__dirname}/dist`,
-    themes: getThemesDir(),
-  },
-}).compile()
+export const builder = new Insomnia({
+  dir: getThemesDir(__dirname),
+})
+
+builder.compile()

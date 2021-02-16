@@ -1,11 +1,8 @@
 import { Code } from '@zort/code'
 import { getThemesDir } from '@flate/setup'
 
-new Code({
-  dir: {
-    dist: `${__dirname}/dist`,
-    themes: getThemesDir(),
-  },
-})
-  .set({ type: 'dark', fontStyle: ['none', 'italic', 'bold'] })
-  .compile()
+export const builder = new Code({
+  dir: getThemesDir(__dirname),
+}).set({ type: 'dark', fontStyle: ['none', 'italic', 'bold'] })
+
+builder.compile()

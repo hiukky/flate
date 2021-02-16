@@ -22,10 +22,11 @@
   },
   "scripts": {
     "postinstall": "husky install",
-    "test": "lerna run test",
-    "test:cov": "lerna run test:cov",
-    "format": "lerna run format",
-    "lint": "lerna run lint",
+    "test": "yarn jest",
+    "test:cov": "yarn jest --coverage",
+    "posttest": "rimraf dist",
+    "format": "prettier --write \"**/*.ts\"",
+    "lint": "yarn eslint \"**/*.ts\" --fix",
     "build": "lerna run dev --stream"
   },
   "devDependencies": {

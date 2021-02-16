@@ -1,11 +1,13 @@
 module.exports = {
+  rootDir: '.',
   testEnvironment: 'node',
-  coverageDirectory: '../../coverage',
   collectCoverage: true,
   coverageReporters: ['json', 'lcov'],
-  collectCoverageFrom: ['**/src/**'],
-  testMatch: ['**/__tests__/**/*.+(ts|js)', '**/?(*.)+(spec|test).+(ts|js)'],
+  testMatch: ['**/?(*.)+(spec).+(ts)'],
   transform: {
     '^.+\\.(ts)$': 'ts-jest',
+  },
+  moduleNameMapper: {
+    '^@flate(.*)$': '<rootDir>/flate$1',
   },
 }
