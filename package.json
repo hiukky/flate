@@ -21,6 +21,7 @@
     "url": "https://github.com/hiukky/flate"
   },
   "scripts": {
+    "postinstall": "husky install",
     "test": "lerna run test",
     "test:cov": "lerna run test:cov",
     "format": "lerna run format",
