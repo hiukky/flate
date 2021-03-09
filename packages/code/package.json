@@ -21,22 +21,20 @@
   "scripts": {
     "build": "tsnd -r tsconfig-paths/register builder.ts"
   },
+  "engines": {
+    "vscode": "^1.44.0"
+  },
   "contributes": {
     "themes": [
       {
-        "label": "Flate",
+        "label": "Flate Arc Bold",
         "uiTheme": "vs-dark",
-        "path": "./dist/flate/flate.json"
+        "path": "./dist/flate-arc/flate.arc.bold.json"
       },
       {
-        "label": "Flate (Italic)",
+        "label": "Flate Arc Italic",
         "uiTheme": "vs-dark",
-        "path": "./dist/flate/flate.italic.json"
-      },
-      {
-        "label": "Flate (Bold)",
-        "uiTheme": "vs-dark",
-        "path": "./dist/flate/flate.bold.json"
+        "path": "./dist/flate-arc/flate.arc.italic.json"
       },
       {
         "label": "Flate Arc",
@@ -44,14 +42,14 @@
         "path": "./dist/flate-arc/flate.arc.json"
       },
       {
-        "label": "Flate Arc (Italic)",
+        "label": "Flate Punk Bold",
         "uiTheme": "vs-dark",
-        "path": "./dist/flate-arc/flate.arc.italic.json"
+        "path": "./dist/flate-punk/flate.punk.bold.json"
       },
       {
-        "label": "Flate Arc (Bold)",
+        "label": "Flate Punk Italic",
         "uiTheme": "vs-dark",
-        "path": "./dist/flate-arc/flate.arc.bold.json"
+        "path": "./dist/flate-punk/flate.punk.italic.json"
       },
       {
         "label": "Flate Punk",
@@ -59,22 +57,42 @@
         "path": "./dist/flate-punk/flate.punk.json"
       },
       {
-        "label": "Flate Punk (Italic)",
+        "label": "Flate Bold",
         "uiTheme": "vs-dark",
-        "path": "./dist/flate-punk/flate.punk.italic.json"
+        "path": "./dist/flate.bold.json"
       },
       {
-        "label": "Flate Punk (Bold)",
+        "label": "Flate Italic",
         "uiTheme": "vs-dark",
-        "path": "./dist/flate-punk/flate.punk.bold.json"
+        "path": "./dist/flate.italic.json"
+      },
+      {
+        "label": "Flate",
+        "uiTheme": "vs-dark",
+        "path": "./dist/flate.json"
+      },
+      {
+        "label": "Flate Bold",
+        "uiTheme": "vs-dark",
+        "path": "./dist/flate/flate.bold.json"
+      },
+      {
+        "label": "Flate Italic",
+        "uiTheme": "vs-dark",
+        "path": "./dist/flate/flate.italic.json"
+      },
+      {
+        "label": "Flate",
+        "uiTheme": "vs-dark",
+        "path": "./dist/flate/flate.json"
       }
     ]
   },
   "devDependencies": {
-    "ts-node-dev": "1.1.1",
+    "ts-node-dev": "1.1.6",
     "tsconfig-paths": "3.9.0"
   },
   "dependencies": {
-    "@zort/code": "0.1.0-alpha.7"
+    "@zort/code": "0.1.0-alpha.11"
   }
 }

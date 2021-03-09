@@ -19,11 +19,11 @@
   "scripts": {
     "build": "tsnd -r tsconfig-paths/register builder.ts"
   },
-  "dependencies": {
-    "@zort/ulauncher": "0.1.0-alpha.7"
-  },
   "devDependencies": {
-    "ts-node-dev": "1.1.1",
+    "ts-node-dev": "1.1.6",
     "tsconfig-paths": "3.9.0"
+  },
+  "dependencies": {
+    "@zort/ulauncher": "0.1.0-alpha.11"
   }
 }
