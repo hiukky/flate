@@ -60,21 +60,6 @@
       {
         "label": "Flate Bold",
         "uiTheme": "vs-dark",
-        "path": "./dist/flate.bold.json"
-      },
-      {
-        "label": "Flate Italic",
-        "uiTheme": "vs-dark",
-        "path": "./dist/flate.italic.json"
-      },
-      {
-        "label": "Flate",
-        "uiTheme": "vs-dark",
-        "path": "./dist/flate.json"
-      },
-      {
-        "label": "Flate Bold",
-        "uiTheme": "vs-dark",
         "path": "./dist/flate/flate.bold.json"
       },
       {
@@ -94,6 +79,6 @@
     "tsconfig-paths": "3.9.0"
   },
   "dependencies": {
-    "@zort/code": "0.1.0-alpha.11"
+    "@zort/code": "0.1.0-alpha.12"
   }
 }
