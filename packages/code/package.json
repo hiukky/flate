@@ -75,8 +75,8 @@
     ]
   },
   "devDependencies": {
-    "ts-node-dev": "1.1.6",
-    "tsconfig-paths": "3.9.0"
+    "ts-node-dev": "1.1.8",
+    "tsconfig-paths": "3.11.0"
   },
   "dependencies": {
     "@zort/code": "0.1.0-alpha.12"
