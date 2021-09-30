@@ -1,0 +1,11 @@
+node_modules/
+examples/
+scripts/
+themes/
+.vscode/**
+.vscode-test/**
+.gitignore
+.huskyrc
+.prettierrc
+commitlint.config.js
+yarn.lock

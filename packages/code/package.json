@@ -2,7 +2,7 @@
   "name": "flate",
   "displayName": "Flate",
   "description": "Dark Colored Theme for VS Code.",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "publisher": "hiukky",
   "icon": "assets/logo.png",
   "author": {
@@ -25,6 +25,9 @@
   "engines": {
     "vscode": "^1.44.0"
   },
+  "categories": [
+    "Themes"
+  ],
   "contributes": {
     "themes": [
       {
